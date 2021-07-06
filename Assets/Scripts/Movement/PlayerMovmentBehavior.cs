@@ -4,39 +4,32 @@ using UnityEngine;
 
 public class PlayerMovmentBehavior : MonoBehaviour
 {
-    private PlayerInputBehavior _playerInput;
+    [SerializeField]
+    private float _movementSpeed;
 
-    //A reference to the rigidbody component
-    private Rigidbody _rigidbody;
+    [SerializeField]
+    private CharacterController _controller;
 
-    //A varibale that handles the movement speed of the player
-    public float moveSpeed;
-
-    //A reference of a Vector3
     private Vector3 _velocity;
 
-    public Vector3 Velocity
+
+    private void Start()
     {
-        get
-        {
-            return _velocity;
-        }
+
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        _playerInput = GetComponent<PlayerInputBehavior>();
-        _rigidbody = GetComponent<Rigidbody>();
+        Movement();
     }
 
-    public void Move(Vector3 direction)
+    private void Movement()
     {
-        _velocity = direction * moveSpeed * Time.deltaTime;
-    }
+        float xInput = Input.GetAxis("Horizontal");
+        float zInput = Input.GetAxis("Vertical");
 
-    void FixedUpdate()
-    {
-        _rigidbody.MovePosition(transform.position + _velocity);
+        Vector3 move = transform.right * xInput + transform.forward * zInput;
+
+        _controller.Move(move* _movementSpeed * Time.deltaTime);
     }
 }
