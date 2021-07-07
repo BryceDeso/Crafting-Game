@@ -14,6 +14,7 @@ public class OreBehavior : MonoBehaviour
 
     private void Start()
     {
+        _timeInterval = _maxTime;
         currentHealth = maxHealth;
     }
 
