@@ -71,15 +71,6 @@ public class PlayerBehavior : MonoBehaviour
                 }
             }
         }
-        if (_interactionField.canInteract == true)
-        {
-            if (_interactionField.interactable.CompareTag("AirEnemy"))
-            {
-                if (Input.GetButtonDown("Fire1"))
-                {
-                }
-            }
-        }
     }
 
     private void TakeDamage()
