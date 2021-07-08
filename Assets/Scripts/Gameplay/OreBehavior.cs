@@ -7,16 +7,19 @@ public class OreBehavior : MonoBehaviour
     public float maxHealth;
     public float currentHealth;
 
+    private MeshRenderer mesh;
+
     public bool canCollect = true;
     public float _maxTime;
     public float _timeLeft;
-    public float _timeInterval;
+    private float _timeInterval;
 
     private void Start()
     {
         canCollect = true;
         _timeInterval = _maxTime;
         currentHealth = maxHealth;
+        mesh = gameObject.GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
@@ -30,6 +33,7 @@ public class OreBehavior : MonoBehaviour
         if (currentHealth <= 0)
         {
             canCollect = false;
+            mesh.enabled = false;
             Timer();
         }
     }
@@ -41,10 +45,10 @@ public class OreBehavior : MonoBehaviour
 
         if (_timeLeft <= 0)
         {
+            mesh.enabled = true;
             currentHealth = maxHealth;
             canCollect = true;
             _maxTime = _timeInterval;
         }
-
     }
 }
