@@ -10,6 +10,10 @@ public class InteractableFieldBehavior : MonoBehaviour
 
     [HideInInspector]
     public OreBehavior ore;
+    [HideInInspector]
+    public GroundEnemyAIBehavior groundEnemy;
+    [HideInInspector]
+    public AirEnemyAIBehavior airEnemy;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,13 +23,26 @@ public class InteractableFieldBehavior : MonoBehaviour
             canInteract = true;
             interactable = other.gameObject;
         }
-        
+        else if(other.CompareTag("GroundEnemy"))
+        {
+            groundEnemy = other.GetComponent<GroundEnemyAIBehavior>();
+            canInteract = true;
+            interactable = other.gameObject;
+        }
+        else if(other.CompareTag("AirEnemy"))
+        {
+            airEnemy = other.GetComponent<AirEnemyAIBehavior>();
+            canInteract = true;
+            interactable = other.gameObject;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        ore = null;
         canInteract = false;
         interactable = null;
+        airEnemy = null;
+        groundEnemy = null;
+        ore = null;
     }
 }

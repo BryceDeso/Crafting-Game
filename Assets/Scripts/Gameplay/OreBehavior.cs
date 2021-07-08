@@ -25,10 +25,10 @@ public class OreBehavior : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        OreCollected();
+        CheckIfCollected();
     }
 
-    private void OreCollected()
+    private void CheckIfCollected()
     {
         if (currentHealth <= 0)
         {
@@ -40,15 +40,14 @@ public class OreBehavior : MonoBehaviour
 
     private void Timer()
     {
-        _maxTime -= Time.deltaTime;
-        _timeLeft = _maxTime;
+        _timeLeft -= Time.deltaTime;
 
         if (_timeLeft <= 0)
         {
+            _timeLeft = _maxTime;
             mesh.enabled = true;
             currentHealth = maxHealth;
             canCollect = true;
-            _maxTime = _timeInterval;
         }
     }
 }
