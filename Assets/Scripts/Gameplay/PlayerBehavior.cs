@@ -39,38 +39,7 @@ public class PlayerBehavior : MonoBehaviour
 
     private void PlayerActions()
     {
-        Fighting();
-        Mining();
         TakeDamage();
-    }
-
-    private void Mining()
-    {
-        if(_interactionField.canInteract == true)
-        {
-            if (_interactionField.interactable.CompareTag("IronOre") && _interactionField.ore.canCollect == true)
-            {
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    _ironHeld++;
-                    _interactionField.ore.currentHealth -= 1;
-                }
-            }
-        }
-    }
-
-    private void Fighting()
-    {
-        if(_interactionField.canInteract == true)
-        {
-            if (_interactionField.interactable.CompareTag("GroundEnemy"))
-            {
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    _interactionField.groundEnemy.health -= 1;
-                }
-            }
-        }
     }
 
     private void TakeDamage()

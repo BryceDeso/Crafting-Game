@@ -6,7 +6,10 @@ public class InteractableFieldBehavior : MonoBehaviour
 {
     public bool canInteract = false;
 
-    public GameObject interactable;
+    public float range;
+
+    [SerializeField]
+    private Camera playerCamera;
 
     [HideInInspector]
     public OreBehavior ore;
@@ -15,34 +18,56 @@ public class InteractableFieldBehavior : MonoBehaviour
     [HideInInspector]
     public AirEnemyAIBehavior airEnemy;
 
+    private void Update()
+    {
+        Interact();
+    }
+
+    private void Interact()
+    {
+        RaycastHit hit;
+
+        Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * range, Color.white);
+
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
+        {
+            if (hit.transform.CompareTag("IronOre"))
+            {
+                ore = hit.transform.GetComponent<OreBehavior>();
+                canInteract = true;
+                if(Input.GetButtonDown("Fire1"))
+                {
+                    ore.currentHealth -= 1;
+                    Debug.Log("Hit ore");
+                }
+            }
+            else if (hit.transform.CompareTag("GroundEnemy"))
+            {
+                groundEnemy = hit.transform.GetComponent<GroundEnemyAIBehavior>();
+                canInteract = true;
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    groundEnemy.health -= 1;
+                    Debug.Log("Hit ground enemy");
+                }
+            }
+            else if (hit.transform.CompareTag("AirEnemy"))
+            {
+                airEnemy = hit.transform.GetComponent<AirEnemyAIBehavior>();
+                canInteract = true;
+                if (Input.GetButtonDown("Fire1"))
+                {
+                }
+            }
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("IronOre"))
-        {
-            ore = other.GetComponent<OreBehavior>();
-            canInteract = true;
-            interactable = other.gameObject;
-        }
-        else if(other.CompareTag("GroundEnemy"))
-        {
-            groundEnemy = other.GetComponent<GroundEnemyAIBehavior>();
-            canInteract = true;
-            interactable = other.gameObject;
-        }
-        else if(other.CompareTag("AirEnemy"))
-        {
-            airEnemy = other.GetComponent<AirEnemyAIBehavior>();
-            canInteract = true;
-            interactable = other.gameObject;
-        }
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        canInteract = false;
-        interactable = null;
-        airEnemy = null;
-        groundEnemy = null;
-        ore = null;
     }
 }
