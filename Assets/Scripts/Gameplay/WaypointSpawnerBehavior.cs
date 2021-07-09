@@ -2,20 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerBehavior : MonoBehaviour
+public class WaypointSpawnerBehavior : MonoBehaviour
 {
     [Tooltip("Reference to the object that you want to spawn")]
-    [SerializeField]
-    private GameObject _spawnRef;
+    public GameObject waypoint;
 
+    [SerializeField]
+    private GroundEnemyAIBehavior enemy;
+
+    [SerializeField]
     private float _maxTime;
     //Used to tell how much time is left until the next spawn.
     public float _timeLeft;
 
     private void Start()
     {
+
         _timeLeft = _maxTime;
-        Instantiate(_spawnRef, transform.position, transform.rotation);
+        Instantiate(waypoint, transform.position, transform.rotation);
     }
 
     // Start is called before the first frame update
@@ -31,6 +35,8 @@ public class SpawnerBehavior : MonoBehaviour
         if (_timeLeft <= 0)
         {
             _timeLeft = _maxTime;
+
+            Instantiate(waypoint, transform.position, transform.rotation);
         }
     }
 }

@@ -18,7 +18,7 @@ public class InteractableFieldBehavior : MonoBehaviour
     [HideInInspector]
     public AirEnemyAIBehavior airEnemy;
 
-    private void Update()
+    private void FixedUpdate()
     {
         Interact();
     }
@@ -35,7 +35,8 @@ public class InteractableFieldBehavior : MonoBehaviour
             {
                 ore = hit.transform.GetComponent<OreBehavior>();
                 canInteract = true;
-                if(Input.GetButtonDown("Fire1"))
+                Debug.Log("Looking at ore");
+                if (Input.GetButtonDown("Fire1"))
                 {
                     ore.currentHealth -= 1;
                     Debug.Log("Hit ore");
@@ -45,6 +46,7 @@ public class InteractableFieldBehavior : MonoBehaviour
             {
                 groundEnemy = hit.transform.GetComponent<GroundEnemyAIBehavior>();
                 canInteract = true;
+                Debug.Log("Looking at ground enemy");
                 if (Input.GetButtonDown("Fire1"))
                 {
                     groundEnemy.health -= 1;

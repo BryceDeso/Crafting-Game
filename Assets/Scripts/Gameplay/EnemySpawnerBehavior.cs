@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerBehavior : MonoBehaviour
+public class EnemySpawnerBehavior : MonoBehaviour
 {
     [Tooltip("Reference to the object that you want to spawn")]
     [SerializeField]
     private GameObject _spawnRef;
+    [Tooltip("The amount of time inbetween spawns")]
+    public float _timeInterval;
+
+    [SerializeField]
+    private GameObject _player;
 
     private float _maxTime;
     //Used to tell how much time is left until the next spawn.
@@ -14,7 +19,8 @@ public class SpawnerBehavior : MonoBehaviour
 
     private void Start()
     {
-        _timeLeft = _maxTime;
+        _maxTime = _timeInterval;
+        _spawnRef.GetComponent<GroundEnemyAIBehavior>().target = _player;
         Instantiate(_spawnRef, transform.position, transform.rotation);
     }
 
@@ -26,11 +32,14 @@ public class SpawnerBehavior : MonoBehaviour
 
     private void Timer()
     {
-        _timeLeft -= Time.deltaTime;
+        _maxTime -= Time.deltaTime;
+        _timeLeft = _maxTime;
 
         if (_timeLeft <= 0)
         {
-            _timeLeft = _maxTime;
+            Instantiate(_spawnRef, transform.position, transform.rotation);
+
+            _maxTime = _timeInterval;
         }
     }
 }
