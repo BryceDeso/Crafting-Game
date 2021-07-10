@@ -15,6 +15,8 @@ public class GroundEnemyAIBehavior : MonoBehaviour
     [SerializeField]
     public GameObject target;
     private NavMeshAgent _agent;
+    [SerializeField]
+    private float range;
 
     [SerializeField]
     private bool seePlayer = false;
@@ -60,7 +62,7 @@ public class GroundEnemyAIBehavior : MonoBehaviour
     private void Update()
     {
         CheckIfDead();
-        RotateWander();
+        CheckForPlayer();
         if(seePlayer == false)
         {
             Wander();
@@ -86,6 +88,7 @@ public class GroundEnemyAIBehavior : MonoBehaviour
         if(!canMove)
         {
             target = null;
+            RotateWander();
             Timer(true);
         }
     }
@@ -114,10 +117,7 @@ public class GroundEnemyAIBehavior : MonoBehaviour
 
     private void RotateWander()
     {
-        if(!canMove)
-        {
-            wanderAnchor.transform.Rotate(0, 1, 0);
-        }
+        wanderAnchor.transform.Rotate(0, 1, 0);
     }
 
     private void CheckIfDead()
@@ -125,6 +125,23 @@ public class GroundEnemyAIBehavior : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void CheckForPlayer()
+    {
+        RaycastHit hit;
+
+        Debug.DrawRay(gameObject.transform.position, gameObject.transform.forward * range, Color.white);
+
+        if (Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out hit, range))
+        {
+            if(hit.transform.gameObject.CompareTag("Player"))
+            {
+                seePlayer = true;
+
+                target = hit.transform.gameObject;
+            }
         }
     }
 }
