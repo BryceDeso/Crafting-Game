@@ -29,9 +29,12 @@ public class GroundEnemyAIBehavior : MonoBehaviour
     [SerializeField]
     private float _TimeTillNextWander;
     [SerializeField]
-    private float _timeLeft;
-    private float _minTimeWandering;
-    private float _maxTimeWandering;
+    private float _timeLeftNextWander;
+
+    [SerializeField]
+    private float _timeWandering;
+    [SerializeField]
+    private float _timeLeftWandering;
 
     public GameObject Target
     {
@@ -48,7 +51,8 @@ public class GroundEnemyAIBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _timeLeft = _TimeTillNextWander;
+        _timeLeftNextWander = _TimeTillNextWander;
+        _timeLeftWandering = _timeWandering;
         _rigidbody = GetComponent<Rigidbody>();
         _agent = GetComponent<NavMeshAgent>();
     }
@@ -77,23 +81,34 @@ public class GroundEnemyAIBehavior : MonoBehaviour
         if(canMove)
         {
             target = wanderPoint;
-            _timeWandering = Random.Range()
+            Timer2(false);
         }
         if(!canMove)
         {
             target = null;
+            Timer(true);
         }
-        Timer();
     }
 
-    private void Timer()
+    private void Timer(bool activeState)
     {
-        _timeLeft -= Time.deltaTime;
+        _timeLeftNextWander -= Time.deltaTime;
 
-        if (_timeLeft <= 0)
+        if (_timeLeftNextWander <= 0)
         {
-            canMove = true;
-            _timeLeft = _TimeTillNextWander;
+            canMove = activeState;
+            _timeLeftNextWander = _TimeTillNextWander;
+        }
+    }
+
+    private void Timer2(bool activeState)
+    {
+        _timeLeftWandering -= Time.deltaTime;
+
+        if (_timeLeftWandering <= 0)
+        {
+            canMove = activeState;
+            _timeLeftWandering = _timeWandering;
         }
     }
 

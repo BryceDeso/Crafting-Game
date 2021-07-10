@@ -187,8 +187,10 @@ MonoBehaviour:
   wanderAnchor: {fileID: 2032141130097279052}
   wanderPoint: {fileID: 9132342000841831585}
   canMove: 1
-  _TimeTillNextWander: 10
-  _timeLeft: 0
+  _TimeTillNextWander: 5
+  _timeLeftNextWander: 0
+  _timeWandering: 0.5
+  _timeLeftWandering: 0
 --- !u!1 &8137912135838281870
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +293,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7394113418071438300}
-  - component: {fileID: 5931852846505996939}
   m_Layer: 0
   m_Name: Wander Target
   m_TagString: WanderPoint
@@ -313,20 +314,3 @@ Transform:
   m_Father: {fileID: 2189311024700974746}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &5931852846505996939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9132342000841831585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbccc90806e04944dbb1159bf8826122, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoint: {fileID: 1520311081869969131, guid: 03dff204cf1b39d478a007d193e067bc,
-    type: 3}
-  enemy: {fileID: 8356346894644324585}
-  _maxTime: 0
-  _timeLeft: 0
