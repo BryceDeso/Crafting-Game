@@ -310,7 +310,7 @@ GameObject:
   m_Layer: 0
   m_Name: Interaction Field
   m_TagString: InteractionField
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -457,11 +457,14 @@ MonoBehaviour:
   _pickaxe: {fileID: 0}
   _pickaxeDamage: 0
   _weaponDamage: 0
+  _canEquipWeapon: 0
+  _canEquipPickaxe: 0
   _weaponAnchor: {fileID: 8883041610270751665}
   _pickaxeAnchor: {fileID: 806138497725240970}
   _hitbox: {fileID: 4542705402076568437}
   _interactionField: {fileID: 4542705402276686581}
   _ironHeld: 5
+  _goldHeld: 0
   _oakWoodHeld: 6
   _invincibleTime: 3
   _timeLeft: 0
