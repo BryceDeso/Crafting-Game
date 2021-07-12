@@ -44,11 +44,14 @@ public class InteractableFieldBehavior : MonoBehaviour
 
         if (_currentInteraction)
         {
+            canInteract = false;
             ore = null;
             groundEnemy = null;
             airEnemy = null;
             weapon = null;
             pickaxe = null;
+            canFight = false;
+            canCraft = false;
             _currentInteraction = null;
         }
 
