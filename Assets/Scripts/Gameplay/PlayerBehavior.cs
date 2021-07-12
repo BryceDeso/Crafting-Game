@@ -6,8 +6,7 @@ public class PlayerBehavior : MonoBehaviour
 {
     [SerializeField]
     private float _health;
-    [SerializeField]
-    private float _currentHealth;
+    public float _currentHealth;
     [SerializeField]
     private float _armor;
     [SerializeField]
@@ -18,9 +17,9 @@ public class PlayerBehavior : MonoBehaviour
     public GameObject _chestplate;
     public GameObject _leggings;
     public GameObject _boots;
-    public GameObject _currentWeapon;
     public WeaponBehavior _weapon;
     public PickaxeBehavior _pickaxe;
+
     [SerializeField]
     private float _pickaxeDamage;
     [SerializeField]
