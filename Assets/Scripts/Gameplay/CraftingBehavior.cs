@@ -41,9 +41,8 @@ public class CraftingBehavior : MonoBehaviour
                     Instantiate(_ironSword, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
                 }
             }
-            if (_player._ironHeld >= 5 && _player._oakWoodHeld >= 3)
+            if (_player._goldHeld >= 5 && _player._oakWoodHeld >= 3)
             {
-
                 if (Input.GetButtonDown("Fire2"))
                 {
                     _player._goldHeld -= 5;

@@ -42,6 +42,16 @@ public class InteractableFieldBehavior : MonoBehaviour
 
         Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * range, Color.white);
 
+        if (_currentInteraction)
+        {
+            ore = null;
+            groundEnemy = null;
+            airEnemy = null;
+            weapon = null;
+            pickaxe = null;
+            _currentInteraction = null;
+        }
+
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
         {
             if(hit.transform.CompareTag("IronOre"))
@@ -63,6 +73,7 @@ public class InteractableFieldBehavior : MonoBehaviour
                 canInteract = true;
                 airEnemy = hit.transform.GetComponent<AirEnemyAIBehavior>();
                 _currentInteraction = hit.transform.gameObject;
+
             }
             else if(hit.transform.CompareTag("CraftingTable"))
             {

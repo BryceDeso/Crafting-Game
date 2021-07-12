@@ -27,6 +27,11 @@ public class PlayerBehavior : MonoBehaviour
     private float _weaponDamage;
 
     [SerializeField]
+    private bool _canEquipWeapon;
+    [SerializeField]
+    private bool _canEquipPickaxe;
+
+    [SerializeField]
     private GameObject _weaponAnchor;
     [SerializeField]
     private GameObject _pickaxeAnchor;
@@ -46,8 +51,8 @@ public class PlayerBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _weapon = null;
-        _pickaxe = null;
+        _canEquipPickaxe = true;
+        _canEquipWeapon = true;
         _currentHealth = _health;
     }
 
@@ -60,6 +65,7 @@ public class PlayerBehavior : MonoBehaviour
     private void PlayerActions()
     {
         TakeDamage();
+        UnEquipTool();
         Interact();
         UpdateStats();
     }
@@ -122,23 +128,49 @@ public class PlayerBehavior : MonoBehaviour
             _interactionField.groundEnemy.health -= _weapon.weaponDamage;
             Debug.Log("Hit ground enemy");
         }
-        if (Input.GetButtonDown("Fire1") && _interactionField.weapon)
+        if(_canEquipWeapon)
         {
-            _weapon = _interactionField.weapon;
-            Debug.Log("Equipped " + _interactionField.weapon);
-            _weapon.equipped = true;
-            _weapon.transform.rotation = _weaponAnchor.transform.rotation;
-            _weapon.transform.position = _weaponAnchor.transform.position;
-            _weapon.gameObject.transform.parent = _weaponAnchor.transform;
+            if (Input.GetButtonDown("Fire1") && _interactionField.weapon)
+            {
+                _weapon = _interactionField.weapon;
+                Debug.Log("Equipped " + _interactionField.weapon);
+                _weapon.equipped = true;
+                _weapon.transform.rotation = _weaponAnchor.transform.rotation;
+                _weapon.transform.position = _weaponAnchor.transform.position;
+                _weapon.gameObject.transform.parent = _weaponAnchor.transform;
+                _canEquipWeapon = false;
+            }
         }
-        if (Input.GetButtonDown("Fire1") && _interactionField.pickaxe)
+        if(_canEquipPickaxe)
         {
-            _pickaxe = _interactionField.pickaxe;
-            Debug.Log("Equipped " + _interactionField.weapon);
-            _pickaxe.equipped = true;
-            _pickaxe.transform.rotation = _pickaxeAnchor.transform.rotation;
-            _pickaxe.transform.position = _pickaxeAnchor.transform.position;
-            _pickaxe.gameObject.transform.parent = _pickaxeAnchor.transform;
+            if (Input.GetButtonDown("Fire1") && _interactionField.pickaxe)
+            {
+                _pickaxe = _interactionField.pickaxe;
+                Debug.Log("Equipped " + _interactionField.weapon);
+                _pickaxe.equipped = true;
+                _pickaxe.transform.rotation = _pickaxeAnchor.transform.rotation;
+                _pickaxe.transform.position = _pickaxeAnchor.transform.position;
+                _pickaxe.gameObject.transform.parent = _pickaxeAnchor.transform;
+                _canEquipPickaxe = false;
+            }
+        }
+    }
+
+    private void UnEquipTool()
+    {
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            _pickaxe.transform.parent = null;
+            _pickaxe.equipped = false;
+            _canEquipPickaxe = true;
+            _pickaxe = null;
+        }
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            _weapon.transform.parent = null;
+            _weapon.equipped = false;
+            _canEquipWeapon = true;
+            _weapon = null;
         }
     }
 

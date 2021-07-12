@@ -21,5 +21,10 @@ public class WeaponBehavior : MonoBehaviour
             gameObject.GetComponent<Rigidbody>().useGravity = false;
             gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         }
+        else if (equipped == false)
+        {
+            gameObject.GetComponent<Rigidbody>().useGravity = true;
+            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        }
     }
 }
