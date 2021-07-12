@@ -160,6 +160,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Q))
         {
+            _pickaxe.miningDamage = 0;
             _pickaxe.transform.parent = null;
             _pickaxe.equipped = false;
             _canEquipPickaxe = true;

@@ -139,9 +139,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 0}
   _itemSpawn: {fileID: 8489255541491468430}
-  _ironSword: {fileID: 409605080877216014, guid: 998cc683bb08a99408eed01ded087e70,
+  _ironSword: {fileID: 2439914633159769210, guid: 998cc683bb08a99408eed01ded087e70,
     type: 3}
-  _ironPickaxe: {fileID: 210164900307684518, guid: cab4cedee0477c849981ccf6b79720ae,
+  _ironPickaxe: {fileID: 7423028485204839436, guid: cab4cedee0477c849981ccf6b79720ae,
     type: 3}
-  _goldPickaxe: {fileID: 1258879696563157218, guid: 6a4794b2754c69e48aae406ce633a5b0,
+  _goldPickaxe: {fileID: 5544724281647059049, guid: 6a4794b2754c69e48aae406ce633a5b0,
     type: 3}
