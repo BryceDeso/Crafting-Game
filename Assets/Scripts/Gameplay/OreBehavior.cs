@@ -12,12 +12,11 @@ public class OreBehavior : MonoBehaviour
     public bool canCollect = true;
     public float _maxTime;
     public float _timeLeft;
-    private float _timeInterval;
 
     private void Start()
     {
         canCollect = true;
-        _timeInterval = _maxTime;
+        _timeLeft = _maxTime;
         currentHealth = maxHealth;
         mesh = gameObject.GetComponent<MeshRenderer>();
     }

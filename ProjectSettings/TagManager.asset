@@ -8,6 +8,9 @@ TagManager:
   - InteractionField
   - GroundEnemy
   - WanderPoint
+  - CraftingTable
+  - Weapon
+  - Pickaxe
   layers:
   - Default
   - TransparentFX

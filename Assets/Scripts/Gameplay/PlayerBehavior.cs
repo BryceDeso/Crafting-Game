@@ -13,14 +13,32 @@ public class PlayerBehavior : MonoBehaviour
     [SerializeField]
     private bool canBeHit = true;
 
+
+    public GameObject _helmet;
+    public GameObject _chestplate;
+    public GameObject _leggings;
+    public GameObject _boots;
+    public GameObject _currentWeapon;
+    public WeaponBehavior _weapon;
+    public PickaxeBehavior _pickaxe;
+    [SerializeField]
+    private float _pickaxeDamage;
+    [SerializeField]
+    private float _weaponDamage;
+
+    [SerializeField]
+    private GameObject _weaponAnchor;
+    [SerializeField]
+    private GameObject _pickaxeAnchor;
+
     [SerializeField]
     private PlayerHitBoxBehavior _hitbox;
 
-    [SerializeField]
-    private InteractableFieldBehavior _interactionField;
+    public InteractableFieldBehavior _interactionField;
 
-    [SerializeField]
-    private float _ironHeld;
+    public float _ironHeld;
+    public float _goldHeld;
+    public float _oakWoodHeld;
 
     public float _invincibleTime;
     public float _timeLeft;
@@ -28,6 +46,8 @@ public class PlayerBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _weapon = null;
+        _pickaxe = null;
         _currentHealth = _health;
     }
 
@@ -40,6 +60,8 @@ public class PlayerBehavior : MonoBehaviour
     private void PlayerActions()
     {
         TakeDamage();
+        Interact();
+        UpdateStats();
     }
 
     private void TakeDamage()
@@ -61,6 +83,62 @@ public class PlayerBehavior : MonoBehaviour
         if (_currentHealth <= 0)
         {
             _currentHealth = 0;
+        }
+    }
+
+    private void UpdateStats()
+    {
+        if(_pickaxe)
+        {
+            _pickaxeDamage = _pickaxe.miningDamage;
+        }
+        if(_weapon)
+        { 
+            _weaponDamage = _weapon.weaponDamage;
+        }
+    }
+
+    private void Interact()
+    {
+        if (_interactionField.ore)
+        {
+            if (Input.GetButtonDown("Fire1") && _interactionField.ore.canCollect == true)
+            {
+                if (_pickaxe.miningDamage >= _interactionField.ore.currentHealth)
+                {
+                    _ironHeld += _interactionField.ore.currentHealth;
+                }
+                else
+                {
+                    _ironHeld += _pickaxe.miningDamage;
+                }
+
+                _interactionField.ore.currentHealth -= _pickaxe.miningDamage;
+                Debug.Log("Hit ore");
+            }
+        }
+        if (Input.GetButtonDown("Fire1") && _interactionField.groundEnemy)
+        {
+            _interactionField.groundEnemy.health -= _weapon.weaponDamage;
+            Debug.Log("Hit ground enemy");
+        }
+        if (Input.GetButtonDown("Fire1") && _interactionField.weapon)
+        {
+            _weapon = _interactionField.weapon;
+            Debug.Log("Equipped " + _interactionField.weapon);
+            _weapon.equipped = true;
+            _weapon.transform.rotation = _weaponAnchor.transform.rotation;
+            _weapon.transform.position = _weaponAnchor.transform.position;
+            _weapon.gameObject.transform.parent = _weaponAnchor.transform;
+        }
+        if (Input.GetButtonDown("Fire1") && _interactionField.pickaxe)
+        {
+            _pickaxe = _interactionField.pickaxe;
+            Debug.Log("Equipped " + _interactionField.weapon);
+            _pickaxe.equipped = true;
+            _pickaxe.transform.rotation = _pickaxeAnchor.transform.rotation;
+            _pickaxe.transform.position = _pickaxeAnchor.transform.position;
+            _pickaxe.gameObject.transform.parent = _pickaxeAnchor.transform;
         }
     }
 

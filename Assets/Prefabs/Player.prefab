@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &806138497725240970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8617677963384952592}
+  m_Layer: 0
+  m_Name: PickaxeAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8617677963384952592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806138497725240970}
+  m_LocalRotation: {x: 0.27059805, y: -0.27059805, z: 0.6532815, w: 0.6532815}
+  m_LocalPosition: {x: -0.947, y: -0.183, z: 0.706}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4542705402534024750}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 90}
 --- !u!1 &4542705401282147236
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +251,7 @@ GameObject:
   - component: {fileID: 4542705402076568437}
   m_Layer: 0
   m_Name: PlayerHitBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,9 +343,15 @@ MonoBehaviour:
   canInteract: 0
   range: 3
   playerCamera: {fileID: 4542705401346047476}
+  _ironMined: 0
+  canCraft: 0
+  canFight: 0
   ore: {fileID: 0}
   groundEnemy: {fileID: 0}
   airEnemy: {fileID: 0}
+  weapon: {fileID: 0}
+  pickaxe: {fileID: 0}
+  _currentInteraction: {fileID: 0}
 --- !u!1 &4542705402534024738
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,6 +386,8 @@ Transform:
   - {fileID: 4542705401346047369}
   - {fileID: 4542705401695636321}
   - {fileID: 4542705402076568439}
+  - {fileID: 7525752826317649394}
+  - {fileID: 8617677963384952592}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -410,8 +448,50 @@ MonoBehaviour:
   _currentHealth: 0
   _armor: 1
   canBeHit: 1
+  _helmet: {fileID: 0}
+  _chestplate: {fileID: 0}
+  _leggings: {fileID: 0}
+  _boots: {fileID: 0}
+  _currentWeapon: {fileID: 0}
+  _weapon: {fileID: 0}
+  _pickaxe: {fileID: 0}
+  _pickaxeDamage: 0
+  _weaponDamage: 0
+  _weaponAnchor: {fileID: 8883041610270751665}
+  _pickaxeAnchor: {fileID: 806138497725240970}
   _hitbox: {fileID: 4542705402076568437}
   _interactionField: {fileID: 4542705402276686581}
-  _ironHeld: 0
+  _ironHeld: 5
+  _oakWoodHeld: 6
   _invincibleTime: 3
   _timeLeft: 0
+--- !u!1 &8883041610270751665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7525752826317649394}
+  m_Layer: 0
+  m_Name: WeaponAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7525752826317649394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8883041610270751665}
+  m_LocalRotation: {x: 0.27059805, y: -0.27059805, z: 0.6532815, w: 0.6532815}
+  m_LocalPosition: {x: 0.947, y: -0.183, z: 0.706}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4542705402534024750}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 90}
