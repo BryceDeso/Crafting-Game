@@ -11,6 +11,7 @@ TagManager:
   - CraftingTable
   - Weapon
   - Pickaxe
+  - GoldOre
   layers:
   - Default
   - TransparentFX
