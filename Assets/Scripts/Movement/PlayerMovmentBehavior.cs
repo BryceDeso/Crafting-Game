@@ -27,14 +27,19 @@ public class PlayerMovmentBehavior : MonoBehaviour
     [SerializeField]
     private LayerMask groundMask;
 
+    public bool canMove;
+
     private void Start()
     {
-
+        canMove = true;
     }
 
     private void Update()
     {
-        Movement();
+        if(canMove == true)
+        {
+            Movement();
+        }
     }
 
     private void Movement()

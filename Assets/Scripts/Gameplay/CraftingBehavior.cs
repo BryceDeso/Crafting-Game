@@ -19,37 +19,59 @@ public class CraftingBehavior : MonoBehaviour
     [SerializeField]
     private GameObject _goldPickaxe;
 
-    //[SerializeField]
-    //private GameObject ;
-
-    // Update is called once per frame
-    void Update()
+    public void CraftIronSword()
     {
-        Crafting();
+        if (_player._ironHeld >= 5 && _player._oakWoodHeld >= 3)
+        {
+            _player._ironHeld -= 5;
+            _player._oakWoodHeld -= 3;
+            Instantiate(_ironSword, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+        }
+        else
+        {
+            Debug.Log("Not Enough Materials");
+        }
     }
 
-    private void Crafting()
+    public void CraftSword()
     {
-        if(_player._interactionField.canCraft == true)
+        if (_player._ironHeld >= 5 && _player._oakWoodHeld >= 3)
         {
-            if (_player._ironHeld >= 5 && _player._oakWoodHeld >= 3)
-            {
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    _player._ironHeld -= 5;
-                    _player._oakWoodHeld -= 3;
-                    Instantiate(_ironSword, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
-                }
-            }
-            if (_player._goldHeld >= 5 && _player._oakWoodHeld >= 3)
-            {
-                if (Input.GetButtonDown("Fire2"))
-                {
-                    _player._goldHeld -= 5;
-                    _player._oakWoodHeld -= 3;
-                    Instantiate(_goldPickaxe, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
-                }
-            }
+            _player._ironHeld -= 5;
+            _player._oakWoodHeld -= 3;
+            Instantiate(_ironSword, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+        }
+        else
+        {
+            Debug.Log("Not Enough Materials");
+        }
+    }
+
+    public void CraftIronPickaxe()
+    {
+        if (_player._ironHeld >= 5 && _player._oakWoodHeld >= 3)
+        {
+            _player._ironHeld -= 5;
+            _player._oakWoodHeld -= 3;
+            Instantiate(_ironPickaxe, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+        }
+        else
+        {
+            Debug.Log("Not Enough Materials");
+        }
+    }
+
+    public void CraftGoldPickaxe(float goldNeeded, float oakWoodNeeded)
+    {
+        if (_player._goldHeld >= goldNeeded && _player._oakWoodHeld >= oakWoodNeeded)
+        {
+            _player._goldHeld -= 5;
+            _player._oakWoodHeld -= 3;
+            Instantiate(_goldPickaxe, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+        }
+        else
+        {
+            Debug.Log("Not Enough Materials");
         }
     }
 }

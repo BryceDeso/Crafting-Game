@@ -141,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   miningDamage: 1
   equipped: 0
+  _name: Gold Pickaxe
 --- !u!54 &5544724281647059054
 Rigidbody:
   m_ObjectHideFlags: 0

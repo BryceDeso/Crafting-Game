@@ -10,6 +10,14 @@ public class PickaxeBehavior : MonoBehaviour
 
     public bool equipped;
 
+    [SerializeField]
+    private string _name;
+
+    private void Start()
+    {
+        gameObject.name = _name;
+    }
+
     // Update is called once per frame
     void Update()
     {

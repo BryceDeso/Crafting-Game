@@ -157,7 +157,7 @@ public class PlayerBehavior : MonoBehaviour
 
     private void UnEquipTool()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(Input.GetKeyDown(KeyCode.Q) && _pickaxe)
         {
             _pickaxe.miningDamage = 0;
             _pickaxe.transform.parent = null;
@@ -165,7 +165,7 @@ public class PlayerBehavior : MonoBehaviour
             _canEquipPickaxe = true;
             _pickaxe = null;
         }
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.E) && _weapon)
         {
             _weapon.transform.parent = null;
             _weapon.equipped = false;

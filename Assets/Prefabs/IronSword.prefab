@@ -344,3 +344,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponDamage: 2
   equipped: 0
+  _name: Iron Sword

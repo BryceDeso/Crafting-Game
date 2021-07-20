@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class InventoryUIBehavior : MonoBehaviour
 {
     [SerializeField]
-    private PlayerBehavior _player;
+    private UIManagerBehavior _UIManager;
 
     [SerializeField]
     private GameObject inventoryUI;
@@ -52,10 +52,10 @@ public class InventoryUIBehavior : MonoBehaviour
 
     private void UpdateUI()
     {
-        iron.text = ("Iron held: " + _player._ironHeld);
-        oakWood.text = ("Oak Wood Held: " + _player._oakWoodHeld);
-        weapon.text = ("Weapon: " + _player._weapon);
-        pickaxe.text = ("Pickaxe: " + _player._pickaxe);
+        iron.text = ("Iron held: " + _UIManager._player._ironHeld);
+        oakWood.text = ("Oak Wood Held: " + _UIManager._player._oakWoodHeld);
+        weapon.text = ("Weapon: " + _UIManager._player._weapon);
+        pickaxe.text = ("Pickaxe: " + _UIManager._player._pickaxe);
     }
 
 }
