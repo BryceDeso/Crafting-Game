@@ -107,7 +107,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (_interactionField.ore)
         {
-            if (Input.GetButtonDown("Fire1") && _interactionField.ore.canCollect == true)
+            if (Input.GetButtonDown("Fire1") && (_interactionField.ore.canCollect == true && _interactionField.ore.CompareTag("IronOre")))
             {
                 if (_pickaxe.miningDamage >= _interactionField.ore.currentHealth)
                 {
@@ -121,12 +121,28 @@ public class PlayerBehavior : MonoBehaviour
                 _interactionField.ore.currentHealth -= _pickaxe.miningDamage;
                 Debug.Log("Hit ore");
             }
+            if (Input.GetButtonDown("Fire1") && (_interactionField.ore.canCollect == true && _interactionField.ore.CompareTag("GoldOre")))
+            {
+                if (_pickaxe.miningDamage >= _interactionField.ore.currentHealth)
+                {
+                    _goldHeld += _interactionField.ore.currentHealth;
+                }
+                else
+                {
+                    _goldHeld += _pickaxe.miningDamage;
+                }
+
+                _interactionField.ore.currentHealth -= _pickaxe.miningDamage;
+                Debug.Log("Hit ore");
+            }
         }
+
         if (Input.GetButtonDown("Fire1") && _interactionField.groundEnemy)
         {
             _interactionField.groundEnemy.health -= _weapon.weaponDamage;
             Debug.Log("Hit ground enemy");
         }
+
         if(_canEquipWeapon)
         {
             if (Input.GetButtonDown("Fire1") && _interactionField.weapon)
