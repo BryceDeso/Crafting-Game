@@ -36,6 +36,7 @@ public class CraftingUI : MonoBehaviour
             _craftingUI.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.lockState = CursorLockMode.Confined;
+            _UIManager._player.GetComponent<PlayerMovmentBehavior>().canMove = false;
         }
     }
 
@@ -43,6 +44,7 @@ public class CraftingUI : MonoBehaviour
     {
         _craftingUI.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+        _UIManager._player.GetComponent<PlayerMovmentBehavior>().canMove = true;
     }
 
     private void UpdateRequirements()

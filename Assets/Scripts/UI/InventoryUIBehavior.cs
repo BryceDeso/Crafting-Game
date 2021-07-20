@@ -57,8 +57,15 @@ public class InventoryUIBehavior : MonoBehaviour
         iron.text = ("Iron held: " + _UIManager._player._ironHeld);
         gold.text = ("Gold held: " + _UIManager._player._goldHeld);
         oakWood.text = ("Oak Wood Held: " + _UIManager._player._oakWoodHeld);
-        weapon.text = ("Weapon: " + _UIManager._player._weapon);
-        pickaxe.text = ("Pickaxe: " + _UIManager._player._pickaxe);
+        weapon.text = ("Weapon: none");
+        pickaxe.text = ("Pickaxe: none");
+        if (_UIManager._player._weapon)
+        {
+            weapon.text = ("Weapon: " + _UIManager._player._weapon._name);
+        }
+        if (_UIManager._player._pickaxe)
+        {
+            pickaxe.text = ("Pickaxe: " + _UIManager._player._pickaxe._name);
+        }
     }
-
 }

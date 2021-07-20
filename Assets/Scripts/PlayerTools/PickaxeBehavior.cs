@@ -10,8 +10,7 @@ public class PickaxeBehavior : MonoBehaviour
 
     public bool equipped;
 
-    [SerializeField]
-    private string _name;
+    public string _name;
 
     public float _oakWoodNeeded;
     public float _ironNeeded;

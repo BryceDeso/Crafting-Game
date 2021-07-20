@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7423028485104878634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.018, y: 0, z: 0}
-  m_LocalScale: {x: 1.1312305, y: -0.06180987, z: 0.06589422}
+  m_LocalScale: {x: 1.1312305, y: 0.06, z: 0.06589422}
   m_Children: []
   m_Father: {fileID: 7423028485204839434}
   m_RootOrder: 1
@@ -142,8 +142,8 @@ MonoBehaviour:
   miningDamage: 1
   equipped: 0
   _name: Iron Pickaxe
-  _oakWoodNeeded: 3
-  _ironNeeded: 5
+  _oakWoodNeeded: 4
+  _ironNeeded: 3
   _goldNeeded: 0
 --- !u!54 &7423028485204839435
 Rigidbody:

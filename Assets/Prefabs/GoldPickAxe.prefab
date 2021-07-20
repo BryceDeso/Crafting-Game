@@ -139,12 +139,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5029e72deec3b641aea2ffd21a6c20d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  miningDamage: 1
+  miningDamage: 6
   equipped: 0
   _name: Gold Pickaxe
-  _oakWoodNeeded: 3
+  _oakWoodNeeded: 4
   _ironNeeded: 0
-  _goldNeeded: 5
+  _goldNeeded: 6
 --- !u!54 &5544724281647059054
 Rigidbody:
   m_ObjectHideFlags: 0

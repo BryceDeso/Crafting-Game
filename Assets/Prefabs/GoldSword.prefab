@@ -63,9 +63,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ee5b005ea1f0c4e8bbd02f194bc9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponDamage: 2
+  weaponDamage: 5
   equipped: 1
-  _name: Iron Sword
+  _name: Gold Sword
   _oakWoodNeeded: 3
   _ironNeeded: 0
   _goldNeeded: 5
