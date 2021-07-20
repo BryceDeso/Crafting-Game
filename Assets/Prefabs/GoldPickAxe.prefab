@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 5544724281647059048}
   - component: {fileID: 5544724281647059054}
   m_Layer: 0
-  m_Name: GoldPickaxe
+  m_Name: GoldPickAxe
   m_TagString: Pickaxe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,6 +142,9 @@ MonoBehaviour:
   miningDamage: 1
   equipped: 0
   _name: Gold Pickaxe
+  _oakWoodNeeded: 3
+  _ironNeeded: 0
+  _goldNeeded: 5
 --- !u!54 &5544724281647059054
 Rigidbody:
   m_ObjectHideFlags: 0

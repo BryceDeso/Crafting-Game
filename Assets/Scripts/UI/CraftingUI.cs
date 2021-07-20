@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CraftingUI : MonoBehaviour
 {
@@ -10,11 +11,22 @@ public class CraftingUI : MonoBehaviour
     [SerializeField]
     private UIManagerBehavior _UIManager;
 
-    private 
+    [SerializeField]
+    private Text _ironSwordReqirements;
+
+    [SerializeField]
+    private Text _goldSwordReqirements;
+
+    [SerializeField]
+    private Text _ironPickaxeReqirements;
+
+    [SerializeField]
+    private Text _goldPickaxeReqirements;
 
     private void Update()
     {
         Crafting();
+        UpdateRequirements();
     }
 
     public void Crafting()
@@ -31,5 +43,20 @@ public class CraftingUI : MonoBehaviour
     {
         _craftingUI.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void UpdateRequirements()
+    {
+        _ironPickaxeReqirements.text = ("Iron:" + _UIManager._craftingTable._ironPickaxe.GetComponent<PickaxeBehavior>()._ironNeeded + 
+            "| Oak Wood:" + _UIManager._craftingTable._ironPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
+
+        _goldPickaxeReqirements.text = ("Gold:" + _UIManager._craftingTable._goldPickaxe.GetComponent<PickaxeBehavior>()._goldNeeded + 
+            "| Oak Wood:" + _UIManager._craftingTable._goldPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
+
+        _ironSwordReqirements.text = ("Iron:" + _UIManager._craftingTable._ironSword.GetComponent<WeaponBehavior>()._ironNeeded + 
+            "| Oak Wood:" + _UIManager._craftingTable._ironSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
+
+        _goldSwordReqirements.text = ("Gold:" + _UIManager._craftingTable._goldSword.GetComponent<WeaponBehavior>()._goldNeeded +
+            "| Oak Wood:" + _UIManager._craftingTable._goldSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
     }
 }

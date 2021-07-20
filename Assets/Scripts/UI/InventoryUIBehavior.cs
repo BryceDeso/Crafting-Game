@@ -14,6 +14,8 @@ public class InventoryUIBehavior : MonoBehaviour
     [SerializeField]
     private Text iron;
     [SerializeField]
+    private Text gold;
+    [SerializeField]
     private Text oakWood;
     [SerializeField]
     private Text weapon;
@@ -53,6 +55,7 @@ public class InventoryUIBehavior : MonoBehaviour
     private void UpdateUI()
     {
         iron.text = ("Iron held: " + _UIManager._player._ironHeld);
+        gold.text = ("Gold held: " + _UIManager._player._goldHeld);
         oakWood.text = ("Oak Wood Held: " + _UIManager._player._oakWoodHeld);
         weapon.text = ("Weapon: " + _UIManager._player._weapon);
         pickaxe.text = ("Pickaxe: " + _UIManager._player._pickaxe);

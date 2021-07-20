@@ -71,13 +71,12 @@ public class InteractableFieldBehavior : MonoBehaviour
                 Debug.Log("Looking at ground enemy");
                 _currentInteraction = hit.transform.gameObject;
             }
-            else if(hit.transform.CompareTag("AirEnemy"))
-            {
-                canInteract = true;
-                airEnemy = hit.transform.GetComponent<AirEnemyAIBehavior>();
-                _currentInteraction = hit.transform.gameObject;
-
-            }
+            //else if(hit.transform.CompareTag("AirEnemy"))
+            //{
+            //    canInteract = true;
+            //    airEnemy = hit.transform.GetComponent<AirEnemyAIBehavior>();
+            //    _currentInteraction = hit.transform.gameObject;
+            //}
             else if(hit.transform.CompareTag("CraftingTable"))
             {
                 canCraft = true;

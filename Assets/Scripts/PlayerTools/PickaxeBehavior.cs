@@ -13,6 +13,10 @@ public class PickaxeBehavior : MonoBehaviour
     [SerializeField]
     private string _name;
 
+    public float _oakWoodNeeded;
+    public float _ironNeeded;
+    public float _goldNeeded;
+
     private void Start()
     {
         gameObject.name = _name;
