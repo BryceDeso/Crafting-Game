@@ -351,6 +351,7 @@ MonoBehaviour:
   airEnemy: {fileID: 0}
   weapon: {fileID: 0}
   pickaxe: {fileID: 0}
+  armor: {fileID: 0}
   _currentInteraction: {fileID: 0}
 --- !u!1 &4542705402534024738
 GameObject:
@@ -388,6 +389,7 @@ Transform:
   - {fileID: 4542705402076568439}
   - {fileID: 7525752826317649394}
   - {fileID: 8617677963384952592}
+  - {fileID: 2332212605594547070}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -432,6 +434,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
+  canMove: 0
 --- !u!114 &4542705402534024739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,15 +455,19 @@ MonoBehaviour:
   _chestplate: {fileID: 0}
   _leggings: {fileID: 0}
   _boots: {fileID: 0}
-  _currentWeapon: {fileID: 0}
   _weapon: {fileID: 0}
   _pickaxe: {fileID: 0}
   _pickaxeDamage: 0
   _weaponDamage: 0
   _canEquipWeapon: 0
   _canEquipPickaxe: 0
+  _canEquipHelmet: 0
+  _canEquipChestplate: 0
+  _canEquipLeggings: 0
+  _canEquipBoots: 0
   _weaponAnchor: {fileID: 8883041610270751665}
   _pickaxeAnchor: {fileID: 806138497725240970}
+  _armorAnchor: {fileID: 7884708219150029989}
   _hitbox: {fileID: 4542705402076568437}
   _interactionField: {fileID: 4542705402276686581}
   _ironHeld: 5
@@ -468,6 +475,36 @@ MonoBehaviour:
   _oakWoodHeld: 6
   _invincibleTime: 3
   _timeLeft: 0
+--- !u!1 &7884708219150029989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2332212605594547070}
+  m_Layer: 0
+  m_Name: ArmorAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2332212605594547070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7884708219150029989}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.603, z: 1.33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4542705402534024750}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &8883041610270751665
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,6 +27,8 @@ public class InteractableFieldBehavior : MonoBehaviour
     public WeaponBehavior weapon;
     [HideInInspector]
     public PickaxeBehavior pickaxe;
+    [HideInInspector]
+    public ArmorBehavior armor;
 
     [SerializeField]
     private GameObject _currentInteraction;
@@ -50,6 +52,7 @@ public class InteractableFieldBehavior : MonoBehaviour
             airEnemy = null;
             weapon = null;
             pickaxe = null;
+            armor = null;
             canFight = false;
             canCraft = false;
             _currentInteraction = null;
@@ -87,7 +90,7 @@ public class InteractableFieldBehavior : MonoBehaviour
             else if(hit.transform.CompareTag("CraftingTable"))
             {
                 canCraft = true;
-                Debug.Log("Looking at carfting bench");
+                Debug.Log("Looking at crafting bench");
                 _currentInteraction = hit.transform.gameObject;
             }
             else if(hit.transform.CompareTag("Weapon"))
@@ -100,6 +103,12 @@ public class InteractableFieldBehavior : MonoBehaviour
             {
                 canInteract = true;
                 pickaxe = hit.transform.GetComponent<PickaxeBehavior>();
+                _currentInteraction = hit.transform.gameObject;
+            }
+            else if (hit.transform.CompareTag("Armor"))
+            {
+                canInteract = true;
+                armor = hit.transform.GetComponent<ArmorBehavior>();
                 _currentInteraction = hit.transform.gameObject;
             }
         }

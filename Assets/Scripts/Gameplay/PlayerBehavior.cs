@@ -12,11 +12,10 @@ public class PlayerBehavior : MonoBehaviour
     [SerializeField]
     private bool canBeHit = true;
 
-
-    public GameObject _helmet;
-    public GameObject _chestplate;
-    public GameObject _leggings;
-    public GameObject _boots;
+    public ArmorBehavior _helmet;
+    public ArmorBehavior _chestplate;
+    public ArmorBehavior _leggings;
+    public ArmorBehavior _boots;
     public WeaponBehavior _weapon;
     public PickaxeBehavior _pickaxe;
 
@@ -29,11 +28,21 @@ public class PlayerBehavior : MonoBehaviour
     private bool _canEquipWeapon;
     [SerializeField]
     private bool _canEquipPickaxe;
+    [SerializeField]
+    private bool _canEquipHelmet;
+    [SerializeField]
+    private bool _canEquipChestplate;
+    [SerializeField]
+    private bool _canEquipLeggings;
+    [SerializeField]
+    private bool _canEquipBoots;
 
     [SerializeField]
     private GameObject _weaponAnchor;
     [SerializeField]
     private GameObject _pickaxeAnchor;
+    [SerializeField]
+    private GameObject _armorAnchor;
 
     [SerializeField]
     private PlayerHitBoxBehavior _hitbox;
@@ -52,6 +61,10 @@ public class PlayerBehavior : MonoBehaviour
     {
         _canEquipPickaxe = true;
         _canEquipWeapon = true;
+        _canEquipHelmet = true;
+        _canEquipChestplate = true;
+        _canEquipLeggings = true;
+        _canEquipBoots = true;
         _currentHealth = _health;
     }
 
@@ -64,16 +77,16 @@ public class PlayerBehavior : MonoBehaviour
     private void PlayerActions()
     {
         TakeDamage();
-        UnEquipTool();
+        UnEquipItems();
         Interact();
         UpdateStats();
     }
 
     private void TakeDamage()
     {
-        if(_hitbox.isHit == true && canBeHit == true)
+        if (_hitbox.isHit == true && canBeHit == true)
         {
-            if(_hitbox.enemy.CompareTag("GroundEnemy"))
+            if (_hitbox.enemy.CompareTag("GroundEnemy"))
             {
                 float damageTaken = _hitbox.enemy.GetComponent<GroundEnemyAIBehavior>().damage - _armor;
                 _currentHealth -= damageTaken;
@@ -81,7 +94,7 @@ public class PlayerBehavior : MonoBehaviour
             }
         }
 
-        if(canBeHit == false)
+        if (canBeHit == false)
         {
             Timer();
         }
@@ -93,18 +106,42 @@ public class PlayerBehavior : MonoBehaviour
 
     private void UpdateStats()
     {
-        if(_pickaxe)
+        float helmetArmor = 0;
+        float chestplateArmor = 0;
+        float leggingArmor = 0;
+        float bootArmor = 0;
+
+        if (_pickaxe)
         {
             _pickaxeDamage = _pickaxe.miningDamage;
         }
-        if(_weapon)
-        { 
+        if (_weapon)
+        {
             _weaponDamage = _weapon.weaponDamage;
         }
+        if(_helmet)
+        {
+            helmetArmor = _helmet.armorPoints;
+        }
+        if (_chestplate)
+        {
+            chestplateArmor = _chestplate.armorPoints;
+        }
+        if (_leggings)
+        {
+            leggingArmor = _leggings.armorPoints;
+        }
+        if (_boots)
+        {
+            bootArmor = _boots.armorPoints;
+        }
+
+        _armor = helmetArmor + chestplateArmor + leggingArmor + bootArmor;
     }
 
     private void Interact()
     {
+        //Mining
         if (_interactionField.ore)
         {
             if (Input.GetButtonDown("Fire1") && (_interactionField.ore.canCollect == true && _interactionField.ore.CompareTag("IronOre")))
@@ -137,13 +174,15 @@ public class PlayerBehavior : MonoBehaviour
             }
         }
 
+        //Fighting
         if (Input.GetButtonDown("Fire1") && _interactionField.groundEnemy)
         {
             _interactionField.groundEnemy.health -= _weapon.weaponDamage;
             Debug.Log("Hit ground enemy");
         }
 
-        if(_canEquipWeapon)
+        //Tool eqipping
+        if (_canEquipWeapon)
         {
             if (Input.GetButtonDown("Fire1") && _interactionField.weapon)
             {
@@ -156,12 +195,12 @@ public class PlayerBehavior : MonoBehaviour
                 _canEquipWeapon = false;
             }
         }
-        if(_canEquipPickaxe)
+        if (_canEquipPickaxe)
         {
             if (Input.GetButtonDown("Fire1") && _interactionField.pickaxe)
             {
                 _pickaxe = _interactionField.pickaxe;
-                Debug.Log("Equipped " + _interactionField.weapon);
+                Debug.Log("Equipped " + _interactionField.pickaxe);
                 _pickaxe.equipped = true;
                 _pickaxe.transform.rotation = _pickaxeAnchor.transform.rotation;
                 _pickaxe.transform.position = _pickaxeAnchor.transform.position;
@@ -169,9 +208,66 @@ public class PlayerBehavior : MonoBehaviour
                 _canEquipPickaxe = false;
             }
         }
+
+        //Armor equipping
+        if(_interactionField.armor)
+        {
+            if (_canEquipHelmet)
+            {
+                if (Input.GetButtonDown("Fire1") && _interactionField.armor._helmet)
+                {
+                    _helmet = _interactionField.armor;
+                    Debug.Log("Equipped " + _interactionField.armor);
+                    _helmet.equipped = true;
+                    _helmet.transform.rotation = _armorAnchor.transform.rotation;
+                    _helmet.transform.position = _armorAnchor.transform.position;
+                    _helmet.gameObject.transform.parent = _armorAnchor.transform;
+                    _canEquipHelmet = false;
+                }
+            }
+            if (_canEquipChestplate)
+            {
+                if (Input.GetButtonDown("Fire1") && _interactionField.armor._chestplate)
+                {
+                    _chestplate = _interactionField.armor;
+                    Debug.Log("Equipped " + _interactionField.armor);
+                    _chestplate.equipped = true;
+                    _chestplate.transform.rotation = _armorAnchor.transform.rotation;
+                    _chestplate.transform.position = _armorAnchor.transform.position;
+                    _chestplate.gameObject.transform.parent = _armorAnchor.transform;
+                    _canEquipChestplate = false;
+                }
+            }
+            if (_canEquipLeggings)
+            {
+                if (Input.GetButtonDown("Fire1") && _interactionField.armor._leggings)
+                {
+                    _leggings = _interactionField.armor;
+                    Debug.Log("Equipped " + _interactionField.armor);
+                    _leggings.equipped = true;
+                    _leggings.transform.rotation = _armorAnchor.transform.rotation;
+                    _leggings.transform.position = _armorAnchor.transform.position;
+                    _leggings.gameObject.transform.parent = _armorAnchor.transform;
+                    _canEquipLeggings = false;
+                }
+            }
+            if (_canEquipBoots)
+            {
+                if (Input.GetButtonDown("Fire1") && _interactionField.armor._boots)
+                {
+                    _boots = _interactionField.armor;
+                    Debug.Log("Equipped " + _interactionField.armor);
+                    _boots.equipped = true;
+                    _boots.transform.rotation = _armorAnchor.transform.rotation;
+                    _boots.transform.position = _armorAnchor.transform.position;
+                    _boots.gameObject.transform.parent = _armorAnchor.transform;
+                    _canEquipBoots = false;
+                }
+            }
+        }
     }
 
-    private void UnEquipTool()
+    private void UnEquipItems()
     {
         if(Input.GetKeyDown(KeyCode.Q) && _pickaxe)
         {

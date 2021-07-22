@@ -12,6 +12,7 @@ TagManager:
   - Weapon
   - Pickaxe
   - GoldOre
+  - Armor
   layers:
   - Default
   - TransparentFX

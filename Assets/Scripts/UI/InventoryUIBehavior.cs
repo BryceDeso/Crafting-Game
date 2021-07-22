@@ -12,15 +12,24 @@ public class InventoryUIBehavior : MonoBehaviour
     private GameObject inventoryUI;
 
     [SerializeField]
-    private Text iron;
+    private Text _iron;
     [SerializeField]
-    private Text gold;
+    private Text _gold;
     [SerializeField]
-    private Text oakWood;
+    private Text _oakWood;
     [SerializeField]
-    private Text weapon;
+    private Text _weapon;
     [SerializeField]
-    private Text pickaxe;
+    private Text _pickaxe;
+    [SerializeField]
+    private Text _helmet;
+    [SerializeField]
+    private Text _chestplate;
+    [SerializeField]
+    private Text _leggings;
+    [SerializeField]
+    private Text _boots;
+
 
     private bool inventoryOpen;
 
@@ -54,18 +63,38 @@ public class InventoryUIBehavior : MonoBehaviour
 
     private void UpdateUI()
     {
-        iron.text = ("Iron held: " + _UIManager._player._ironHeld);
-        gold.text = ("Gold held: " + _UIManager._player._goldHeld);
-        oakWood.text = ("Oak Wood Held: " + _UIManager._player._oakWoodHeld);
-        weapon.text = ("Weapon: none");
-        pickaxe.text = ("Pickaxe: none");
+        _iron.text = (_UIManager._player._ironHeld + "");
+        _gold.text = (_UIManager._player._goldHeld + "");
+        _oakWood.text = (_UIManager._player._oakWoodHeld + "");
+        _weapon.text = ("none");
+        _pickaxe.text = ("none");
+        _helmet.text = ("none");
+        _chestplate.text = ("none");
+        _leggings.text = ("none");
+        _boots.text = ("none");
         if (_UIManager._player._weapon)
         {
-            weapon.text = ("Weapon: " + _UIManager._player._weapon._name);
+            _weapon.text = (_UIManager._player._weapon._name + "");
         }
         if (_UIManager._player._pickaxe)
         {
-            pickaxe.text = ("Pickaxe: " + _UIManager._player._pickaxe._name);
+            _pickaxe.text = (_UIManager._player._pickaxe._name + "");
+        }
+        if (_UIManager._player._helmet)
+        {
+            _weapon.text = (_UIManager._player._helmet._name + "");
+        }
+        if (_UIManager._player._chestplate)
+        {
+            _pickaxe.text = (_UIManager._player._chestplate._name + "");
+        }
+        if (_UIManager._player._leggings)
+        {
+            _weapon.text = (_UIManager._player._leggings._name + "");
+        }
+        if (_UIManager._player._boots)
+        {
+            _pickaxe.text = (_UIManager._player._boots._name + "");
         }
     }
 }
