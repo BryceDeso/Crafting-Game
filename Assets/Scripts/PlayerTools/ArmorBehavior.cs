@@ -10,6 +10,9 @@ public class ArmorBehavior : MonoBehaviour
 
     public string _name;
 
+    [SerializeField]
+    private GameObject _activeObject;
+
     public float _oakWoodNeeded;
     public float _ironNeeded;
     public float _goldNeeded;
@@ -34,11 +37,13 @@ public class ArmorBehavior : MonoBehaviour
     {
         if (equipped == true)
         {
+            _activeObject.SetActive(false);
             gameObject.GetComponent<Rigidbody>().useGravity = false;
             gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         }
         else if (equipped == false)
         {
+            _activeObject.SetActive(true);
             gameObject.GetComponent<Rigidbody>().useGravity = true;
             gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         }

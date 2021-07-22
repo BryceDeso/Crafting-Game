@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 4542705402534024750}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 90}
+--- !u!1 &3462546201288729505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1447451097663431069}
+  m_Layer: 0
+  m_Name: ItemDropPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1447451097663431069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3462546201288729505}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 1.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4542705402534024750}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4542705401282147236
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,6 +376,7 @@ MonoBehaviour:
   _ironMined: 0
   canCraft: 0
   canFight: 0
+  inInventory: 0
   ore: {fileID: 0}
   groundEnemy: {fileID: 0}
   airEnemy: {fileID: 0}
@@ -390,6 +421,7 @@ Transform:
   - {fileID: 7525752826317649394}
   - {fileID: 8617677963384952592}
   - {fileID: 2332212605594547070}
+  - {fileID: 1447451097663431069}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -468,6 +500,7 @@ MonoBehaviour:
   _weaponAnchor: {fileID: 8883041610270751665}
   _pickaxeAnchor: {fileID: 806138497725240970}
   _armorAnchor: {fileID: 7884708219150029989}
+  _itemDropAnchor: {fileID: 3462546201288729505}
   _hitbox: {fileID: 4542705402076568437}
   _interactionField: {fileID: 4542705402276686581}
   _ironHeld: 5
@@ -499,7 +532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7884708219150029989}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.603, z: 1.33}
+  m_LocalPosition: {x: 0, y: 0.431, z: -0.817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4542705402534024750}

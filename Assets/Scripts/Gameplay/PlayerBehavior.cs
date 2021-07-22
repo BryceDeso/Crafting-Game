@@ -7,8 +7,7 @@ public class PlayerBehavior : MonoBehaviour
     [SerializeField]
     private float _health;
     public float _currentHealth;
-    [SerializeField]
-    private float _armor;
+    public float _armor;
     [SerializeField]
     private bool canBeHit = true;
 
@@ -19,10 +18,8 @@ public class PlayerBehavior : MonoBehaviour
     public WeaponBehavior _weapon;
     public PickaxeBehavior _pickaxe;
 
-    [SerializeField]
-    private float _pickaxeDamage;
-    [SerializeField]
-    private float _weaponDamage;
+    public float _pickaxeDamage;
+    public float _weaponDamage;
 
     [SerializeField]
     private bool _canEquipWeapon;
@@ -43,6 +40,8 @@ public class PlayerBehavior : MonoBehaviour
     private GameObject _pickaxeAnchor;
     [SerializeField]
     private GameObject _armorAnchor;
+    [SerializeField]
+    private GameObject _itemDropAnchor;
 
     [SerializeField]
     private PlayerHitBoxBehavior _hitbox;
@@ -77,7 +76,7 @@ public class PlayerBehavior : MonoBehaviour
     private void PlayerActions()
     {
         TakeDamage();
-        UnEquipItems();
+        UnEquipTools();
         Interact();
         UpdateStats();
     }
@@ -115,22 +114,35 @@ public class PlayerBehavior : MonoBehaviour
         {
             _pickaxeDamage = _pickaxe.miningDamage;
         }
+        else
+        {
+            _pickaxeDamage = 0;
+        }
+
         if (_weapon)
         {
             _weaponDamage = _weapon.weaponDamage;
         }
+        else
+        {
+            _weaponDamage = 0;
+        }
+
         if(_helmet)
         {
             helmetArmor = _helmet.armorPoints;
         }
+
         if (_chestplate)
         {
             chestplateArmor = _chestplate.armorPoints;
         }
+
         if (_leggings)
         {
             leggingArmor = _leggings.armorPoints;
         }
+
         if (_boots)
         {
             bootArmor = _boots.armorPoints;
@@ -267,7 +279,7 @@ public class PlayerBehavior : MonoBehaviour
         }
     }
 
-    private void UnEquipItems()
+    private void UnEquipTools()
     {
         if(Input.GetKeyDown(KeyCode.Q) && _pickaxe)
         {
@@ -284,6 +296,42 @@ public class PlayerBehavior : MonoBehaviour
             _canEquipWeapon = true;
             _weapon = null;
         }
+    }
+
+    public void UnEquipHelmet()
+    {
+        _helmet.transform.position = _itemDropAnchor.transform.position;
+        _helmet.transform.parent = null;
+        _helmet.equipped = false;
+        _canEquipHelmet = true;
+        _helmet = null;
+    }
+
+    public void UnEquipChestplate()
+    {
+        _chestplate.transform.position = _itemDropAnchor.transform.position;
+        _chestplate.transform.parent = null;
+        _chestplate.equipped = false;
+        _canEquipChestplate = true;
+        _chestplate = null;
+    }
+
+    public void UnEquipLeggings()
+    {
+        _leggings.transform.position = _itemDropAnchor.transform.position;
+        _leggings.transform.parent = null;
+        _leggings.equipped = false;
+        _canEquipLeggings = true;
+        _leggings = null;
+    }
+
+    public void UnEquipBoots()
+    {
+        _boots.transform.position = _itemDropAnchor.transform.position;
+        _boots.transform.parent = null;
+        _boots.equipped = false;
+        _canEquipBoots = true;
+        _boots = null;
     }
 
     private void Timer()

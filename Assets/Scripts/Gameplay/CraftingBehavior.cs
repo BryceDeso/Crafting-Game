@@ -9,23 +9,31 @@ public class CraftingBehavior : MonoBehaviour
 
     public GameObject _itemSpawn;
 
-    public GameObject _ironSword;
+    public GameObject ironSword;
 
-    public GameObject _goldSword;
+    public GameObject ironPickaxe;
 
-    public GameObject _ironPickaxe;
+    public GameObject ironHelmet;
+
+    public GameObject ironChestplate;
+
+    public GameObject ironLeggings;
+
+    public GameObject ironBoots;
+
+    public GameObject goldSword;
     
-    public GameObject _goldPickaxe;
+    public GameObject goldPickaxe;
 
     //Sword crafting
 
     public void CraftIronSword()
     {
-        if (_player._ironHeld >= _ironSword.GetComponent<WeaponBehavior>()._ironNeeded && _player._oakWoodHeld >= _ironSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
+        if (_player._ironHeld >= ironSword.GetComponent<WeaponBehavior>()._ironNeeded && _player._oakWoodHeld >= ironSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
         {
-            _player._ironHeld -= _ironSword.GetComponent<WeaponBehavior>()._ironNeeded;
-            _player._oakWoodHeld -= _ironSword.GetComponent<WeaponBehavior>()._oakWoodNeeded;
-            Instantiate(_ironSword, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+            _player._ironHeld -= ironSword.GetComponent<WeaponBehavior>()._ironNeeded;
+            _player._oakWoodHeld -= ironSword.GetComponent<WeaponBehavior>()._oakWoodNeeded;
+            Instantiate(ironSword, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
         }
         else
         {
@@ -35,11 +43,11 @@ public class CraftingBehavior : MonoBehaviour
 
     public void CraftGoldSword()
     {
-        if (_player._goldHeld >= _goldSword.GetComponent<WeaponBehavior>()._goldNeeded && _player._oakWoodHeld >= _goldSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
+        if (_player._goldHeld >= goldSword.GetComponent<WeaponBehavior>()._goldNeeded && _player._oakWoodHeld >= goldSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
         {
-            _player._goldHeld -= _goldSword.GetComponent<WeaponBehavior>()._goldNeeded;
-            _player._oakWoodHeld -= _goldSword.GetComponent<WeaponBehavior>()._oakWoodNeeded;
-            Instantiate(_goldSword, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+            _player._goldHeld -= goldSword.GetComponent<WeaponBehavior>()._goldNeeded;
+            _player._oakWoodHeld -= goldSword.GetComponent<WeaponBehavior>()._oakWoodNeeded;
+            Instantiate(goldSword, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
         }
         else
         {
@@ -51,11 +59,11 @@ public class CraftingBehavior : MonoBehaviour
 
     public void CraftIronPickaxe()
     {
-        if (_player._ironHeld >= _ironPickaxe.GetComponent<PickaxeBehavior>()._ironNeeded && _player._oakWoodHeld >= _ironPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
+        if (_player._ironHeld >= ironPickaxe.GetComponent<PickaxeBehavior>()._ironNeeded && _player._oakWoodHeld >= ironPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
         {
-            _player._ironHeld -= _ironPickaxe.GetComponent<PickaxeBehavior>()._ironNeeded;
-            _player._oakWoodHeld -= _ironPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded;
-            Instantiate(_ironPickaxe, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+            _player._ironHeld -= ironPickaxe.GetComponent<PickaxeBehavior>()._ironNeeded;
+            _player._oakWoodHeld -= ironPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded;
+            Instantiate(ironPickaxe, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
         }
         else
         {
@@ -65,11 +73,65 @@ public class CraftingBehavior : MonoBehaviour
 
     public void CraftGoldPickaxe()
     {
-        if (_player._goldHeld >= _goldPickaxe.GetComponent<PickaxeBehavior>()._goldNeeded && _player._oakWoodHeld >= _goldPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
+        if (_player._goldHeld >= goldPickaxe.GetComponent<PickaxeBehavior>()._goldNeeded && _player._oakWoodHeld >= goldPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
         {
-            _player._goldHeld -= _goldPickaxe.GetComponent<PickaxeBehavior>()._goldNeeded;
-            _player._oakWoodHeld -= _goldPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded;
-            Instantiate(_goldPickaxe, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+            _player._goldHeld -= goldPickaxe.GetComponent<PickaxeBehavior>()._goldNeeded;
+            _player._oakWoodHeld -= goldPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded;
+            Instantiate(goldPickaxe, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+        }
+        else
+        {
+            Debug.Log("Not Enough Materials");
+        }
+    }
+
+    //Armor crafting
+
+    public void CraftIronHelmet()
+    {
+        if (_player._ironHeld >= ironHelmet.GetComponent<ArmorBehavior>()._ironNeeded)
+        {
+            _player._ironHeld -= ironHelmet.GetComponent<ArmorBehavior>()._ironNeeded;
+            Instantiate(ironHelmet, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+        }
+        else
+        {
+            Debug.Log("Not Enough Materials");
+        }
+    }
+
+    public void CraftIronChestplate()
+    {
+        if (_player._ironHeld >= ironChestplate.GetComponent<ArmorBehavior>()._ironNeeded)
+        {
+            _player._ironHeld -= ironChestplate.GetComponent<ArmorBehavior>()._ironNeeded;
+            Instantiate(ironChestplate, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+        }
+        else
+        {
+            Debug.Log("Not Enough Materials");
+        }
+    }
+
+    public void CraftIronLeggings()
+    {
+        if (_player._ironHeld >= ironLeggings.GetComponent<ArmorBehavior>()._ironNeeded)
+        {
+            _player._ironHeld -= ironLeggings.GetComponent<ArmorBehavior>()._ironNeeded;
+            Instantiate(ironLeggings, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+        }
+        else
+        {
+            Debug.Log("Not Enough Materials");
+        }
+    }
+
+    public void CraftIronBoots()
+    {
+        if (_player._ironHeld >= ironBoots.GetComponent<ArmorBehavior>()._ironNeeded)
+        {
+            _player._ironHeld -= ironBoots.GetComponent<ArmorBehavior>()._ironNeeded;
+            Instantiate(ironBoots, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
         }
         else
         {

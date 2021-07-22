@@ -18,6 +18,9 @@ public class InteractableFieldBehavior : MonoBehaviour
     public bool canFight;
 
     [HideInInspector]
+    public bool inInventory;
+
+    [HideInInspector]
     public OreBehavior ore;
     [HideInInspector]
     public GroundEnemyAIBehavior groundEnemy;
@@ -33,6 +36,11 @@ public class InteractableFieldBehavior : MonoBehaviour
     [SerializeField]
     private GameObject _currentInteraction;
 
+    private void Start()
+    {
+        inInventory = false;
+    }
+
     private void Update()
     {
         Interact();
@@ -40,10 +48,6 @@ public class InteractableFieldBehavior : MonoBehaviour
 
     private void Interact()
     {
-        RaycastHit hit;
-
-        Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * range, Color.white);
-
         if (_currentInteraction)
         {
             canInteract = false;
@@ -58,58 +62,65 @@ public class InteractableFieldBehavior : MonoBehaviour
             _currentInteraction = null;
         }
 
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
+        if (inInventory == false)
         {
-            if(hit.transform.CompareTag("IronOre"))
+            RaycastHit hit;
+
+            Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * range, Color.white);
+
+            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
             {
-                ore = hit.transform.GetComponent<OreBehavior>();
-                canInteract = true;
-                Debug.Log("Looking at iron ore");
-                _currentInteraction = hit.transform.gameObject;
-            }
-            if (hit.transform.CompareTag("GoldOre"))
-            {
-                ore = hit.transform.GetComponent<OreBehavior>();
-                canInteract = true;
-                Debug.Log("Looking at gold ore");
-                _currentInteraction = hit.transform.gameObject;
-            }
-            else if(hit.transform.CompareTag("GroundEnemy"))
-            {
-                groundEnemy = hit.transform.GetComponent<GroundEnemyAIBehavior>();
-                canInteract = true;
-                Debug.Log("Looking at ground enemy");
-                _currentInteraction = hit.transform.gameObject;
-            }
-            //else if(hit.transform.CompareTag("AirEnemy"))
-            //{
-            //    canInteract = true;
-            //    airEnemy = hit.transform.GetComponent<AirEnemyAIBehavior>();
-            //    _currentInteraction = hit.transform.gameObject;
-            //}
-            else if(hit.transform.CompareTag("CraftingTable"))
-            {
-                canCraft = true;
-                Debug.Log("Looking at crafting bench");
-                _currentInteraction = hit.transform.gameObject;
-            }
-            else if(hit.transform.CompareTag("Weapon"))
-            {
-                canInteract = true;
-                weapon = hit.transform.GetComponent<WeaponBehavior>();
-                _currentInteraction = hit.transform.gameObject;
-            }
-            else if (hit.transform.CompareTag("Pickaxe"))
-            {
-                canInteract = true;
-                pickaxe = hit.transform.GetComponent<PickaxeBehavior>();
-                _currentInteraction = hit.transform.gameObject;
-            }
-            else if (hit.transform.CompareTag("Armor"))
-            {
-                canInteract = true;
-                armor = hit.transform.GetComponent<ArmorBehavior>();
-                _currentInteraction = hit.transform.gameObject;
+                if (hit.transform.CompareTag("IronOre"))
+                {
+                    ore = hit.transform.GetComponent<OreBehavior>();
+                    canInteract = true;
+                    Debug.Log("Looking at iron ore");
+                    _currentInteraction = hit.transform.gameObject;
+                }
+                if (hit.transform.CompareTag("GoldOre"))
+                {
+                    ore = hit.transform.GetComponent<OreBehavior>();
+                    canInteract = true;
+                    Debug.Log("Looking at gold ore");
+                    _currentInteraction = hit.transform.gameObject;
+                }
+                else if (hit.transform.CompareTag("GroundEnemy"))
+                {
+                    groundEnemy = hit.transform.GetComponent<GroundEnemyAIBehavior>();
+                    canInteract = true;
+                    Debug.Log("Looking at ground enemy");
+                    _currentInteraction = hit.transform.gameObject;
+                }
+                //else if(hit.transform.CompareTag("AirEnemy"))
+                //{
+                //    canInteract = true;
+                //    airEnemy = hit.transform.GetComponent<AirEnemyAIBehavior>();
+                //    _currentInteraction = hit.transform.gameObject;
+                //}
+                else if (hit.transform.CompareTag("CraftingTable"))
+                {
+                    canCraft = true;
+                    Debug.Log("Looking at crafting bench");
+                    _currentInteraction = hit.transform.gameObject;
+                }
+                else if (hit.transform.CompareTag("Weapon"))
+                {
+                    canInteract = true;
+                    weapon = hit.transform.GetComponent<WeaponBehavior>();
+                    _currentInteraction = hit.transform.gameObject;
+                }
+                else if (hit.transform.CompareTag("Pickaxe"))
+                {
+                    canInteract = true;
+                    pickaxe = hit.transform.GetComponent<PickaxeBehavior>();
+                    _currentInteraction = hit.transform.gameObject;
+                }
+                else if (hit.transform.CompareTag("Armor"))
+                {
+                    canInteract = true;
+                    armor = hit.transform.GetComponent<ArmorBehavior>();
+                    _currentInteraction = hit.transform.gameObject;
+                }
             }
         }
     }

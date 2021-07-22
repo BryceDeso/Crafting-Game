@@ -1,5 +1,40 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1575340513505963129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8190761841208447027}
+  m_Layer: 0
+  m_Name: ActiveObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8190761841208447027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575340513505963129}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7028178523374930422}
+  - {fileID: 7028178523608263883}
+  - {fileID: 7028178522737986151}
+  - {fileID: 7028178523283492451}
+  - {fileID: 7028178522599760077}
+  m_Father: {fileID: 7028178522640888122}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7028178522599760076
 GameObject:
   m_ObjectHideFlags: 0
@@ -26,12 +61,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7028178522599760076}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.247, z: 0}
-  m_LocalScale: {x: 0.03, y: 0.5, z: 0.2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5000003, y: 0.24700007, z: 0}
+  m_LocalScale: {x: 0.03, y: 0.5, z: 0.19999996}
   m_Children:
   - {fileID: 7028178522614388824}
-  m_Father: {fileID: 7028178522640888122}
+  m_Father: {fileID: 8190761841208447027}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7028178522599760072
@@ -201,7 +236,7 @@ GameObject:
   - component: {fileID: 7028178522640888123}
   - component: {fileID: 7028178522640889540}
   m_Layer: 0
-  m_Name: Helmet
+  m_Name: Iron Helmet
   m_TagString: Armor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,14 +250,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7028178522640888126}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.895, y: 3.758, z: 8.467}
-  m_LocalScale: {x: 0.6, y: 0.59999996, z: 0.6}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.4412357, y: 0.44123566, z: 0.4412357}
   m_Children:
-  - {fileID: 7028178523374930422}
-  - {fileID: 7028178523608263883}
-  - {fileID: 7028178522737986151}
-  - {fileID: 7028178523283492451}
-  - {fileID: 7028178522599760077}
+  - {fileID: 8190761841208447027}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -278,8 +309,9 @@ MonoBehaviour:
   armorPoints: 4
   equipped: 0
   _name: Iron Helmet
+  _activeObject: {fileID: 1575340513505963129}
   _oakWoodNeeded: 0
-  _ironNeeded: 6
+  _ironNeeded: 4
   _goldNeeded: 0
   _helmet: 1
   _chestplate: 0
@@ -298,7 +330,7 @@ GameObject:
   - component: {fileID: 7028178522737986145}
   - component: {fileID: 7028178522737986144}
   m_Layer: 0
-  m_Name: RightPlate
+  m_Name: LeftPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -311,11 +343,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7028178522737986150}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.5}
-  m_LocalScale: {x: 1, y: 1, z: 0.1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5000003}
+  m_LocalScale: {x: 1, y: 1, z: 0.09999998}
   m_Children: []
-  m_Father: {fileID: 7028178522640888122}
+  m_Father: {fileID: 8190761841208447027}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7028178522737986146
@@ -404,11 +436,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7028178523283492450}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5000003, y: 0, z: 0}
+  m_LocalScale: {x: 0.09999998, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7028178522640888122}
+  m_Father: {fileID: 8190761841208447027}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7028178523283492462
@@ -501,7 +533,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.505, z: 0}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7028178522640888122}
+  m_Father: {fileID: 8190761841208447027}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7028178523374930417
@@ -577,7 +609,7 @@ GameObject:
   - component: {fileID: 7028178523608263893}
   - component: {fileID: 7028178523608263892}
   m_Layer: 0
-  m_Name: LeftPlate
+  m_Name: RightPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -590,11 +622,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7028178523608263882}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5}
-  m_LocalScale: {x: 1, y: 1, z: 0.1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5000003}
+  m_LocalScale: {x: 1, y: 1, z: 0.09999998}
   m_Children: []
-  m_Father: {fileID: 7028178522640888122}
+  m_Father: {fileID: 8190761841208447027}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7028178523608263894

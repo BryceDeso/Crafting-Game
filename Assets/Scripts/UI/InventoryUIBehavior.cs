@@ -30,9 +30,23 @@ public class InventoryUIBehavior : MonoBehaviour
     [SerializeField]
     private Text _boots;
 
+    [SerializeField]
+    private Text _currentDamageText;
+    [SerializeField]
+    private Text _miningPowerText;
+    [SerializeField]
+    private Text _currentArmor;
+
+    [SerializeField]
+    private Button _helmetButton;
+    [SerializeField]
+    private Button _chestplateButton;
+    [SerializeField]
+    private Button _leggingButton;
+    [SerializeField]
+    private Button _bootsButton;
 
     private bool inventoryOpen;
-
 
     // Start is called before the first frame update
     void Start()
@@ -53,17 +67,25 @@ public class InventoryUIBehavior : MonoBehaviour
         {
             inventoryUI.SetActive(true);
             inventoryOpen = true;
+            _UIManager._player._interactionField.inInventory = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Confined;
         }
         else if (Input.GetKeyDown(KeyCode.I) && inventoryOpen == true)
         {
             inventoryUI.SetActive(false);
             inventoryOpen = false;
+            _UIManager._player._interactionField.inInventory = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
     private void UpdateUI()
     {
-        _iron.text = (_UIManager._player._ironHeld + "");
+        _currentDamageText.text = ("" + _UIManager._player._weaponDamage);
+        _miningPowerText.text = ("" + _UIManager._player._pickaxeDamage);
+        _currentArmor.text = ("" + _UIManager._player._armor);
+        _iron.text = ("" + _UIManager._player._ironHeld);
         _gold.text = (_UIManager._player._goldHeld + "");
         _oakWood.text = (_UIManager._player._oakWoodHeld + "");
         _weapon.text = ("none");
@@ -76,25 +98,50 @@ public class InventoryUIBehavior : MonoBehaviour
         {
             _weapon.text = (_UIManager._player._weapon._name + "");
         }
+
         if (_UIManager._player._pickaxe)
         {
             _pickaxe.text = (_UIManager._player._pickaxe._name + "");
         }
+
         if (_UIManager._player._helmet)
         {
-            _weapon.text = (_UIManager._player._helmet._name + "");
+            _helmet.text = (_UIManager._player._helmet._name + "");
+            _helmetButton.gameObject.SetActive(true);
         }
+        else
+        {
+            _helmetButton.gameObject.SetActive(false);
+        }
+
         if (_UIManager._player._chestplate)
         {
-            _pickaxe.text = (_UIManager._player._chestplate._name + "");
+            _chestplate.text = (_UIManager._player._chestplate._name + "");
+            _chestplateButton.gameObject.SetActive(true);
         }
+        else
+        {
+            _chestplateButton.gameObject.SetActive(false);
+        }
+
         if (_UIManager._player._leggings)
         {
-            _weapon.text = (_UIManager._player._leggings._name + "");
+            _leggings.text = (_UIManager._player._leggings._name + "");
+            _leggingButton.gameObject.SetActive(true);
         }
+        else
+        {
+            _leggingButton.gameObject.SetActive(false);
+        }
+
         if (_UIManager._player._boots)
         {
-            _pickaxe.text = (_UIManager._player._boots._name + "");
+            _boots.text = (_UIManager._player._boots._name + "");
+            _bootsButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            _bootsButton.gameObject.SetActive(false);
         }
     }
 }

@@ -23,6 +23,18 @@ public class CraftingUI : MonoBehaviour
     [SerializeField]
     private Text _goldPickaxeReqirements;
 
+    [SerializeField]
+    private Text _ironHelmetReqirements;
+
+    [SerializeField]
+    private Text _ironChestplateReqirements;
+
+    [SerializeField]
+    private Text _ironLeggingsReqirements;
+
+    [SerializeField]
+    private Text _ironBootsReqirements;
+
     private void Update()
     {
         Crafting();
@@ -49,16 +61,24 @@ public class CraftingUI : MonoBehaviour
 
     private void UpdateRequirements()
     {
-        _ironPickaxeReqirements.text = ("Iron:" + _UIManager._craftingTable._ironPickaxe.GetComponent<PickaxeBehavior>()._ironNeeded + 
-            "| Oak Wood:" + _UIManager._craftingTable._ironPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
+        _ironPickaxeReqirements.text = ("Iron:" + _UIManager._craftingTable.ironPickaxe.GetComponent<PickaxeBehavior>()._ironNeeded + 
+            " | Oak Wood:" + _UIManager._craftingTable.ironPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
 
-        _goldPickaxeReqirements.text = ("Gold:" + _UIManager._craftingTable._goldPickaxe.GetComponent<PickaxeBehavior>()._goldNeeded + 
-            "| Oak Wood:" + _UIManager._craftingTable._goldPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
+        _goldPickaxeReqirements.text = ("Gold:" + _UIManager._craftingTable.goldPickaxe.GetComponent<PickaxeBehavior>()._goldNeeded + 
+            " | Oak Wood:" + _UIManager._craftingTable.goldPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
 
-        _ironSwordReqirements.text = ("Iron:" + _UIManager._craftingTable._ironSword.GetComponent<WeaponBehavior>()._ironNeeded + 
-            "| Oak Wood:" + _UIManager._craftingTable._ironSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
+        _ironSwordReqirements.text = ("Iron:" + _UIManager._craftingTable.ironSword.GetComponent<WeaponBehavior>()._ironNeeded + 
+            " | Oak Wood:" + _UIManager._craftingTable.ironSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
 
-        _goldSwordReqirements.text = ("Gold:" + _UIManager._craftingTable._goldSword.GetComponent<WeaponBehavior>()._goldNeeded +
-            "| Oak Wood:" + _UIManager._craftingTable._goldSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
+        _goldSwordReqirements.text = ("Gold:" + _UIManager._craftingTable.goldSword.GetComponent<WeaponBehavior>()._goldNeeded +
+            " | Oak Wood:" + _UIManager._craftingTable.goldSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
+
+        _ironHelmetReqirements.text = ("Iron:" + _UIManager._craftingTable.ironHelmet.GetComponent<ArmorBehavior>()._ironNeeded);
+
+        _ironChestplateReqirements.text = ("Iron:" + _UIManager._craftingTable.ironChestplate.GetComponent<ArmorBehavior>()._ironNeeded);
+
+        _ironLeggingsReqirements.text = ("Iron:" + _UIManager._craftingTable.ironLeggings.GetComponent<ArmorBehavior>()._ironNeeded);
+
+        _ironBootsReqirements.text = ("Iron:" + _UIManager._craftingTable.ironBoots.GetComponent<ArmorBehavior>()._ironNeeded);
     }
 }
