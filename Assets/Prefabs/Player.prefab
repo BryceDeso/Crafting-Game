@@ -481,7 +481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 20
   _currentHealth: 0
-  _armor: 1
+  _armor: 0
   canBeHit: 1
   _helmet: {fileID: 0}
   _chestplate: {fileID: 0}
@@ -503,9 +503,9 @@ MonoBehaviour:
   _itemDropAnchor: {fileID: 3462546201288729505}
   _hitbox: {fileID: 4542705402076568437}
   _interactionField: {fileID: 4542705402276686581}
-  _ironHeld: 5
+  _ironHeld: 0
   _goldHeld: 0
-  _oakWoodHeld: 6
+  _oakWoodHeld: 0
   _invincibleTime: 3
   _timeLeft: 0
 --- !u!1 &7884708219150029989
