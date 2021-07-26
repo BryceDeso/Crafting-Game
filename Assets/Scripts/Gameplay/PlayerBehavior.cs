@@ -50,7 +50,14 @@ public class PlayerBehavior : MonoBehaviour
 
     public float _ironHeld;
     public float _goldHeld;
+    public float _silverHeld;
+    public float _diamondsHeld;
+    public float _titaniumHeld;
+    public float _chlorophyteHeld;
+    public float _mithrilHeld;
     public float _oakWoodHeld;
+    public float _jungleWoodHeld;
+    public float _ashWoodHeld;
 
     public float _invincibleTime;
     public float _timeLeft;

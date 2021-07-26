@@ -13,8 +13,15 @@ public class PickaxeBehavior : MonoBehaviour
     public string _name;
 
     public float _oakWoodNeeded;
+    public float _jungleWoodNeeded;
+    public float _ashWoodNeeded;
     public float _ironNeeded;
     public float _goldNeeded;
+    public float _silverNeeded;
+    public float _diamondsNeeded;
+    public float _titaniumNeeded;
+    public float _chlorophyteNeeded;
+    public float _mithrilNeeded;
 
     private void Start()
     {

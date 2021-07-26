@@ -12,11 +12,27 @@ public class InventoryUIBehavior : MonoBehaviour
     private GameObject inventoryUI;
 
     [SerializeField]
+    private Text _copper;
+    [SerializeField]
     private Text _iron;
     [SerializeField]
     private Text _gold;
     [SerializeField]
+    private Text _silver;
+    [SerializeField]
+    private Text _diamond;
+    [SerializeField]
+    private Text _titanium;
+    [SerializeField]
+    private Text _chlorophyte;
+    [SerializeField]
+    private Text _mithril;
+    [SerializeField]
     private Text _oakWood;
+    [SerializeField]
+    private Text _jungleWood;
+    [SerializeField]
+    private Text _ashWood;
     [SerializeField]
     private Text _weapon;
     [SerializeField]
@@ -87,7 +103,14 @@ public class InventoryUIBehavior : MonoBehaviour
         _currentArmor.text = ("" + _UIManager._player._armor);
         _iron.text = ("" + _UIManager._player._ironHeld);
         _gold.text = (_UIManager._player._goldHeld + "");
+        _silver.text = (_UIManager._player._silverHeld + "");
+        _diamond.text = (_UIManager._player._diamondsHeld + "");
+        _titanium.text = (_UIManager._player._titaniumHeld + "");
+        _chlorophyte.text = (_UIManager._player._chlorophyteHeld + "");
+        _mithril.text = (_UIManager._player._mithrilHeld + "");
         _oakWood.text = (_UIManager._player._oakWoodHeld + "");
+        _jungleWood.text = (_UIManager._player._jungleWoodHeld + "");
+        _ashWood.text = (_UIManager._player._ashWoodHeld + "");
         _weapon.text = ("none");
         _pickaxe.text = ("none");
         _helmet.text = ("none");
