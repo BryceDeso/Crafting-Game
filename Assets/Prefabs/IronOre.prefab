@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7339433036961442985}
   - component: {fileID: 7339433036961442994}
   m_Layer: 0
-  m_Name: IronOre 1
+  m_Name: IronOre
   m_TagString: IronOre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0b9d4eddd5a1f7842a12da00c31ea7b3, type: 2}
+  - {fileID: 2100000, guid: 0ee02f3b2e4b96d4287896e1914ea060, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
