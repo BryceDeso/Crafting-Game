@@ -9,6 +9,48 @@ public class CraftingUI : MonoBehaviour
     [SerializeField]
     private UIManagerBehavior _UIManager;
 
+    [SerializeField]
+    private Button _ironTabButton;
+
+    [SerializeField]
+    private bool _onIronTab;
+
+    [SerializeField]
+    private Button _silverTabButton;
+
+    [SerializeField]
+    private bool _onSilverTab;
+
+    [SerializeField]
+    private Button _goldTabButton;
+
+    [SerializeField]
+    private bool _onGoldTab;
+
+    [SerializeField]
+    private Button _diamondTabButton;
+
+    [SerializeField]
+    private bool _onDiamondTab;
+
+    [SerializeField]
+    private Button _bloodstoneTabButton;
+
+    [SerializeField]
+    private bool _onBloodstoneTab;
+
+    [SerializeField]
+    private Button _chlorophyteTabButton;
+
+    [SerializeField]
+    private bool _onChlorophyteTab;
+
+    [SerializeField]
+    private Button _mithrilTabButton;
+
+    [SerializeField]
+    private bool _onMithrilTab;
+
     //Swords
     [SerializeField]
     private Text _ironSwordReqirements;
@@ -271,7 +313,6 @@ public class CraftingUI : MonoBehaviour
     {
         Crafting();
         UpdateRequirements();
-        UpdateButtons();
     }
 
     public void ExitCraftingMenu()
@@ -292,511 +333,555 @@ public class CraftingUI : MonoBehaviour
         }
     }
 
-    private void UpdateButtons()
+    public void UpdateTab()
     {
-        //Swords
-        if(_UIManager._player._ironHeld >= _UIManager._craftingTable.ironSword.GetComponent<WeaponBehavior>()._ironNeeded &&
-           _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.ironSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
+        if(_onIronTab)
         {
-            _ironSwordButton.gameObject.SetActive(true);
+            //Sword
+            if (_UIManager._player._ironHeld >= _UIManager._craftingTable.ironSword.GetComponent<WeaponBehavior>()._ironNeeded &&
+                _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.ironSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
+            {
+                _ironSwordButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _ironSwordButton.gameObject.SetActive(false);
+            }
+            //Pickaxe
+            if (_UIManager._player._ironHeld >= _UIManager._craftingTable.ironPickaxe.GetComponent<PickaxeBehavior>()._ironNeeded &&
+                _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.ironPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
+            {
+                _ironPickaxeButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _ironPickaxeButton.gameObject.SetActive(false);
+            }
+            //Helemt
+            if (_UIManager._player._ironHeld >= _UIManager._craftingTable.ironHelmet.GetComponent<ArmorBehavior>()._ironNeeded)
+            {
+                _ironHelmetButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _ironHelmetButton.gameObject.SetActive(false);
+            }
+            //Chestplate
+            if (_UIManager._player._ironHeld >= _UIManager._craftingTable.ironChestplate.GetComponent<ArmorBehavior>()._ironNeeded)
+            {
+                _ironChestplateButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _ironChestplateButton.gameObject.SetActive(false);
+            }
+            //Leggings
+            if (_UIManager._player._ironHeld >= _UIManager._craftingTable.ironLeggings.GetComponent<ArmorBehavior>()._ironNeeded)
+            {
+                _ironLeggingsButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _ironLeggingsButton.gameObject.SetActive(false);
+            }
+            //Boots
+            if (_UIManager._player._ironHeld >= _UIManager._craftingTable.ironBoots.GetComponent<ArmorBehavior>()._ironNeeded)
+            {
+                _ironBootsButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _ironBootsButton.gameObject.SetActive(false);
+            }
         }
-        else
+        else if (_onSilverTab)
         {
-            _ironSwordButton.gameObject.SetActive(false);
+            //Sword
+            if (_UIManager._player._silverHeld >= _UIManager._craftingTable.silverSword.GetComponent<WeaponBehavior>()._silverNeeded &&
+                _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.silverSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
+            {
+                _silverSwordButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _silverSwordButton.gameObject.SetActive(false);
+            }
+            //Pickaxe
+            if (_UIManager._player._silverHeld >= _UIManager._craftingTable.silverPickaxe.GetComponent<PickaxeBehavior>()._silverNeeded &&
+                _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.silverPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
+            {
+                _silverPickaxeButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _silverPickaxeButton.gameObject.SetActive(false);
+            }
+            //Helmet
+            if (_UIManager._player._silverHeld >= _UIManager._craftingTable.silverHelmet.GetComponent<ArmorBehavior>()._silverNeeded)
+            {
+                _silverHelmetButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _silverHelmetButton.gameObject.SetActive(false);
+            }
+            //Chestplate
+            if (_UIManager._player._silverHeld >= _UIManager._craftingTable.silverChestplate.GetComponent<ArmorBehavior>()._silverNeeded)
+            {
+                _silverChestplateButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _silverChestplateButton.gameObject.SetActive(false);
+            }
+            //Leggings
+            if (_UIManager._player._silverHeld >= _UIManager._craftingTable.silverLeggings.GetComponent<ArmorBehavior>()._silverNeeded)
+            {
+                _silverLeggingsButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _silverLeggingsButton.gameObject.SetActive(false);
+            }
+            //Boots
+            if (_UIManager._player._silverHeld >= _UIManager._craftingTable.silverBoots.GetComponent<ArmorBehavior>()._silverNeeded)
+            {
+                _silverBootsButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _silverBootsButton.gameObject.SetActive(false);
+            }
         }
+        else if(_onGoldTab)
+        {
+            //Sword
+            if (_UIManager._player._goldHeld >= _UIManager._craftingTable.goldSword.GetComponent<WeaponBehavior>()._goldNeeded &&
+                _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.goldSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
+            {
+                _goldSwordButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _goldSwordButton.gameObject.SetActive(false);
+            }
+            //Pickaxe
+            if (_UIManager._player._goldHeld >= _UIManager._craftingTable.goldPickaxe.GetComponent<PickaxeBehavior>()._goldNeeded &&
+                _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.goldPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
+            {
+                _goldPickaxeButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _goldPickaxeButton.gameObject.SetActive(false);
+            }
+            //Helmet
+            if (_UIManager._player._goldHeld >= _UIManager._craftingTable.goldHelmet.GetComponent<ArmorBehavior>()._goldNeeded)
+            {
+                _goldHelmetButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _goldHelmetButton.gameObject.SetActive(false);
+            }
+            //Chestplate
+            if (_UIManager._player._goldHeld >= _UIManager._craftingTable.goldChestplate.GetComponent<ArmorBehavior>()._goldNeeded)
+            {
+                _goldChestplateButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _goldChestplateButton.gameObject.SetActive(false);
+            }
+            //Leggings
+            if (_UIManager._player._goldHeld >= _UIManager._craftingTable.goldLeggings.GetComponent<ArmorBehavior>()._goldNeeded)
+            {
+                _goldLeggingsButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _goldLeggingsButton.gameObject.SetActive(false);
+            }
+            //Boots
+            if (_UIManager._player._goldHeld >= _UIManager._craftingTable.goldBoots.GetComponent<ArmorBehavior>()._goldNeeded)
+            {
+                _goldBootsButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _goldBootsButton.gameObject.SetActive(false);
+            }
+        }
+        else if (_onDiamondTab)
+        {
+            //Sword
+            if (_UIManager._player._diamondsHeld >= _UIManager._craftingTable.diamondSword.GetComponent<WeaponBehavior>()._diamondsNeeded &&
+                _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.diamondSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
+            {
+                _diamondSwordButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _diamondSwordButton.gameObject.SetActive(false);
+            }
+            //Pickaxe
+            if (_UIManager._player._diamondsHeld >= _UIManager._craftingTable.diamondPickaxe.GetComponent<PickaxeBehavior>()._diamondsNeeded &&
+                _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.diamondPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
+            {
+                _diamondPickaxeButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _diamondPickaxeButton.gameObject.SetActive(false);
+            }
+            //Helmet
+            if (_UIManager._player._diamondsHeld >= _UIManager._craftingTable.diamondHelmet.GetComponent<ArmorBehavior>()._diamondsNeeded)
+            {
+                _diamondHelmetButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _diamondHelmetButton.gameObject.SetActive(false);
+            }
+            //Chestplate
+            if (_UIManager._player._diamondsHeld >= _UIManager._craftingTable.diamondChestplate.GetComponent<ArmorBehavior>()._diamondsNeeded)
+            {
+                _diamondChestplateButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _diamondChestplateButton.gameObject.SetActive(false);
+            }
+            //Leggings
+            if (_UIManager._player._diamondsHeld >= _UIManager._craftingTable.diamondLeggings.GetComponent<ArmorBehavior>()._diamondsNeeded)
+            {
+                _diamondLeggingsButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _diamondLeggingsButton.gameObject.SetActive(false);
+            }
+            //Boots
+            if (_UIManager._player._diamondsHeld >= _UIManager._craftingTable.diamondBoots.GetComponent<ArmorBehavior>()._diamondsNeeded)
+            {
+                _diamondBootsButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _diamondBootsButton.gameObject.SetActive(false);
+            }
+        }
+        else if (_onBloodstoneTab)
+        {
+            //Sword
+            if (_UIManager._player._bloodstoneHeld >= _UIManager._craftingTable.bloodstoneSword.GetComponent<WeaponBehavior>()._bloodstoneNeeded &&
+                _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.bloodstoneSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
+            {
+                _bloodstoneSwordButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _bloodstoneSwordButton.gameObject.SetActive(false);
+            }
+            //Pickaxe
+            if (_UIManager._player._bloodstoneHeld >= _UIManager._craftingTable.bloodstonePickaxe.GetComponent<PickaxeBehavior>()._bloodstoneNeeded &&
+                _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.bloodstonePickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
+            {
+                _bloodstonePickaxeButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _bloodstonePickaxeButton.gameObject.SetActive(false);
+            }
+            //Helmet
+            if (_UIManager._player._bloodstoneHeld >= _UIManager._craftingTable.bloodstoneHelmet.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
+            {
+                _bloodstoneHelmetButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _bloodstoneHelmetButton.gameObject.SetActive(false);
+            }
+            //Chestplate
+            if (_UIManager._player._bloodstoneHeld >= _UIManager._craftingTable.bloodstoneChestplate.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
+            {
+                _bloodstoneChestplateButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _bloodstoneChestplateButton.gameObject.SetActive(false);
+            }
+            //Leggings
+            if (_UIManager._player._bloodstoneHeld >= _UIManager._craftingTable.bloodstoneLeggings.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
+            {
+                _bloodstoneLeggingsButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _bloodstoneLeggingsButton.gameObject.SetActive(false);
+            }
+            //Boots
+            if (_UIManager._player._bloodstoneHeld >= _UIManager._craftingTable.bloodstoneBoots.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
+            {
+                _bloodstoneBootsButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _bloodstoneBootsButton.gameObject.SetActive(false);
+            }
+        }
+        else if (_onChlorophyteTab)
+        {
+            //Sword
+            if (_UIManager._player._chlorophyteHeld >= _UIManager._craftingTable.chlorophyteSword.GetComponent<WeaponBehavior>()._chlorophyteNeeded &&
+                _UIManager._player._jungleWoodHeld >= _UIManager._craftingTable.chlorophyteSword.GetComponent<WeaponBehavior>()._jungleWoodNeeded)
+            {
+                _chlorophyteSwordButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _chlorophyteSwordButton.gameObject.SetActive(false);
+            }
+            //Pickaxe
+            if (_UIManager._player._chlorophyteHeld >= _UIManager._craftingTable.chlorophytePickaxe.GetComponent<PickaxeBehavior>()._chlorophyteNeeded &&
+                _UIManager._player._jungleWoodHeld >= _UIManager._craftingTable.chlorophytePickaxe.GetComponent<PickaxeBehavior>()._jungleWoodNeeded)
+            {
+                _chlorophytePickaxeButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _chlorophytePickaxeButton.gameObject.SetActive(false);
+            }
+            //Helmet
+            if (_UIManager._player._chlorophyteHeld >= _UIManager._craftingTable.chlorophyteHelmet.GetComponent<ArmorBehavior>()._chlorophyteNeeded)
+            {
+                _chlorophyteHelmetButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _chlorophyteHelmetButton.gameObject.SetActive(false);
+            }
+            //Chestplate
+            if (_UIManager._player._chlorophyteHeld >= _UIManager._craftingTable.chlorophyteChestplate.GetComponent<ArmorBehavior>()._chlorophyteNeeded)
+            {
+                _chlorophyteChestplateButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _chlorophyteChestplateButton.gameObject.SetActive(false);
+            }
+            //Leggings
+            if (_UIManager._player._chlorophyteHeld >= _UIManager._craftingTable.chlorophyteLeggings.GetComponent<ArmorBehavior>()._chlorophyteNeeded)
+            {
+                _chlorophyteLeggingsButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _chlorophyteLeggingsButton.gameObject.SetActive(false);
+            }
+            //Boots
+            if (_UIManager._player._chlorophyteHeld >= _UIManager._craftingTable.chlorophyteBoots.GetComponent<ArmorBehavior>()._chlorophyteNeeded)
+            {
+                _chlorophyteBootsButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _chlorophyteBootsButton.gameObject.SetActive(false);
+            }
+        }
+        else if (_onMithrilTab)
+        {
+            //Sword
+            if (_UIManager._player._mithrilHeld >= _UIManager._craftingTable.mithrilSword.GetComponent<WeaponBehavior>()._mithrilNeeded &&
+                _UIManager._player._ashWoodHeld >= _UIManager._craftingTable.mithrilSword.GetComponent<WeaponBehavior>()._ashWoodNeeded)
+            {
+                _mithrilSwordButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _mithrilSwordButton.gameObject.SetActive(false);
+            }
+            //Pickaxe
+            if (_UIManager._player._mithrilHeld >= _UIManager._craftingTable.mithrilPickaxe.GetComponent<PickaxeBehavior>()._mithrilNeeded &&
+                _UIManager._player._ashWoodHeld >= _UIManager._craftingTable.mithrilPickaxe.GetComponent<PickaxeBehavior>()._ashWoodNeeded)
+            {
+                _mithrilPickaxeButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _mithrilPickaxeButton.gameObject.SetActive(false);
+            }
+            //Helmet
+            if (_UIManager._player._mithrilHeld >= _UIManager._craftingTable.mithrilHelmet.GetComponent<ArmorBehavior>()._mithrilNeeded)
+            {
+                _mithrilHelmetButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _mithrilHelmetButton.gameObject.SetActive(false);
+            }
+            //Chestplate
+            if (_UIManager._player._mithrilHeld >= _UIManager._craftingTable.mithrilChestplate.GetComponent<ArmorBehavior>()._mithrilNeeded)
+            {
+                _mithrilChestplateButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _mithrilChestplateButton.gameObject.SetActive(false);
+            }
+            //Leggings
+            if (_UIManager._player._mithrilHeld >= _UIManager._craftingTable.mithrilLeggings.GetComponent<ArmorBehavior>()._mithrilNeeded)
+            {
+                _mithrilLeggingsButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _mithrilLeggingsButton.gameObject.SetActive(false);
+            }
+            //Boots
+            if (_UIManager._player._mithrilHeld >= _UIManager._craftingTable.mithrilBoots.GetComponent<ArmorBehavior>()._mithrilNeeded)
+            {
+                _mithrilBootsButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                _mithrilBootsButton.gameObject.SetActive(false);
+            }
+        }
+    }
 
-        if (_UIManager._player._goldHeld >= _UIManager._craftingTable.goldSword.GetComponent<WeaponBehavior>()._goldNeeded &&
-            _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.goldSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
-        {
-            _goldSwordButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _goldSwordButton.gameObject.SetActive(false);
-        }
+    private void ItemReqirements(string name, )
+    {
 
-        if (_UIManager._player._silverHeld >= _UIManager._craftingTable.silverSword.GetComponent<WeaponBehavior>()._silverNeeded &&
-            _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.silverSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
-        {
-            _silverSwordButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _silverSwordButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._diamondsHeld >= _UIManager._craftingTable.diamondSword.GetComponent<WeaponBehavior>()._diamondsNeeded &&
-            _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.diamondSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
-        {
-            _diamondSwordButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _diamondSwordButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._bloodstoneHeld >= _UIManager._craftingTable.bloodstoneSword.GetComponent<WeaponBehavior>()._bloodstoneNeeded &&
-            _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.bloodstoneSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
-        {
-            _bloodstoneSwordButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _bloodstoneSwordButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._chlorophyteHeld >= _UIManager._craftingTable.chlorophyteSword.GetComponent<WeaponBehavior>()._chlorophyteNeeded &&
-            _UIManager._player._jungleWoodHeld >= _UIManager._craftingTable.chlorophyteSword.GetComponent<WeaponBehavior>()._jungleWoodNeeded)
-        {
-            _chlorophyteSwordButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _chlorophyteSwordButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._mithrilHeld >= _UIManager._craftingTable.mithrilSword.GetComponent<WeaponBehavior>()._mithrilNeeded &&
-            _UIManager._player._ashWoodHeld >= _UIManager._craftingTable.mithrilSword.GetComponent<WeaponBehavior>()._ashWoodNeeded)
-        {
-            _mithrilSwordButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _mithrilSwordButton.gameObject.SetActive(false);
-        }
-
-        //Pickaxes
-        if (_UIManager._player._ironHeld >= _UIManager._craftingTable.ironPickaxe.GetComponent<PickaxeBehavior>()._ironNeeded &&
-            _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.ironPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
-        {
-            _ironPickaxeButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _ironPickaxeButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._goldHeld >= _UIManager._craftingTable.goldPickaxe.GetComponent<PickaxeBehavior>()._goldNeeded &&
-            _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.goldPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
-        {
-            _goldPickaxeButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _goldPickaxeButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._silverHeld >= _UIManager._craftingTable.silverPickaxe.GetComponent<PickaxeBehavior>()._silverNeeded &&
-            _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.silverPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
-        {
-            _silverPickaxeButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _silverPickaxeButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._diamondsHeld >= _UIManager._craftingTable.diamondPickaxe.GetComponent<PickaxeBehavior>()._diamondsNeeded &&
-            _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.diamondPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
-        {
-            _diamondPickaxeButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _diamondPickaxeButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._bloodstoneHeld >= _UIManager._craftingTable.bloodstonePickaxe.GetComponent<PickaxeBehavior>()._bloodstoneNeeded &&
-            _UIManager._player._oakWoodHeld >= _UIManager._craftingTable.bloodstonePickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
-        {
-            _bloodstonePickaxeButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _bloodstonePickaxeButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._chlorophyteHeld >= _UIManager._craftingTable.chlorophytePickaxe.GetComponent<PickaxeBehavior>()._chlorophyteNeeded &&
-            _UIManager._player._jungleWoodHeld >= _UIManager._craftingTable.chlorophytePickaxe.GetComponent<PickaxeBehavior>()._jungleWoodNeeded)
-        {
-            _chlorophytePickaxeButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _chlorophytePickaxeButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._mithrilHeld >= _UIManager._craftingTable.mithrilPickaxe.GetComponent<PickaxeBehavior>()._mithrilNeeded &&
-            _UIManager._player._ashWoodHeld >= _UIManager._craftingTable.mithrilPickaxe.GetComponent<PickaxeBehavior>()._ashWoodNeeded)
-        {
-            _mithrilPickaxeButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _mithrilPickaxeButton.gameObject.SetActive(false);
-        }
-
-        //Helmets
-        if (_UIManager._player._ironHeld >= _UIManager._craftingTable.ironHelmet.GetComponent<ArmorBehavior>()._ironNeeded)
-        {
-            _ironHelmetButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _ironHelmetButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._goldHeld >= _UIManager._craftingTable.goldHelmet.GetComponent<ArmorBehavior>()._goldNeeded)
-        {
-            _goldHelmetButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _goldHelmetButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._silverHeld >= _UIManager._craftingTable.silverHelmet.GetComponent<ArmorBehavior>()._silverNeeded)
-        {
-            _silverHelmetButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _silverHelmetButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._diamondsHeld >= _UIManager._craftingTable.diamondHelmet.GetComponent<ArmorBehavior>()._diamondsNeeded)
-        {
-            _diamondHelmetButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _diamondHelmetButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._bloodstoneHeld >= _UIManager._craftingTable.bloodstoneHelmet.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
-        {
-            _bloodstoneHelmetButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _bloodstoneHelmetButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._chlorophyteHeld >= _UIManager._craftingTable.chlorophyteHelmet.GetComponent<ArmorBehavior>()._chlorophyteNeeded)
-        {
-            _chlorophyteHelmetButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _chlorophyteHelmetButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._mithrilHeld >= _UIManager._craftingTable.mithrilHelmet.GetComponent<ArmorBehavior>()._mithrilNeeded)
-        {
-            _mithrilHelmetButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _mithrilHelmetButton.gameObject.SetActive(false);
-        }
-
-        //Chestplates
-        if (_UIManager._player._ironHeld >= _UIManager._craftingTable.ironChestplate.GetComponent<ArmorBehavior>()._ironNeeded)
-        {
-            _ironChestplateButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _ironChestplateButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._goldHeld >= _UIManager._craftingTable.goldChestplate.GetComponent<ArmorBehavior>()._goldNeeded)
-        {
-            _goldChestplateButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _goldChestplateButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._silverHeld >= _UIManager._craftingTable.silverChestplate.GetComponent<ArmorBehavior>()._silverNeeded)
-        {
-            _silverChestplateButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _silverChestplateButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._diamondsHeld >= _UIManager._craftingTable.diamondChestplate.GetComponent<ArmorBehavior>()._diamondsNeeded)
-        {
-            _diamondChestplateButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _diamondChestplateButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._bloodstoneHeld >= _UIManager._craftingTable.bloodstoneChestplate.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
-        {
-            _bloodstoneChestplateButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _bloodstoneChestplateButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._chlorophyteHeld >= _UIManager._craftingTable.chlorophyteChestplate.GetComponent<ArmorBehavior>()._chlorophyteNeeded)
-        {
-            _chlorophyteChestplateButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _chlorophyteChestplateButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._mithrilHeld >= _UIManager._craftingTable.mithrilChestplate.GetComponent<ArmorBehavior>()._mithrilNeeded)
-        {
-            _mithrilChestplateButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _mithrilChestplateButton.gameObject.SetActive(false);
-        }
-
-        //Leggings
-        if (_UIManager._player._ironHeld >= _UIManager._craftingTable.ironLeggings.GetComponent<ArmorBehavior>()._ironNeeded)
-        {
-            _ironLeggingsButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _ironLeggingsButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._goldHeld >= _UIManager._craftingTable.goldLeggings.GetComponent<ArmorBehavior>()._goldNeeded)
-        {
-            _goldLeggingsButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _goldLeggingsButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._silverHeld >= _UIManager._craftingTable.silverLeggings.GetComponent<ArmorBehavior>()._silverNeeded)
-        {
-            _silverLeggingsButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _silverLeggingsButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._diamondsHeld >= _UIManager._craftingTable.diamondLeggings.GetComponent<ArmorBehavior>()._diamondsNeeded)
-        {
-            _diamondLeggingsButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _diamondLeggingsButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._bloodstoneHeld >= _UIManager._craftingTable.bloodstoneLeggings.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
-        {
-            _bloodstoneLeggingsButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _bloodstoneLeggingsButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._chlorophyteHeld >= _UIManager._craftingTable.chlorophyteLeggings.GetComponent<ArmorBehavior>()._chlorophyteNeeded)
-        {
-            _chlorophyteLeggingsButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _chlorophyteLeggingsButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._mithrilHeld >= _UIManager._craftingTable.mithrilLeggings.GetComponent<ArmorBehavior>()._mithrilNeeded)
-        {
-            _mithrilLeggingsButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _mithrilLeggingsButton.gameObject.SetActive(false);
-        }
-
-        //Boots
-        if (_UIManager._player._ironHeld >= _UIManager._craftingTable.ironBoots.GetComponent<ArmorBehavior>()._ironNeeded)
-        {
-            _ironBootsButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _ironBootsButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._goldHeld >= _UIManager._craftingTable.goldBoots.GetComponent<ArmorBehavior>()._goldNeeded)
-        {
-            _goldBootsButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _goldBootsButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._silverHeld >= _UIManager._craftingTable.silverBoots.GetComponent<ArmorBehavior>()._silverNeeded)
-        {
-            _silverBootsButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _silverBootsButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._diamondsHeld >= _UIManager._craftingTable.diamondBoots.GetComponent<ArmorBehavior>()._diamondsNeeded)
-        {
-            _diamondBootsButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _diamondBootsButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._bloodstoneHeld >= _UIManager._craftingTable.bloodstoneBoots.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
-        {
-            _bloodstoneBootsButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _bloodstoneBootsButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._chlorophyteHeld >= _UIManager._craftingTable.chlorophyteBoots.GetComponent<ArmorBehavior>()._chlorophyteNeeded)
-        {
-            _chlorophyteBootsButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _chlorophyteBootsButton.gameObject.SetActive(false);
-        }
-
-        if (_UIManager._player._mithrilHeld >= _UIManager._craftingTable.mithrilBoots.GetComponent<ArmorBehavior>()._mithrilNeeded)
-        {
-            _mithrilBootsButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            _mithrilBootsButton.gameObject.SetActive(false);
-        }
     }
 
     private void UpdateRequirements()
     {
         //Pickaxes
         _ironPickaxeReqirements.text = ("Iron:" + _UIManager._craftingTable.ironPickaxe.GetComponent<PickaxeBehavior>()._ironNeeded + 
-            " | Oak Wood:" + _UIManager._craftingTable.ironPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
+            "|Oak Wood:" + _UIManager._craftingTable.ironPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
 
-        _goldPickaxeReqirements.text = ("Gold:" + _UIManager._craftingTable.goldPickaxe.GetComponent<PickaxeBehavior>()._goldNeeded + 
-            " | Oak Wood:" + _UIManager._craftingTable.goldPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
+        _ironSwordReqirements.text = ("Iron:" + _UIManager._craftingTable.ironSword.GetComponent<WeaponBehavior>()._ironNeeded +
+            "|Oak Wood:" + _UIManager._craftingTable.ironSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
 
-        _silverPickaxeReqirements.text = ("Silver:" + _UIManager._craftingTable.silverPickaxe.GetComponent<PickaxeBehavior>()._silverNeeded +
-        " | Oak Wood:" + _UIManager._craftingTable.silverPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
+        _ironChestplateReqirements.text = ("Iron:" + _UIManager._craftingTable.ironChestplate.GetComponent<ArmorBehavior>()._ironNeeded);
 
-        _diamondPickaxeReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondPickaxe.GetComponent<PickaxeBehavior>()._diamondsNeeded +
-        " | Oak Wood:" + _UIManager._craftingTable.diamondPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
-
-        _bloodstonePickaxeReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstonePickaxe.GetComponent<PickaxeBehavior>()._bloodstoneNeeded +
-        " | Oak Wood:" + _UIManager._craftingTable.bloodstonePickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
-
-        _chlorophytePickaxeReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophytePickaxe.GetComponent<PickaxeBehavior>()._chlorophyteNeeded +
-        " | Jungle Wood:" + _UIManager._craftingTable.chlorophytePickaxe.GetComponent<PickaxeBehavior > ()._jungleWoodNeeded);
-
-        _mithrilPickaxeReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilPickaxe.GetComponent<PickaxeBehavior>()._mithrilNeeded +
-        " | Ash Wood:" + _UIManager._craftingTable.mithrilPickaxe.GetComponent<PickaxeBehavior > ()._ashWoodNeeded);
-
-        //Swords
-        _ironSwordReqirements.text = ("Iron:" + _UIManager._craftingTable.ironSword.GetComponent<WeaponBehavior>()._ironNeeded + 
-            " | Oak Wood:" + _UIManager._craftingTable.ironSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
-
-        _goldSwordReqirements.text = ("Gold:" + _UIManager._craftingTable.goldSword.GetComponent<WeaponBehavior>()._goldNeeded +
-            " | Oak Wood:" + _UIManager._craftingTable.goldSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
-
-        _silverSwordReqirements.text = ("Silver:" + _UIManager._craftingTable.silverSword.GetComponent<WeaponBehavior>()._silverNeeded +
-        " | Oak Wood:" + _UIManager._craftingTable.silverSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
-
-        _diamondSwordReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondSword.GetComponent<WeaponBehavior>()._diamondsNeeded +
-        " | Oak Wood:" + _UIManager._craftingTable.diamondSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
-
-        _bloodstoneSwordReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneSword.GetComponent<WeaponBehavior>()._bloodstoneNeeded +
-        " | Oak Wood:" + _UIManager._craftingTable.bloodstoneSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
-
-        _chlorophyteSwordReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteSword.GetComponent<WeaponBehavior>()._chlorophyteNeeded +
-        " | Jungle Wood:" + _UIManager._craftingTable.chlorophyteSword.GetComponent<WeaponBehavior>()._jungleWoodNeeded);
-
-        _mithrilSwordReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilSword.GetComponent<WeaponBehavior>()._mithrilNeeded +
-        " | Ash Wood:" + _UIManager._craftingTable.mithrilSword.GetComponent<WeaponBehavior>()._ashWoodNeeded);
-
-
-        //Helmets
         _ironHelmetReqirements.text = ("Iron:" + _UIManager._craftingTable.ironHelmet.GetComponent<ArmorBehavior>()._ironNeeded);
 
-        _silverHelmetReqirements.text = ("Silver:" + _UIManager._craftingTable.silverHelmet.GetComponent<ArmorBehavior>()._silverNeeded);
+        _ironLeggingsReqirements.text = ("Iron:" + _UIManager._craftingTable.ironLeggings.GetComponent<ArmorBehavior>()._ironNeeded);
+
+        _ironBootsReqirements.text = ("Iron:" + _UIManager._craftingTable.ironBoots.GetComponent<ArmorBehavior>()._ironNeeded);
+
+
+
+
+
+
+        _mithrilPickaxeReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilPickaxe.GetComponent<PickaxeBehavior>()._mithrilNeeded +
+        "|Ash Wood:" + _UIManager._craftingTable.mithrilPickaxe.GetComponent<PickaxeBehavior > ()._ashWoodNeeded);
+
+        //Swords
+
+
+        _goldSwordReqirements.text = ("Gold:" + _UIManager._craftingTable.goldSword.GetComponent<WeaponBehavior>()._goldNeeded +
+            "|Oak Wood:" + _UIManager._craftingTable.goldSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
+
+        _goldPickaxeReqirements.text = ("Gold:" + _UIManager._craftingTable.goldPickaxe.GetComponent<PickaxeBehavior>()._goldNeeded +
+            "|Oak Wood:" + _UIManager._craftingTable.goldPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
 
         _goldHelmetReqirements.text = ("Gold:" + _UIManager._craftingTable.goldHelmet.GetComponent<ArmorBehavior>()._goldNeeded);
 
-        _diamondHelmetReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondHelmet.GetComponent<ArmorBehavior>()._diamondsNeeded);
-
-        _bloodstoneHelmetReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneHelmet.GetComponent<ArmorBehavior>()._bloodstoneNeeded);
-
-        _chlorophyteHelmetReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteHelmet.GetComponent<ArmorBehavior>()._chlorophyteNeeded);
-
-        _mithrilHelmetReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilHelmet.GetComponent<ArmorBehavior>()._mithrilNeeded);
-
-        //Chestplates
-        _ironChestplateReqirements.text = ("Iron:" + _UIManager._craftingTable.ironChestplate.GetComponent<ArmorBehavior>()._ironNeeded);
-
-        _silverChestplateReqirements.text = ("Silver:" + _UIManager._craftingTable.silverChestplate.GetComponent<ArmorBehavior>()._silverNeeded);
-
         _goldChestplateReqirements.text = ("Gold:" + _UIManager._craftingTable.goldChestplate.GetComponent<ArmorBehavior>()._goldNeeded);
-
-        _diamondChestplateReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondChestplate.GetComponent<ArmorBehavior>()._diamondsNeeded);
-
-        _bloodstoneChestplateReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneChestplate.GetComponent<ArmorBehavior>()._bloodstoneNeeded);
-
-        _chlorophyteChestplateReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteChestplate.GetComponent<ArmorBehavior>()._chlorophyteNeeded);
-
-        _mithrilChestplateReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilChestplate.GetComponent<ArmorBehavior>()._mithrilNeeded);
-
-        //Leggings
-        _ironLeggingsReqirements.text = ("Iron:" + _UIManager._craftingTable.ironLeggings.GetComponent<ArmorBehavior>()._ironNeeded);
-
-        _silverLeggingsReqirements.text = ("Silver:" + _UIManager._craftingTable.silverHelmet.GetComponent<ArmorBehavior>()._silverNeeded);
 
         _goldLeggingsReqirements.text = ("Gold:" + _UIManager._craftingTable.goldHelmet.GetComponent<ArmorBehavior>()._goldNeeded);
 
-        _diamondLeggingsReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondHelmet.GetComponent<ArmorBehavior>()._diamondsNeeded);
+        _goldBootsReqirements.text = ("Gold:" + _UIManager._craftingTable.goldBoots.GetComponent<ArmorBehavior>()._goldNeeded);
 
-        _bloodstoneLeggingsReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneLeggings.GetComponent<ArmorBehavior>()._bloodstoneNeeded);
 
-        _chlorophyteLeggingsReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteLeggings.GetComponent<ArmorBehavior>()._chlorophyteNeeded);
 
-        _mithrilLeggingsReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilLeggings.GetComponent<ArmorBehavior>()._mithrilNeeded);
 
-        //Boots
-        _ironBootsReqirements.text = ("Iron:" + _UIManager._craftingTable.ironBoots.GetComponent<ArmorBehavior>()._ironNeeded);
+
+        _mithrilSwordReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilSword.GetComponent<WeaponBehavior>()._mithrilNeeded +
+        "|Ash Wood:" + _UIManager._craftingTable.mithrilSword.GetComponent<WeaponBehavior>()._ashWoodNeeded);
+
+
+        //Helmets
+
+        _silverHelmetReqirements.text = ("Silver:" + _UIManager._craftingTable.silverHelmet.GetComponent<ArmorBehavior>()._silverNeeded);
+
+        _silverChestplateReqirements.text = ("Silver:" + _UIManager._craftingTable.silverChestplate.GetComponent<ArmorBehavior>()._silverNeeded);
+
+        _silverLeggingsReqirements.text = ("Silver:" + _UIManager._craftingTable.silverHelmet.GetComponent<ArmorBehavior>()._silverNeeded);
 
         _silverBootsReqirements.text = ("Silver:" + _UIManager._craftingTable.silverBoots.GetComponent<ArmorBehavior>()._silverNeeded);
 
-        _goldBootsReqirements.text = ("Gold:" + _UIManager._craftingTable.goldBoots.GetComponent<ArmorBehavior>()._goldNeeded);
+        _silverPickaxeReqirements.text = ("Silver:" + _UIManager._craftingTable.silverPickaxe.GetComponent<PickaxeBehavior>()._silverNeeded +
+        "|Oak Wood:" + _UIManager._craftingTable.silverPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
+
+        _silverSwordReqirements.text = ("Silver:" + _UIManager._craftingTable.silverSword.GetComponent<WeaponBehavior>()._silverNeeded +
+        "|Oak Wood:" + _UIManager._craftingTable.silverSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
+
+
+
+
+
+        //Chestplates
+
+        _diamondSwordReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondSword.GetComponent<WeaponBehavior>()._diamondsNeeded +
+        "|Oak Wood:" + _UIManager._craftingTable.diamondSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
+
+        _diamondPickaxeReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondPickaxe.GetComponent<PickaxeBehavior>()._diamondsNeeded +
+        "|Oak Wood:" + _UIManager._craftingTable.diamondPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
+
+        _diamondHelmetReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondHelmet.GetComponent<ArmorBehavior>()._diamondsNeeded);
+
+        _diamondChestplateReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondChestplate.GetComponent<ArmorBehavior>()._diamondsNeeded);
+
+        _diamondLeggingsReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondHelmet.GetComponent<ArmorBehavior>()._diamondsNeeded);
 
         _diamondBootsReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondBoots.GetComponent<ArmorBehavior>()._diamondsNeeded);
 
+
+
+
+        //Leggings
+
+        _bloodstonePickaxeReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstonePickaxe.GetComponent<PickaxeBehavior>()._bloodstoneNeeded +
+        "|Oak Wood:" + _UIManager._craftingTable.bloodstonePickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
+
+        _bloodstoneSwordReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneSword.GetComponent<WeaponBehavior>()._bloodstoneNeeded +
+        "|Oak Wood:" + _UIManager._craftingTable.bloodstoneSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
+
+        _bloodstoneHelmetReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneHelmet.GetComponent<ArmorBehavior>()._bloodstoneNeeded);
+
+        _bloodstoneChestplateReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneChestplate.GetComponent<ArmorBehavior>()._bloodstoneNeeded);
+
         _bloodstoneBootsReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneBoots.GetComponent<ArmorBehavior>()._bloodstoneNeeded);
 
+        _bloodstoneLeggingsReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneLeggings.GetComponent<ArmorBehavior>()._bloodstoneNeeded);
+
+
+
+        //Boots
+        _chlorophytePickaxeReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophytePickaxe.GetComponent<PickaxeBehavior>()._chlorophyteNeeded +
+        "|Jungle Wood:" + _UIManager._craftingTable.chlorophytePickaxe.GetComponent<PickaxeBehavior>()._jungleWoodNeeded);
+
+        _chlorophyteSwordReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteSword.GetComponent<WeaponBehavior>()._chlorophyteNeeded +
+        "|Jungle Wood:" + _UIManager._craftingTable.chlorophyteSword.GetComponent<WeaponBehavior>()._jungleWoodNeeded);
+
+        _chlorophyteHelmetReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteHelmet.GetComponent<ArmorBehavior>()._chlorophyteNeeded);
+
+        _chlorophyteChestplateReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteChestplate.GetComponent<ArmorBehavior>()._chlorophyteNeeded);
+
+        _chlorophyteLeggingsReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteLeggings.GetComponent<ArmorBehavior>()._chlorophyteNeeded);
+
         _chlorophyteBootsReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteBoots.GetComponent<ArmorBehavior>()._chlorophyteNeeded);
+
+        _mithrilHelmetReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilHelmet.GetComponent<ArmorBehavior>()._mithrilNeeded);
+
+        _mithrilChestplateReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilChestplate.GetComponent<ArmorBehavior>()._mithrilNeeded);
+
+        _mithrilLeggingsReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilLeggings.GetComponent<ArmorBehavior>()._mithrilNeeded);
 
         _mithrilBootsReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilBoots.GetComponent<ArmorBehavior>()._mithrilNeeded);
     }

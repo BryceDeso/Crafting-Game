@@ -261,135 +261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &210558023
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 210558024}
-  - component: {fileID: 210558027}
-  - component: {fileID: 210558026}
-  - component: {fileID: 210558025}
-  m_Layer: 5
-  m_Name: BloodstoneSwordButton (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &210558024
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210558023}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 781012623}
-  m_Father: {fileID: 944253405}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: -30.000008}
-  m_SizeDelta: {x: 100, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &210558025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210558023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 210558026}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: CraftIronSword
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &210558026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210558023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &210558027
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210558023}
-  m_CullTransparentMesh: 0
 --- !u!1001 &259109856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -680,85 +551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &781012622
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 781012623}
-  - component: {fileID: 781012625}
-  - component: {fileID: 781012624}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &781012623
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781012622}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 210558024}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &781012624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781012622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Craft
-
-'
---- !u!222 &781012625
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781012622}
-  m_CullTransparentMesh: 0
 --- !u!114 &833854000 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5520731452747236685, guid: 00dc7ba09b0c7c245a442149e895765d,
@@ -783,12 +575,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &944253405 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7937437513782106014, guid: cff27faaba6659343b8119011d696acf,
-    type: 3}
-  m_PrefabInstance: {fileID: 2067463382}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &950330799 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7613505043387369161, guid: 00dc7ba09b0c7c245a442149e895765d,
@@ -2694,6 +2480,66 @@ PrefabInstance:
       propertyPath: _mithrilBootsButton
       value: 
       objectReference: {fileID: 1301107569}
+    - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
+        type: 3}
+      propertyPath: _bloodstoneSwordReqirements
+      value: 
+      objectReference: {fileID: 2067463446}
+    - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
+        type: 3}
+      propertyPath: _bloodstoneSwordButton
+      value: 
+      objectReference: {fileID: 2067463445}
+    - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
+        type: 3}
+      propertyPath: _bloodstonePickaxeReqirements
+      value: 
+      objectReference: {fileID: 2067463432}
+    - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
+        type: 3}
+      propertyPath: _bloodstonePickaxeButton
+      value: 
+      objectReference: {fileID: 2067463431}
+    - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
+        type: 3}
+      propertyPath: _bloodstoneHelmetReqirements
+      value: 
+      objectReference: {fileID: 2067463418}
+    - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
+        type: 3}
+      propertyPath: _bloodstoneHelmetButton
+      value: 
+      objectReference: {fileID: 2067463417}
+    - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
+        type: 3}
+      propertyPath: _bloodstoneChestplateReqirements
+      value: 
+      objectReference: {fileID: 2067463402}
+    - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
+        type: 3}
+      propertyPath: _bloodstoneChestplateButton
+      value: 
+      objectReference: {fileID: 2067463401}
+    - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
+        type: 3}
+      propertyPath: _bloodstoneLeggingsReqirements
+      value: 
+      objectReference: {fileID: 2067463390}
+    - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
+        type: 3}
+      propertyPath: _bloodstoneLeggingsButton
+      value: 
+      objectReference: {fileID: 2067463389}
+    - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
+        type: 3}
+      propertyPath: _bloodstoneBootsReqirements
+      value: 
+      objectReference: {fileID: 1595554001}
+    - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
+        type: 3}
+      propertyPath: _bloodstoneBootsButton
+      value: 
+      objectReference: {fileID: 1515644403}
     - target: {fileID: 1787272649927749797, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
         type: 3}
       propertyPath: m_Name
@@ -3019,7 +2865,7 @@ PrefabInstance:
     - target: {fileID: 4006431420211151423, guid: 00dc7ba09b0c7c245a442149e895765d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4006431420211151555, guid: 00dc7ba09b0c7c245a442149e895765d,
         type: 3}
@@ -3156,6 +3002,162 @@ PrefabInstance:
       propertyPath: _goldPickaxe
       value: 
       objectReference: {fileID: 5544724281647059049, guid: 6a4794b2754c69e48aae406ce633a5b0,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: bloodstonePickaxe
+      value: 
+      objectReference: {fileID: 3674022845039184745, guid: 7df0ed6940c0da74ab7e02105578bb25,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: bloodstoneSword
+      value: 
+      objectReference: {fileID: 8709240740919242482, guid: 43f0cf3ba737cbc49bf44ad1f54f906e,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: goldHelmet
+      value: 
+      objectReference: {fileID: 822357029834509018, guid: f4dc2d988903b514fa802ba5692281be,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: silverHelmet
+      value: 
+      objectReference: {fileID: 3512404824598702770, guid: 40e6d16f3c8effa4d88ade153b1bd85f,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: diamondHelmet
+      value: 
+      objectReference: {fileID: 5247002600713017415, guid: b17659ed566844040922e727de98cce5,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: bloodstoneHelmet
+      value: 
+      objectReference: {fileID: 5966090727038188993, guid: e4eab7004059532439a2302be78933b7,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: chlorophyteHelmet
+      value: 
+      objectReference: {fileID: 6918169075184586923, guid: 3046b00d6a488ef4f9301fd55202ab04,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: mithrilHelmet
+      value: 
+      objectReference: {fileID: 4468107997311733255, guid: 611af6f3b575f6b4e90ff7336458cd84,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: goldChestplate
+      value: 
+      objectReference: {fileID: 7088319374280079089, guid: f0fb686fcd67cb743bee8fa12590208a,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: silverChestplate
+      value: 
+      objectReference: {fileID: 7386196129903116625, guid: e6c8e60d0c06b4048924d2d6c53dbeb0,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: diamondChestplate
+      value: 
+      objectReference: {fileID: 2048410413065640023, guid: 890e04abfb2da19409a7131331e1d761,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: bloodstoneChestplate
+      value: 
+      objectReference: {fileID: 3825492371939069605, guid: 4a73993164ef0104c96c2651922b98ec,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: chlorophyteChestplate
+      value: 
+      objectReference: {fileID: 4034139283106090116, guid: 4309c55c994b7154fa168ffe204a3dd9,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: mithrilChestplate
+      value: 
+      objectReference: {fileID: 2012854572384467798, guid: 1e2efcd28d7108f419410c17a12b7f08,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: goldLeggings
+      value: 
+      objectReference: {fileID: 721771155915119403, guid: 324d0c4a0bda2b341bafbe1c7bcba907,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: silverLeggings
+      value: 
+      objectReference: {fileID: 8782994055451088747, guid: b5b112cdff4d229439a8f5e8c2cda812,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: diamondLeggings
+      value: 
+      objectReference: {fileID: 422713046142965452, guid: de763f32851d98e4a9748ecb6bd82f24,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: bloodstoneLeggings
+      value: 
+      objectReference: {fileID: 8131142876120043605, guid: 9ef67eb6c38e78647aac2cb162def779,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: chlorophyteLeggings
+      value: 
+      objectReference: {fileID: 1184101450966421952, guid: 9661a29ac63c56348b9b294b26cdcee2,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: mithrilLeggings
+      value: 
+      objectReference: {fileID: 1943546602465016792, guid: d71b18d9ae5b2e84fadd8238702b8cca,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: goldBoots
+      value: 
+      objectReference: {fileID: 174144804486719417, guid: 13437f6ba9b960d42b8cc7ebdb38642d,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: silverBoots
+      value: 
+      objectReference: {fileID: 7554270918059864477, guid: e02208c616027264e9913899bf51d047,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: diamondBoots
+      value: 
+      objectReference: {fileID: 1235791540554450134, guid: d9cd08a405fc1424489a930f81f1e62a,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: bloodstoneBoots
+      value: 
+      objectReference: {fileID: 7482690369907339643, guid: 68adb17be14c6a945b1076e5e9780f8d,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: chlorophyteBoots
+      value: 
+      objectReference: {fileID: 9159891452227222388, guid: 2b7677c9076a87144b5baadd7a0a6fe7,
+        type: 3}
+    - target: {fileID: 8489255541502991777, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+        type: 3}
+      propertyPath: mithrilBoots
+      value: 
+      objectReference: {fileID: 998692213116092283, guid: b27629a9318462740850119b8c1090ce,
         type: 3}
     - target: {fileID: 8489255541502991778, guid: 9212a9d5ad955164eb77b5b3a14264cf,
         type: 3}

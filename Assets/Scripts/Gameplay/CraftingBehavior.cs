@@ -199,7 +199,6 @@ public class CraftingBehavior : MonoBehaviour
     }
 
     //Pickaxe crafting
-
     public void CraftIronPickaxe()
     {
         if (_player._ironHeld >= ironPickaxe.GetComponent<PickaxeBehavior>()._ironNeeded && _player._oakWoodHeld >= ironPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
@@ -299,7 +298,6 @@ public class CraftingBehavior : MonoBehaviour
     }
 
     //Helemt crafting
-
     public void CraftIronHelmet()
     {
         if (_player._ironHeld >= ironHelmet.GetComponent<ArmorBehavior>()._ironNeeded)
