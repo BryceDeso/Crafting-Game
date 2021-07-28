@@ -52,7 +52,7 @@ public class PlayerBehavior : MonoBehaviour
     public float _goldHeld;
     public float _silverHeld;
     public float _diamondsHeld;
-    public float _titaniumHeld;
+    public float _bloodstoneHeld;
     public float _chlorophyteHeld;
     public float _mithrilHeld;
     public float _oakWoodHeld;

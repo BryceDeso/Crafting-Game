@@ -105,7 +105,7 @@ public class InventoryUIBehavior : MonoBehaviour
         _gold.text = (_UIManager._player._goldHeld + "");
         _silver.text = (_UIManager._player._silverHeld + "");
         _diamond.text = (_UIManager._player._diamondsHeld + "");
-        _titanium.text = (_UIManager._player._titaniumHeld + "");
+        _titanium.text = (_UIManager._player._bloodstoneHeld + "");
         _chlorophyte.text = (_UIManager._player._chlorophyteHeld + "");
         _mithril.text = (_UIManager._player._mithrilHeld + "");
         _oakWood.text = (_UIManager._player._oakWoodHeld + "");

@@ -1,0 +1,201 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8489255541491468430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8489255541491468429}
+  m_Layer: 0
+  m_Name: ItemSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8489255541491468429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8489255541491468430}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.513, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8489255541502991778}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &8489255541502991790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8489255541502991778}
+  - component: {fileID: 8489255541502991779}
+  - component: {fileID: 8489255541502991788}
+  - component: {fileID: 8489255541502991789}
+  - component: {fileID: 8489255541502991777}
+  m_Layer: 0
+  m_Name: CraftingTable
+  m_TagString: CraftingTable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8489255541502991778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8489255541502991790}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10, y: 2.553, z: 8.465}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8489255541491468429}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8489255541502991779
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8489255541502991790}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8489255541502991788
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8489255541502991790}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 61547ffc6e1f9a24d82eda1c1d2fcf41, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &8489255541502991789
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8489255541502991790}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8489255541502991777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8489255541502991790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9174ec0f87b68d44be7d39d3e771692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  _itemSpawn: {fileID: 8489255541491468430}
+  ironSword: {fileID: 2439914633159769210, guid: 998cc683bb08a99408eed01ded087e70,
+    type: 3}
+  goldSword: {fileID: 1664186562805865465, guid: 6b8e546f1a7cd5b4f82ef47dea6e1537,
+    type: 3}
+  silverSword: {fileID: 8472624896881907850, guid: bf06f033ba87ef641b413f5d3de8dc0a,
+    type: 3}
+  diamondSword: {fileID: 1152580782449043010, guid: e3bf3c0d84d87cf4c9ef3cf841fe7312,
+    type: 3}
+  titaniumSword: {fileID: 8709240740919242482, guid: 43f0cf3ba737cbc49bf44ad1f54f906e,
+    type: 3}
+  chlorophyteSword: {fileID: 6139404339310279680, guid: 256c40617f014b442b6551c5eaf6f287,
+    type: 3}
+  mithrilSword: {fileID: 2577611271821719705, guid: e865f88fb71d8b744a14379a155cf678,
+    type: 3}
+  ironPickaxe: {fileID: 7423028485204839436, guid: cab4cedee0477c849981ccf6b79720ae,
+    type: 3}
+  goldPickaxe: {fileID: 5544724281647059049, guid: 6a4794b2754c69e48aae406ce633a5b0,
+    type: 3}
+  silverPickaxe: {fileID: 2542773662599655522, guid: 16712ba53f76dd64dadd99b1dfe0b763,
+    type: 3}
+  diamondPickaxe: {fileID: 5336876329848119908, guid: 1925c283435d230428209ffa21c00eb2,
+    type: 3}
+  titaniumPickaxe: {fileID: 3674022845039184745, guid: 7df0ed6940c0da74ab7e02105578bb25,
+    type: 3}
+  chlorophytePickaxe: {fileID: 2706907837565857749, guid: 126cc8fd61b92e94d9c9acd6ada28e6f,
+    type: 3}
+  mithrilPickaxe: {fileID: 5441094051098438431, guid: 8cf1ddf9c6f892d43aaee45ed45bb623,
+    type: 3}
+  ironHelmet: {fileID: 7028178522640888126, guid: 6ae1847b30e876d498a0e1815b6ce487,
+    type: 3}
+  goldHelmet: {fileID: 0}
+  silverHelmet: {fileID: 0}
+  diamondHelmet: {fileID: 0}
+  titaniumHelmet: {fileID: 0}
+  chlorophyteHelmet: {fileID: 0}
+  mithrilHelmet: {fileID: 0}
+  ironChestplate: {fileID: 1087985941690347943, guid: a841fa11eb2fb094585da0164f6e8462,
+    type: 3}
+  goldChestplate: {fileID: 0}
+  silverChestplate: {fileID: 0}
+  diamondChestplate: {fileID: 0}
+  titaniumChestplate: {fileID: 0}
+  chlorophyteChestplate: {fileID: 0}
+  mithrilChestplate: {fileID: 0}
+  ironLeggings: {fileID: 488834281232979797, guid: 5fee9ef77bf6ada4fb7b5cc609e513d6,
+    type: 3}
+  goldLeggings: {fileID: 0}
+  silverLeggings: {fileID: 0}
+  diamondLeggings: {fileID: 0}
+  titaniumLeggings: {fileID: 0}
+  chlorophyteLeggings: {fileID: 0}
+  mithrilLeggings: {fileID: 0}
+  ironBoots: {fileID: 992790323236664817, guid: e7fd88c9e7d49c24887b4d34609f6a70,
+    type: 3}
+  goldBoots: {fileID: 0}
+  silverBoots: {fileID: 0}
+  diamondBoots: {fileID: 0}
+  titaniumBoots: {fileID: 0}
+  chlorophyteBoots: {fileID: 0}
+  mithrilBoots: {fileID: 0}

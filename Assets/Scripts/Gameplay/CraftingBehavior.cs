@@ -18,7 +18,7 @@ public class CraftingBehavior : MonoBehaviour
 
     public GameObject diamondSword;
 
-    public GameObject titaniumSword;
+    public GameObject bloodstoneSword;
 
     public GameObject chlorophyteSword;
 
@@ -33,7 +33,7 @@ public class CraftingBehavior : MonoBehaviour
 
     public GameObject diamondPickaxe;
 
-    public GameObject titaniumPickaxe;
+    public GameObject bloodstonePickaxe;
 
     public GameObject chlorophytePickaxe;
 
@@ -48,7 +48,7 @@ public class CraftingBehavior : MonoBehaviour
 
     public GameObject diamondHelmet;
 
-    public GameObject titaniumHelmet;
+    public GameObject bloodstoneHelmet;
 
     public GameObject chlorophyteHelmet;
 
@@ -63,7 +63,7 @@ public class CraftingBehavior : MonoBehaviour
 
     public GameObject diamondChestplate;
 
-    public GameObject titaniumChestplate;
+    public GameObject bloodstoneChestplate;
 
     public GameObject chlorophyteChestplate;
 
@@ -78,7 +78,7 @@ public class CraftingBehavior : MonoBehaviour
 
     public GameObject diamondLeggings;
 
-    public GameObject titaniumLeggings;
+    public GameObject bloodstoneLeggings;
 
     public GameObject chlorophyteLeggings;
 
@@ -93,7 +93,7 @@ public class CraftingBehavior : MonoBehaviour
 
     public GameObject diamondBoots;
 
-    public GameObject titaniumBoots;
+    public GameObject bloodstoneBoots;
 
     public GameObject chlorophyteBoots;
 
@@ -158,11 +158,11 @@ public class CraftingBehavior : MonoBehaviour
 
     public void CraftTitaniumSword()
     {
-        if (_player._titaniumHeld >= titaniumSword.GetComponent<WeaponBehavior>()._titaniumNeeded && _player._oakWoodHeld >= titaniumSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
+        if (_player._bloodstoneHeld >= bloodstoneSword.GetComponent<WeaponBehavior>()._bloodstoneNeeded && _player._oakWoodHeld >= bloodstoneSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
         {
-            _player._titaniumHeld -= titaniumSword.GetComponent<WeaponBehavior>()._titaniumNeeded;
-            _player._oakWoodHeld -= titaniumSword.GetComponent<WeaponBehavior>()._oakWoodNeeded;
-            Instantiate(titaniumSword, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+            _player._bloodstoneHeld -= bloodstoneSword.GetComponent<WeaponBehavior>()._bloodstoneNeeded;
+            _player._oakWoodHeld -= bloodstoneSword.GetComponent<WeaponBehavior>()._oakWoodNeeded;
+            Instantiate(bloodstoneSword, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
         }
         else
         {
@@ -256,13 +256,13 @@ public class CraftingBehavior : MonoBehaviour
         }
     }
 
-    public void CraftTitaniumPickaxe()
+    public void CraftBloodstonePickaxe()
     {
-        if (_player._titaniumHeld >= titaniumPickaxe.GetComponent<PickaxeBehavior>()._titaniumNeeded && _player._oakWoodHeld >= titaniumPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
+        if (_player._bloodstoneHeld >= bloodstonePickaxe.GetComponent<PickaxeBehavior>()._bloodstoneNeeded && _player._oakWoodHeld >= bloodstonePickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded)
         {
-            _player._titaniumHeld -= titaniumPickaxe.GetComponent<PickaxeBehavior>()._titaniumNeeded;
-            _player._oakWoodHeld -= titaniumPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded;
-            Instantiate(titaniumPickaxe, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+            _player._bloodstoneHeld -= bloodstonePickaxe.GetComponent<PickaxeBehavior>()._bloodstoneNeeded;
+            _player._oakWoodHeld -= bloodstonePickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded;
+            Instantiate(bloodstonePickaxe, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
         }
         else
         {
@@ -354,10 +354,10 @@ public class CraftingBehavior : MonoBehaviour
 
     public void CraftTitaniumHelmet()
     {
-        if (_player._titaniumHeld >= titaniumHelmet.GetComponent<ArmorBehavior>()._titaniumNeeded)
+        if (_player._bloodstoneHeld >= bloodstoneHelmet.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
         {
-            _player._titaniumHeld -= titaniumHelmet.GetComponent<ArmorBehavior>()._titaniumNeeded;
-            Instantiate(titaniumHelmet, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+            _player._bloodstoneHeld -= bloodstoneHelmet.GetComponent<ArmorBehavior>()._bloodstoneNeeded;
+            Instantiate(bloodstoneHelmet, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
         }
         else
         {
@@ -446,10 +446,10 @@ public class CraftingBehavior : MonoBehaviour
 
     public void CraftTitaniumChestplate()
     {
-        if (_player._titaniumHeld >= titaniumChestplate.GetComponent<ArmorBehavior>()._titaniumNeeded)
+        if (_player._bloodstoneHeld >= bloodstoneChestplate.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
         {
-            _player._titaniumHeld -= titaniumChestplate.GetComponent<ArmorBehavior>()._titaniumNeeded;
-            Instantiate(titaniumChestplate, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+            _player._bloodstoneHeld -= bloodstoneChestplate.GetComponent<ArmorBehavior>()._bloodstoneNeeded;
+            Instantiate(bloodstoneChestplate, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
         }
         else
         {
@@ -537,10 +537,10 @@ public class CraftingBehavior : MonoBehaviour
 
     public void CraftTitaniumLeggings()
     {
-        if (_player._titaniumHeld >= titaniumLeggings.GetComponent<ArmorBehavior>()._titaniumNeeded)
+        if (_player._bloodstoneHeld >= bloodstoneLeggings.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
         {
-            _player._titaniumHeld -= titaniumLeggings.GetComponent<ArmorBehavior>()._titaniumNeeded;
-            Instantiate(titaniumLeggings, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+            _player._bloodstoneHeld -= bloodstoneLeggings.GetComponent<ArmorBehavior>()._bloodstoneNeeded;
+            Instantiate(bloodstoneLeggings, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
         }
         else
         {
@@ -628,10 +628,10 @@ public class CraftingBehavior : MonoBehaviour
 
     public void CraftTitaniumBoots()
     {
-        if (_player._titaniumHeld >= titaniumBoots.GetComponent<ArmorBehavior>()._titaniumNeeded)
+        if (_player._bloodstoneHeld >= bloodstoneBoots.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
         {
-            _player._titaniumHeld -= titaniumBoots.GetComponent<ArmorBehavior>()._titaniumNeeded;
-            Instantiate(titaniumBoots, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
+            _player._bloodstoneHeld -= bloodstoneBoots.GetComponent<ArmorBehavior>()._bloodstoneNeeded;
+            Instantiate(bloodstoneBoots, _itemSpawn.transform.position, _itemSpawn.transform.rotation);
         }
         else
         {

@@ -19,7 +19,7 @@ public class WeaponBehavior : MonoBehaviour
     public float _goldNeeded;
     public float _silverNeeded;
     public float _diamondsNeeded;
-    public float _titaniumNeeded;
+    public float _bloodstoneNeeded;
     public float _chlorophyteNeeded;
     public float _mithrilNeeded;
 

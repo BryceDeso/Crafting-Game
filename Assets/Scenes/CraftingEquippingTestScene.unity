@@ -261,6 +261,135 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &210558023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 210558024}
+  - component: {fileID: 210558027}
+  - component: {fileID: 210558026}
+  - component: {fileID: 210558025}
+  m_Layer: 5
+  m_Name: BloodstoneSwordButton (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &210558024
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210558023}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 781012623}
+  m_Father: {fileID: 944253405}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000015258789, y: -30.000008}
+  m_SizeDelta: {x: 100, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &210558025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210558023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 210558026}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: CraftIronSword
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &210558026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210558023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &210558027
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210558023}
+  m_CullTransparentMesh: 0
 --- !u!1001 &259109856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -477,7 +606,7 @@ Transform:
   m_LocalScale: {x: 2.4793, y: 2.4793, z: 2.4793}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &576371599 stripped
 MonoBehaviour:
@@ -551,6 +680,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &781012622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 781012623}
+  - component: {fileID: 781012625}
+  - component: {fileID: 781012624}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &781012623
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781012622}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 210558024}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &781012624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781012622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Craft
+
+'
+--- !u!222 &781012625
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781012622}
+  m_CullTransparentMesh: 0
 --- !u!114 &833854000 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5520731452747236685, guid: 00dc7ba09b0c7c245a442149e895765d,
@@ -575,6 +783,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &944253405 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7937437513782106014, guid: cff27faaba6659343b8119011d696acf,
+    type: 3}
+  m_PrefabInstance: {fileID: 2067463382}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &950330799 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7613505043387369161, guid: 00dc7ba09b0c7c245a442149e895765d,
@@ -711,7 +925,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1393328835 stripped
 MonoBehaviour:
@@ -857,6 +1071,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1786916314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3207335942227347295, guid: cff27faaba6659343b8119011d696acf,
+    type: 3}
+  m_PrefabInstance: {fileID: 2067463382}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1810554803 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6205498886820587822, guid: 00dc7ba09b0c7c245a442149e895765d,
@@ -924,6 +1144,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 290037579217755657, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodstoneSwordButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 552711376797810829, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodstoneTab
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039568929826958393, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodstoneChestplateButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2639969057100823792, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodstoneSwordRecipe
+      objectReference: {fileID: 0}
     - target: {fileID: 3207335942227347283, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -962,7 +1202,7 @@ PrefabInstance:
     - target: {fileID: 3207335942227347283, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3207335942227347283, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
@@ -1038,6 +1278,56 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3343505703316549650, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodstoneLeggingsButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040039019898378979, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodstoneBootsButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4145531566302580413, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodstoneHelmetButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218640677287335033, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_Text
+      value: Bloodstone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937432673367940104, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodstonePickaxeRecipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204900971112191341, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodstoneChestplateRecipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687508755386076827, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodstonePickaxeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827393266155717778, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodstoneHelmetRecipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979397040497616788, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodstoneLeggingsRecipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778619862361222109, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodstoneBootsRecipe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cff27faaba6659343b8119011d696acf, type: 3}
@@ -1962,7 +2252,7 @@ PrefabInstance:
     - target: {fileID: 1787272649927749793, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1787272649927749793, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
         type: 3}
@@ -1983,7 +2273,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _craftingUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1786916314}
     - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
         type: 3}
       propertyPath: _ironSwordReqirements
@@ -2696,6 +2986,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1708612826359637850, guid: 00dc7ba09b0c7c245a442149e895765d,
+        type: 3}
+      propertyPath: m_Name
+      value: Bloodstone
+      objectReference: {fileID: 0}
     - target: {fileID: 4006431419191381025, guid: 00dc7ba09b0c7c245a442149e895765d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2764,7 +3059,7 @@ PrefabInstance:
     - target: {fileID: 4006431420211151555, guid: 00dc7ba09b0c7c245a442149e895765d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4006431420211151555, guid: 00dc7ba09b0c7c245a442149e895765d,
         type: 3}
@@ -2830,6 +3125,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852019545843868599, guid: 00dc7ba09b0c7c245a442149e895765d,
+        type: 3}
+      propertyPath: m_Name
+      value: Bloodstone Held
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00dc7ba09b0c7c245a442149e895765d, type: 3}
