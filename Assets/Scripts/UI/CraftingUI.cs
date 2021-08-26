@@ -11,7 +11,7 @@ public class CraftingUI : MonoBehaviour
 
     private bool _updateCraftingUI = false;
 
-    private bool _tabs[7];
+    private bool _tabs[];
 
     [SerializeField]
     private Button _exitCraftingButton;
