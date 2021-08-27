@@ -2194,6 +2194,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
         type: 3}
+      propertyPath: _tabs.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
+        type: 3}
+      propertyPath: Text.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
+        type: 3}
+      propertyPath: _swords.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787272649927749796, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
+        type: 3}
       propertyPath: _craftingUI
       value: 
       objectReference: {fileID: 1786916314}
