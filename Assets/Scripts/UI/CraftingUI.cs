@@ -11,49 +11,43 @@ public class CraftingUI : MonoBehaviour
 
     private bool _updateCraftingUI = false;
 
-    private bool _tabs[];
+    public bool[] _tabs;
 
     [SerializeField]
-    private Button _exitCraftingButton;
+    private Text[] _swords;
 
     [SerializeField]
-    private Button _ironTabButton;
+    private Text[] _pickaxes;
+
+    [SerializeField]
+    private Text[] _helmet;
+
+    [SerializeField]
+    private Text[] _chestplate;
+
+    [SerializeField]
+    private Text[] _leggings;
+
+    [SerializeField]
+    private Text[] _boots;
 
     [SerializeField]
     private bool _onIronTab;
 
     [SerializeField]
-    private Button _silverTabButton;
-
-    [SerializeField]
     private bool _onSilverTab;
-
-    [SerializeField]
-    private Button _goldTabButton;
 
     [SerializeField]
     private bool _onGoldTab;
 
     [SerializeField]
-    private Button _diamondTabButton;
-
-    [SerializeField]
     private bool _onDiamondTab;
-
-    [SerializeField]
-    private Button _bloodstoneTabButton;
 
     [SerializeField]
     private bool _onBloodstoneTab;
 
     [SerializeField]
-    private Button _chlorophyteTabButton;
-
-    [SerializeField]
     private bool _onChlorophyteTab;
-
-    [SerializeField]
-    private Button _mithrilTabButton;
 
     [SerializeField]
     private bool _onMithrilTab;
@@ -318,7 +312,13 @@ public class CraftingUI : MonoBehaviour
 
     private void Start()
     {
-        
+        _tabs[0] = _onIronTab;
+        _tabs[1] = _onSilverTab;
+        _tabs[2] = _onGoldTab;
+        _tabs[3] = _onDiamondTab;
+        _tabs[4] = _onBloodstoneTab;
+        _tabs[5] = _onChlorophyteTab;
+        _tabs[6] = _onMithrilTab;
     }
 
     private void Update()
@@ -346,54 +346,12 @@ public class CraftingUI : MonoBehaviour
         }
         if(_updateCraftingUI)
         {
-            UpdateTab();
+            updateCraftButtons();
             UpdateRequirements();
         }
     }
 
-    private void IronTab()
-    {
-        if(!_onIronTab)
-        {
-            _onIronTab = true;
-            _onSilverTab = false;
-            _onGoldTab = false;
-            _onDiamondTab = false;
-            _onBloodstoneTab = false;
-            _onChlorophyteTab = false;
-            _onMithrilTab = false;
-        }
-    }
-
-    private void SilverTab()
-    {
-        if (!_onSilverTab)
-        {
-            _onIronTab = true;
-            _onSilverTab = false;
-            _onGoldTab = false;
-            _onDiamondTab = false;
-            _onBloodstoneTab = false;
-            _onChlorophyteTab = false;
-            _onMithrilTab = false;
-        }
-    }
-
-    private void GoldTab()
-    {
-        if (!_onGoldTab)
-        {
-            _onIronTab = false;
-            _onSilverTab = false;
-            _onGoldTab = false;
-            _onDiamondTab = false;
-            _onBloodstoneTab = false;
-            _onChlorophyteTab = false;
-            _onMithrilTab = false;
-        }
-    }
-
-    public void UpdateTab()
+    public void updateCraftButtons()
     {
         if(_onIronTab)
         {
