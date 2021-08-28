@@ -324,6 +324,16 @@ PrefabInstance:
       propertyPath: _goldHeld
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4542705402534024739, guid: b1729405eee9ee6428a0d4bffe5ae133,
+        type: 3}
+      propertyPath: _ashWoodHeld
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542705402534024739, guid: b1729405eee9ee6428a0d4bffe5ae133,
+        type: 3}
+      propertyPath: _mithrilHeld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4542705402534024750, guid: b1729405eee9ee6428a0d4bffe5ae133,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -615,6 +625,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &796464653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8489255541502991790, guid: 9212a9d5ad955164eb77b5b3a14264cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 8489255541385776683}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &807966763 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2531155489554882539, guid: cff27faaba6659343b8119011d696acf,
@@ -693,7 +709,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 8489255541385776683}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 796464653}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9174ec0f87b68d44be7d39d3e771692, type: 3}
@@ -1034,6 +1050,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 260471036024836403, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 260471036024836403, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftChlorophytePickaxe
+      objectReference: {fileID: 0}
+    - target: {fileID: 260471036024836403, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 290037579217755657, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_Name
@@ -1043,6 +1074,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403842411545027357, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 403842411545027357, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftDiamondBoots
+      objectReference: {fileID: 0}
+    - target: {fileID: 403842411545027357, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 552711376797810829, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
@@ -1068,6 +1114,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092718056355822711, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 1092718056355822711, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftBloodStoneBoots
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092718056355822711, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1128232353381064948, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
@@ -1104,6 +1165,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1140819106964631428, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 1140819106964631428, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftBloodStoneLeggings
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140819106964631428, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1194675037876831498, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_IsActive
@@ -1119,6 +1195,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1561784646570044798, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 1561784646570044798, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftMithrilSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561784646570044798, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1569367450353680357, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_IsActive
@@ -1129,10 +1220,115 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1684378142360647886, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 1684378142360647886, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftGoldChestplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684378142360647886, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719662491582387870, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 1719662491582387870, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftGoldLeggings
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719662491582387870, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062849203369087744, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 2062849203369087744, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftSilverLeggings
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062849203369087744, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2245042151944469157, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 2245042151944469157, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftDiamondSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 2245042151944469157, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2344073733075479017, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2396355766393742589, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 2396355766393742589, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftGoldLeggings
+      objectReference: {fileID: 0}
+    - target: {fileID: 2396355766393742589, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471354470364455642, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 2471354470364455642, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftMithrilPickaxe
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471354470364455642, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491561551136120288, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 2491561551136120288, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftDiamondHelmet
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491561551136120288, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2531155489554882539, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
@@ -1179,15 +1375,90 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2684740001057186035, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 2684740001057186035, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftChlorophyteHelmet
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684740001057186035, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739459954535963746, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 2739459954535963746, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftSilverChestplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739459954535963746, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2782380627980104174, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2904642156398381771, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 2904642156398381771, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftBloodStoneHelmet
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904642156398381771, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944796680483179569, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 2944796680483179569, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftDiamondPickaxe
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944796680483179569, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2945126887577054218, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961216281841355921, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 2961216281841355921, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftSilverHelmet
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961216281841355921, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3207335940823469994, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
@@ -1214,6 +1485,36 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3207335941387058515, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 3207335941387058515, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftIronBoots
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207335941387058515, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207335941422763777, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 3207335941422763777, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftIronPickaxe
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207335941422763777, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3207335941463510462, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1229,10 +1530,70 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CraftingUI, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3207335941574603308, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 3207335941574603308, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftGoldPickaxe
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207335941574603308, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3207335941612658964, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207335941893090684, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 3207335941893090684, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftIronHelmet
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207335941893090684, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207335942120877034, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 3207335942120877034, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftIronChestplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207335942120877034, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207335942121899015, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 3207335942121899015, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftIronSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207335942121899015, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3207335942227347283, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
@@ -1359,6 +1720,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3207335942469614230, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 3207335942469614230, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftIronLeggings
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207335942469614230, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3207335942482258507, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_IsActive
@@ -1424,6 +1800,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: BloodstoneBootsButton
       objectReference: {fileID: 0}
+    - target: {fileID: 4130416938417694542, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 4130416938417694542, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftDiamondLeggings
+      objectReference: {fileID: 0}
+    - target: {fileID: 4130416938417694542, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4145531566302580413, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_Name
@@ -1438,6 +1829,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Bloodstone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235338115835255483, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 4235338115835255483, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftChlorophyteBoots
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235338115835255483, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4472781988453822187, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
@@ -1499,6 +1905,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5289089597390405138, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 5289089597390405138, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftMithrilChestplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289089597390405138, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5345294968919318257, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_IsActive
@@ -1508,6 +1929,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5504187205469255149, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 5504187205469255149, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftGoldSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 5504187205469255149, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544484366700086903, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 5544484366700086903, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftDiamondChestplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544484366700086903, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5769791327345213008, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
@@ -1544,6 +1995,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5977245738374595297, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 5977245738374595297, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftChlorophyteSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977245738374595297, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6204900971112191341, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_Name
@@ -1558,6 +2024,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598404934428828401, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 6598404934428828401, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftSilverPickaxe
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598404934428828401, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6687508755386076827, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
@@ -1574,6 +2055,51 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6905755115114545811, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 6905755115114545811, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftSilverSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905755115114545811, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6947652780270756422, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 6947652780270756422, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftChlorophyteChestplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6947652780270756422, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977754194965079831, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 6977754194965079831, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftChlorophyteLeggings
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977754194965079831, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6979397040497616788, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_Name
@@ -1583,6 +2109,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010930050707401522, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 7010930050707401522, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftMithrilHelmet
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010930050707401522, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028229050499481015, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 7028229050499481015, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftMithrilBoots
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028229050499481015, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7116013157289760249, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
@@ -1598,6 +2154,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798198638005433261, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 7798198638005433261, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftBloodStoneChestplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798198638005433261, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848735840290128130, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 7848735840290128130, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftSilverBoots
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848735840290128130, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965277827187904028, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 7965277827187904028, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftMithrilLeggings
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965277827187904028, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7984607698156114459, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
@@ -1669,6 +2270,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8388614619958688805, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 8388614619958688805, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftBloodStoneSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 8388614619958688805, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8778619862361222109, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_Name
@@ -1678,6 +2294,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785649431290573051, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195754878}
+    - target: {fileID: 8785649431290573051, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftBloodstonePickaxe
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785649431290573051, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863543444935392760, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 796464653}
+    - target: {fileID: 8863543444935392760, guid: cff27faaba6659343b8119011d696acf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8920792739460034843, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
@@ -4315,7 +4956,7 @@ PrefabInstance:
     - target: {fileID: 8489255541502991778, guid: 9212a9d5ad955164eb77b5b3a14264cf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10
+      value: -8.41
       objectReference: {fileID: 0}
     - target: {fileID: 8489255541502991778, guid: 9212a9d5ad955164eb77b5b3a14264cf,
         type: 3}
@@ -4325,7 +4966,7 @@ PrefabInstance:
     - target: {fileID: 8489255541502991778, guid: 9212a9d5ad955164eb77b5b3a14264cf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.465
+      value: 1.06
       objectReference: {fileID: 0}
     - target: {fileID: 8489255541502991778, guid: 9212a9d5ad955164eb77b5b3a14264cf,
         type: 3}
