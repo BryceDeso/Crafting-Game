@@ -156,7 +156,7 @@ public class CraftingBehavior : MonoBehaviour
         }
     }
 
-    public void CraftTitaniumSword()
+    public void CraftBloodStoneSword()
     {
         if (_player._bloodstoneHeld >= bloodstoneSword.GetComponent<WeaponBehavior>()._bloodstoneNeeded && _player._oakWoodHeld >= bloodstoneSword.GetComponent<WeaponBehavior>()._oakWoodNeeded)
         {
@@ -285,7 +285,7 @@ public class CraftingBehavior : MonoBehaviour
 
     public void CraftMithrilPickaxe()
     {
-        if (_player._mithrilHeld >= mithrilPickaxe.GetComponent<PickaxeBehavior>()._mithrilNeeded && _player._oakWoodHeld >= mithrilPickaxe.GetComponent<PickaxeBehavior>()._ashWoodNeeded)
+        if (_player._mithrilHeld >= mithrilPickaxe.GetComponent<PickaxeBehavior>()._mithrilNeeded && _player._ashWoodHeld >= mithrilPickaxe.GetComponent<PickaxeBehavior>()._ashWoodNeeded)
         {
             _player._mithrilHeld -= mithrilPickaxe.GetComponent<PickaxeBehavior>()._mithrilNeeded;
             _player._ashWoodHeld -= mithrilPickaxe.GetComponent<PickaxeBehavior>()._ashWoodNeeded;
@@ -350,7 +350,7 @@ public class CraftingBehavior : MonoBehaviour
         }
     }
 
-    public void CraftTitaniumHelmet()
+    public void CraftBloodStoneHelmet()
     {
         if (_player._bloodstoneHeld >= bloodstoneHelmet.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
         {
@@ -442,7 +442,7 @@ public class CraftingBehavior : MonoBehaviour
         }
     }
 
-    public void CraftTitaniumChestplate()
+    public void CraftBloodStoneChestplate()
     {
         if (_player._bloodstoneHeld >= bloodstoneChestplate.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
         {
@@ -533,7 +533,7 @@ public class CraftingBehavior : MonoBehaviour
         }
     }
 
-    public void CraftTitaniumLeggings()
+    public void CraftBloodStoneLeggings()
     {
         if (_player._bloodstoneHeld >= bloodstoneLeggings.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
         {
@@ -624,7 +624,7 @@ public class CraftingBehavior : MonoBehaviour
         }
     }
 
-    public void CraftTitaniumBoots()
+    public void CraftBloodStoneBoots()
     {
         if (_player._bloodstoneHeld >= bloodstoneBoots.GetComponent<ArmorBehavior>()._bloodstoneNeeded)
         {
