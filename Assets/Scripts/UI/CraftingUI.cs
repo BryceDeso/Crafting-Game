@@ -14,312 +14,175 @@ public class CraftingUI : MonoBehaviour
     public bool[] _tabs;
 
     [SerializeField]
-    private Text[] _swords;
+    private Text[] _swordReqirement;
 
     [SerializeField]
-    private Text[] _pickaxes;
+    private Text[] _pickaxesRequirement;
 
     [SerializeField]
-    private Text[] _helmet;
+    private Text[] _helmetRequirement;
 
     [SerializeField]
-    private Text[] _chestplate;
+    private Text[] _chestplateRequirement;
 
     [SerializeField]
-    private Text[] _leggings;
+    private Text[] _leggingsRequirement;
 
     [SerializeField]
-    private Text[] _boots;
+    private Text[] _bootsRequirement;
 
     [SerializeField]
-    private bool _onIronTab;
+    private bool _onIronTab = false;
 
     [SerializeField]
-    private bool _onSilverTab;
+    private bool _onSilverTab = false;
 
     [SerializeField]
-    private bool _onGoldTab;
+    private bool _onGoldTab = false;
 
     [SerializeField]
-    private bool _onDiamondTab;
+    private bool _onDiamondTab = false;
 
     [SerializeField]
-    private bool _onBloodstoneTab;
+    private bool _onBloodstoneTab = false;
 
     [SerializeField]
-    private bool _onChlorophyteTab;
+    private bool _onChlorophyteTab = false;
 
     [SerializeField]
-    private bool _onMithrilTab;
+    private bool _onMithrilTab = false;
 
     //Swords
-    [SerializeField]
-    private Text _ironSwordReqirements;
 
     [SerializeField]
     private Button _ironSwordButton;
 
     [SerializeField]
-    private Text _goldSwordReqirements;
-
-    [SerializeField]
     private Button _goldSwordButton;
-
-    [SerializeField]
-    private Text _silverSwordReqirements;
 
     [SerializeField]
     private Button _silverSwordButton;
 
     [SerializeField]
-    private Text _diamondSwordReqirements;
-
-    [SerializeField]
     private Button _diamondSwordButton;
-
-    [SerializeField]
-    private Text _bloodstoneSwordReqirements;
 
     [SerializeField]
     private Button _bloodstoneSwordButton;
 
     [SerializeField]
-    private Text _chlorophyteSwordReqirements;
-
-    [SerializeField]
     private Button _chlorophyteSwordButton;
 
     [SerializeField]
-    private Text _mithrilSwordReqirements;
-
-    [SerializeField]
     private Button _mithrilSwordButton;
-
-    //Pickaxes
-    [SerializeField]
-    private Text _ironPickaxeReqirements;
 
     [SerializeField]
     private Button _ironPickaxeButton;
 
     [SerializeField]
-    private Text _goldPickaxeReqirements;
-
-    [SerializeField]
     private Button _goldPickaxeButton;
-
-    [SerializeField]
-    private Text _silverPickaxeReqirements;
 
     [SerializeField]
     private Button _silverPickaxeButton;
 
     [SerializeField]
-    private Text _diamondPickaxeReqirements;
-
-    [SerializeField]
     private Button _diamondPickaxeButton;
-
-    [SerializeField]
-    private Text _bloodstonePickaxeReqirements;
 
     [SerializeField]
     private Button _bloodstonePickaxeButton;
 
     [SerializeField]
-    private Text _chlorophytePickaxeReqirements;
-
-    [SerializeField]
     private Button _chlorophytePickaxeButton;
-
-    [SerializeField]
-    private Text _mithrilPickaxeReqirements;
 
     [SerializeField]
     private Button _mithrilPickaxeButton;
 
     //Helmets
     [SerializeField]
-    private Text _ironHelmetReqirements;
-
-    [SerializeField]
     private Button _ironHelmetButton;
-
-    [SerializeField]
-    private Text _goldHelmetReqirements;
 
     [SerializeField]
     private Button _goldHelmetButton;
 
     [SerializeField]
-    private Text _silverHelmetReqirements;
-
-    [SerializeField]
     private Button _silverHelmetButton;
-
-    [SerializeField]
-    private Text _diamondHelmetReqirements;
 
     [SerializeField]
     private Button _diamondHelmetButton;
 
     [SerializeField]
-    private Text _bloodstoneHelmetReqirements;
-
-    [SerializeField]
     private Button _bloodstoneHelmetButton;
 
     [SerializeField]
-    private Text _chlorophyteHelmetReqirements;
-
-    [SerializeField]
     private Button _chlorophyteHelmetButton;
-
-    [SerializeField]
-    private Text _mithrilHelmetReqirements;
 
     [SerializeField]
     private Button _mithrilHelmetButton;
 
     //Chestplates
     [SerializeField]
-    private Text _ironChestplateReqirements;
-
-    [SerializeField]
     private Button _ironChestplateButton;
-
-    [SerializeField]
-    private Text _goldChestplateReqirements;
 
     [SerializeField]
     private Button _goldChestplateButton;
 
     [SerializeField]
-    private Text _silverChestplateReqirements;
-
-    [SerializeField]
     private Button _silverChestplateButton;
-
-    [SerializeField]
-    private Text _diamondChestplateReqirements;
 
     [SerializeField]
     private Button _diamondChestplateButton;
 
     [SerializeField]
-    private Text _bloodstoneChestplateReqirements;
-
-    [SerializeField]
     private Button _bloodstoneChestplateButton;
 
     [SerializeField]
-    private Text _chlorophyteChestplateReqirements;
-
-    [SerializeField]
     private Button _chlorophyteChestplateButton;
-
-    [SerializeField]
-    private Text _mithrilChestplateReqirements;
 
     [SerializeField]
     private Button _mithrilChestplateButton;
 
     //Leggings
     [SerializeField]
-    private Text _ironLeggingsReqirements;
-
-    [SerializeField]
     private Button _ironLeggingsButton;
-
-    [SerializeField]
-    private Text _goldLeggingsReqirements;
 
     [SerializeField]
     private Button _goldLeggingsButton;
 
     [SerializeField]
-    private Text _silverLeggingsReqirements;
-
-    [SerializeField]
     private Button _silverLeggingsButton;
-
-    [SerializeField]
-    private Text _diamondLeggingsReqirements;
 
     [SerializeField]
     private Button _diamondLeggingsButton;
 
     [SerializeField]
-    private Text _bloodstoneLeggingsReqirements;
-
-    [SerializeField]
     private Button _bloodstoneLeggingsButton;
 
     [SerializeField]
-    private Text _chlorophyteLeggingsReqirements;
-
-    [SerializeField]
     private Button _chlorophyteLeggingsButton;
-
-    [SerializeField]
-    private Text _mithrilLeggingsReqirements;
 
     [SerializeField]
     private Button _mithrilLeggingsButton;
 
     //Boots
     [SerializeField]
-    private Text _ironBootsReqirements;
-
-    [SerializeField]
     private Button _ironBootsButton;
-
-    [SerializeField]
-    private Text _goldBootsReqirements;
 
     [SerializeField]
     private Button _goldBootsButton;
 
     [SerializeField]
-    private Text _silverBootsReqirements;
-
-    [SerializeField]
     private Button _silverBootsButton;
-
-    [SerializeField]
-    private Text _diamondBootsReqirements;
 
     [SerializeField]
     private Button _diamondBootsButton;
 
     [SerializeField]
-    private Text _bloodstoneBootsReqirements;
-
-    [SerializeField]
     private Button _bloodstoneBootsButton;
-
-    [SerializeField]
-    private Text _chlorophyteBootsReqirements;
 
     [SerializeField]
     private Button _chlorophyteBootsButton;
 
     [SerializeField]
-    private Text _mithrilBootsReqirements;
-
-    [SerializeField]
     private Button _mithrilBootsButton;
-
-    private void Start()
-    {
-        _tabs[0] = _onIronTab;
-        _tabs[1] = _onSilverTab;
-        _tabs[2] = _onGoldTab;
-        _tabs[3] = _onDiamondTab;
-        _tabs[4] = _onBloodstoneTab;
-        _tabs[5] = _onChlorophyteTab;
-        _tabs[6] = _onMithrilTab;
-    }
 
     private void Update()
     {
@@ -336,7 +199,7 @@ public class CraftingUI : MonoBehaviour
 
     public void Crafting()
     {
-        if(Input.GetButtonDown("Fire1") && _UIManager._player._interactionField.canCraft == true)
+        if (Input.GetButtonDown("Fire1") && _UIManager._player._interactionField.canCraft == true)
         {
             _updateCraftingUI = true;
             _craftingUI.SetActive(true);
@@ -344,11 +207,98 @@ public class CraftingUI : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
             _UIManager._player.GetComponent<PlayerMovmentBehavior>().canMove = false;
         }
-        if(_updateCraftingUI)
+        if (_updateCraftingUI)
         {
             updateCraftButtons();
             UpdateRequirements();
         }
+    }
+
+    private void ToggleRequirementText(int index, bool enable)
+    {
+        _pickaxesRequirement[index].gameObject.SetActive(enable);
+        _swordReqirement[index].gameObject.SetActive(enable);
+        _helmetRequirement[index].gameObject.SetActive(enable);
+        _chestplateRequirement[index].gameObject.SetActive(enable);
+        _leggingsRequirement[index].gameObject.SetActive(enable);
+        _bootsRequirement[index].gameObject.SetActive(enable);
+    }
+
+    public void OnIronTab()
+    {
+        _onIronTab = true;
+        _onSilverTab = false;
+        _onGoldTab = false;
+        _onDiamondTab = false;
+        _onBloodstoneTab = false;
+        _onChlorophyteTab = false;
+        _onMithrilTab = false;
+    }
+
+    public void OnSilverTab()
+    {
+        _onIronTab = false;
+        _onSilverTab = true;
+        _onGoldTab = false;
+        _onDiamondTab = false;
+        _onBloodstoneTab = false;
+        _onChlorophyteTab = false;
+        _onMithrilTab = false;
+    }
+
+    public void OnGoldTab()
+    {
+        _onIronTab = false;
+        _onSilverTab = false;
+        _onGoldTab = true;
+        _onDiamondTab = false;
+        _onBloodstoneTab = false;
+        _onChlorophyteTab = false;
+        _onMithrilTab = false;
+    }
+
+    public void OnDiamondTab()
+    {
+        _onIronTab = false;
+        _onSilverTab = false;
+        _onGoldTab = false;
+        _onDiamondTab = true;
+        _onBloodstoneTab = false;
+        _onChlorophyteTab = false;
+        _onMithrilTab = false;
+    }
+
+    public void OnBloodStoneTab()
+    {
+        _onIronTab = false;
+        _onSilverTab = false;
+        _onGoldTab = false;
+        _onDiamondTab = false;
+        _onBloodstoneTab = true;
+        _onChlorophyteTab = false;
+        _onMithrilTab = false;
+    }
+
+    public void OnChlorophyteTab()
+    {
+        _onIronTab = false;
+        _onSilverTab = false;
+        _onGoldTab = false;
+        _onDiamondTab = false;
+        _onBloodstoneTab = false;
+        _onChlorophyteTab = true;
+        _onMithrilTab = false;
+    }
+
+    public void OnMithrilTab()
+    {
+        _onIronTab = false;
+        _onSilverTab = false;
+        _onGoldTab = false;
+        _onDiamondTab = false;
+        _onBloodstoneTab = false;
+        _onChlorophyteTab = false;
+        _onMithrilTab = true;
     }
 
     public void updateCraftButtons()
@@ -768,138 +718,174 @@ public class CraftingUI : MonoBehaviour
         }
     }
 
-    private void ItemReqirements(string name)
-    {
-
-    }
-
     private void UpdateRequirements()
     {
         //Iron
-        if(_onIronTab)
+        if (_onIronTab)
         {
-            _ironPickaxeReqirements.text = ("Iron:" + _UIManager._craftingTable.ironPickaxe.GetComponent<PickaxeBehavior>()._ironNeeded +
+            ToggleRequirementText(0, true);
+
+            _pickaxesRequirement[0].text = ("Iron:" + _UIManager._craftingTable.ironPickaxe.GetComponent<PickaxeBehavior>()._ironNeeded +
             "|Oak Wood:" + _UIManager._craftingTable.ironPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
 
-            _ironSwordReqirements.text = ("Iron:" + _UIManager._craftingTable.ironSword.GetComponent<WeaponBehavior>()._ironNeeded +
+            _swordReqirement[0].text = ("Iron:" + _UIManager._craftingTable.ironSword.GetComponent<WeaponBehavior>()._ironNeeded +
                 "|Oak Wood:" + _UIManager._craftingTable.ironSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
 
-            _ironChestplateReqirements.text = ("Iron:" + _UIManager._craftingTable.ironChestplate.GetComponent<ArmorBehavior>()._ironNeeded);
+            _helmetRequirement[0].text = ("Iron:" + _UIManager._craftingTable.ironHelmet.GetComponent<ArmorBehavior>()._ironNeeded);
 
-            _ironHelmetReqirements.text = ("Iron:" + _UIManager._craftingTable.ironHelmet.GetComponent<ArmorBehavior>()._ironNeeded);
+            _chestplateRequirement[0].text = ("Iron:" + _UIManager._craftingTable.ironChestplate.GetComponent<ArmorBehavior>()._ironNeeded);
 
-            _ironLeggingsReqirements.text = ("Iron:" + _UIManager._craftingTable.ironLeggings.GetComponent<ArmorBehavior>()._ironNeeded);
+            _leggingsRequirement[0].text = ("Iron:" + _UIManager._craftingTable.ironLeggings.GetComponent<ArmorBehavior>()._ironNeeded);
 
-            _ironBootsReqirements.text = ("Iron:" + _UIManager._craftingTable.ironBoots.GetComponent<ArmorBehavior>()._ironNeeded);
+            _bootsRequirement[0].text = ("Iron:" + _UIManager._craftingTable.ironBoots.GetComponent<ArmorBehavior>()._ironNeeded);
         }
-
-
-        //Gold
-        if(_onGoldTab)
+        else
         {
-            _goldSwordReqirements.text = ("Gold:" + _UIManager._craftingTable.goldSword.GetComponent<WeaponBehavior>()._goldNeeded +
-            "|Oak Wood:" + _UIManager._craftingTable.goldSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
-
-            _goldPickaxeReqirements.text = ("Gold:" + _UIManager._craftingTable.goldPickaxe.GetComponent<PickaxeBehavior>()._goldNeeded +
-                "|Oak Wood:" + _UIManager._craftingTable.goldPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
-
-            _goldHelmetReqirements.text = ("Gold:" + _UIManager._craftingTable.goldHelmet.GetComponent<ArmorBehavior>()._goldNeeded);
-
-            _goldChestplateReqirements.text = ("Gold:" + _UIManager._craftingTable.goldChestplate.GetComponent<ArmorBehavior>()._goldNeeded);
-
-            _goldLeggingsReqirements.text = ("Gold:" + _UIManager._craftingTable.goldHelmet.GetComponent<ArmorBehavior>()._goldNeeded);
-
-            _goldBootsReqirements.text = ("Gold:" + _UIManager._craftingTable.goldBoots.GetComponent<ArmorBehavior>()._goldNeeded);
+            ToggleRequirementText(0, false);
         }
 
         //Silver
         if(_onSilverTab)
         {
-            _silverHelmetReqirements.text = ("Silver:" + _UIManager._craftingTable.silverHelmet.GetComponent<ArmorBehavior>()._silverNeeded);
+            ToggleRequirementText(1, true);
 
-            _silverChestplateReqirements.text = ("Silver:" + _UIManager._craftingTable.silverChestplate.GetComponent<ArmorBehavior>()._silverNeeded);
-
-            _silverLeggingsReqirements.text = ("Silver:" + _UIManager._craftingTable.silverHelmet.GetComponent<ArmorBehavior>()._silverNeeded);
-
-            _silverBootsReqirements.text = ("Silver:" + _UIManager._craftingTable.silverBoots.GetComponent<ArmorBehavior>()._silverNeeded);
-
-            _silverPickaxeReqirements.text = ("Silver:" + _UIManager._craftingTable.silverPickaxe.GetComponent<PickaxeBehavior>()._silverNeeded +
+            _pickaxesRequirement[1].text = ("Silver:" + _UIManager._craftingTable.silverPickaxe.GetComponent<PickaxeBehavior>()._silverNeeded +
             "|Oak Wood:" + _UIManager._craftingTable.silverPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
 
-            _silverSwordReqirements.text = ("Silver:" + _UIManager._craftingTable.silverSword.GetComponent<WeaponBehavior>()._silverNeeded +
+            _swordReqirement[1].text = ("Silver:" + _UIManager._craftingTable.silverSword.GetComponent<WeaponBehavior>()._silverNeeded +
             "|Oak Wood:" + _UIManager._craftingTable.silverSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
+
+            _helmetRequirement[1].text = ("Silver:" + _UIManager._craftingTable.silverHelmet.GetComponent<ArmorBehavior>()._silverNeeded);
+
+            _chestplateRequirement[1].text = ("Silver:" + _UIManager._craftingTable.silverChestplate.GetComponent<ArmorBehavior>()._silverNeeded);
+
+            _leggingsRequirement[1].text = ("Silver:" + _UIManager._craftingTable.silverHelmet.GetComponent<ArmorBehavior>()._silverNeeded);
+
+            _bootsRequirement[1].text = ("Silver:" + _UIManager._craftingTable.silverBoots.GetComponent<ArmorBehavior>()._silverNeeded);
+        }
+        else
+        {
+            ToggleRequirementText(1, false);
+        }
+
+        //Gold
+        if (_onGoldTab)
+        {
+            ToggleRequirementText(2, true);
+
+            _pickaxesRequirement[2].text = ("Gold:" + _UIManager._craftingTable.goldSword.GetComponent<WeaponBehavior>()._goldNeeded +
+            "|Oak Wood:" + _UIManager._craftingTable.goldSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
+
+            _swordReqirement[2].text = ("Gold:" + _UIManager._craftingTable.goldPickaxe.GetComponent<PickaxeBehavior>()._goldNeeded +
+                "|Oak Wood:" + _UIManager._craftingTable.goldPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
+
+            _helmetRequirement[2].text = ("Gold:" + _UIManager._craftingTable.goldHelmet.GetComponent<ArmorBehavior>()._goldNeeded);
+
+            _chestplateRequirement[2].text = ("Gold:" + _UIManager._craftingTable.goldChestplate.GetComponent<ArmorBehavior>()._goldNeeded);
+
+            _leggingsRequirement[2].text = ("Gold:" + _UIManager._craftingTable.goldHelmet.GetComponent<ArmorBehavior>()._goldNeeded);
+
+            _bootsRequirement[2].text = ("Gold:" + _UIManager._craftingTable.goldBoots.GetComponent<ArmorBehavior>()._goldNeeded);
+        }
+        else
+        {
+            ToggleRequirementText(2, false);
         }
 
         //Diamond
         if(_onDiamondTab)
         {
-            _diamondSwordReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondSword.GetComponent<WeaponBehavior>()._diamondsNeeded +
+            ToggleRequirementText(3, true);
+
+            _pickaxesRequirement[3].text = ("Diamonds:" + _UIManager._craftingTable.diamondSword.GetComponent<WeaponBehavior>()._diamondsNeeded +
             "|Oak Wood:" + _UIManager._craftingTable.diamondSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
 
-            _diamondPickaxeReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondPickaxe.GetComponent<PickaxeBehavior>()._diamondsNeeded +
+            _swordReqirement[3].text = ("Diamonds:" + _UIManager._craftingTable.diamondPickaxe.GetComponent<PickaxeBehavior>()._diamondsNeeded +
             "|Oak Wood:" + _UIManager._craftingTable.diamondPickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
 
-            _diamondHelmetReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondHelmet.GetComponent<ArmorBehavior>()._diamondsNeeded);
+            _helmetRequirement[3].text = ("Diamonds:" + _UIManager._craftingTable.diamondHelmet.GetComponent<ArmorBehavior>()._diamondsNeeded);
 
-            _diamondChestplateReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondChestplate.GetComponent<ArmorBehavior>()._diamondsNeeded);
+            _chestplateRequirement[3].text = ("Diamonds:" + _UIManager._craftingTable.diamondChestplate.GetComponent<ArmorBehavior>()._diamondsNeeded);
 
-            _diamondLeggingsReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondHelmet.GetComponent<ArmorBehavior>()._diamondsNeeded);
+            _leggingsRequirement[3].text = ("Diamonds:" + _UIManager._craftingTable.diamondHelmet.GetComponent<ArmorBehavior>()._diamondsNeeded);
 
-            _diamondBootsReqirements.text = ("Diamonds:" + _UIManager._craftingTable.diamondBoots.GetComponent<ArmorBehavior>()._diamondsNeeded);
+            _bootsRequirement[3].text = ("Diamonds:" + _UIManager._craftingTable.diamondBoots.GetComponent<ArmorBehavior>()._diamondsNeeded);
+        }
+        else
+        {
+            ToggleRequirementText(3, false);
         }
 
         //BloodStone
         if(_onBloodstoneTab)
         {
-            _bloodstonePickaxeReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstonePickaxe.GetComponent<PickaxeBehavior>()._bloodstoneNeeded +
+            ToggleRequirementText(4, true);
+
+            _pickaxesRequirement[4].text = ("Bloodstone:" + _UIManager._craftingTable.bloodstonePickaxe.GetComponent<PickaxeBehavior>()._bloodstoneNeeded +
             "|Oak Wood:" + _UIManager._craftingTable.bloodstonePickaxe.GetComponent<PickaxeBehavior>()._oakWoodNeeded);
 
-            _bloodstoneSwordReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneSword.GetComponent<WeaponBehavior>()._bloodstoneNeeded +
+            _swordReqirement[4].text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneSword.GetComponent<WeaponBehavior>()._bloodstoneNeeded +
             "|Oak Wood:" + _UIManager._craftingTable.bloodstoneSword.GetComponent<WeaponBehavior>()._oakWoodNeeded);
 
-            _bloodstoneHelmetReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneHelmet.GetComponent<ArmorBehavior>()._bloodstoneNeeded);
+            _helmetRequirement[4].text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneHelmet.GetComponent<ArmorBehavior>()._bloodstoneNeeded);
 
-            _bloodstoneChestplateReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneChestplate.GetComponent<ArmorBehavior>()._bloodstoneNeeded);
+            _chestplateRequirement[4].text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneChestplate.GetComponent<ArmorBehavior>()._bloodstoneNeeded);
 
-            _bloodstoneBootsReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneBoots.GetComponent<ArmorBehavior>()._bloodstoneNeeded);
+            _leggingsRequirement[4].text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneBoots.GetComponent<ArmorBehavior>()._bloodstoneNeeded);
 
-            _bloodstoneLeggingsReqirements.text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneLeggings.GetComponent<ArmorBehavior>()._bloodstoneNeeded);
+            _bootsRequirement[4].text = ("Bloodstone:" + _UIManager._craftingTable.bloodstoneLeggings.GetComponent<ArmorBehavior>()._bloodstoneNeeded);
+        }
+        else
+        {
+            ToggleRequirementText(4, false);
         }
 
         //Chlorophyte
         if(_onChlorophyteTab)
         {
-            _chlorophytePickaxeReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophytePickaxe.GetComponent<PickaxeBehavior>()._chlorophyteNeeded +
+            ToggleRequirementText(5, true);
+
+            _pickaxesRequirement[5].text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophytePickaxe.GetComponent<PickaxeBehavior>()._chlorophyteNeeded +
             "|Jungle Wood:" + _UIManager._craftingTable.chlorophytePickaxe.GetComponent<PickaxeBehavior>()._jungleWoodNeeded);
 
-            _chlorophyteSwordReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteSword.GetComponent<WeaponBehavior>()._chlorophyteNeeded +
+            _swordReqirement[5].text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteSword.GetComponent<WeaponBehavior>()._chlorophyteNeeded +
             "|Jungle Wood:" + _UIManager._craftingTable.chlorophyteSword.GetComponent<WeaponBehavior>()._jungleWoodNeeded);
 
-            _chlorophyteHelmetReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteHelmet.GetComponent<ArmorBehavior>()._chlorophyteNeeded);
+            _helmetRequirement[5].text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteHelmet.GetComponent<ArmorBehavior>()._chlorophyteNeeded);
 
-            _chlorophyteChestplateReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteChestplate.GetComponent<ArmorBehavior>()._chlorophyteNeeded);
+            _chestplateRequirement[5].text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteChestplate.GetComponent<ArmorBehavior>()._chlorophyteNeeded);
 
-            _chlorophyteLeggingsReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteLeggings.GetComponent<ArmorBehavior>()._chlorophyteNeeded);
+            _leggingsRequirement[5].text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteLeggings.GetComponent<ArmorBehavior>()._chlorophyteNeeded);
 
-            _chlorophyteBootsReqirements.text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteBoots.GetComponent<ArmorBehavior>()._chlorophyteNeeded);
+            _bootsRequirement[5].text = ("Chlorophyte:" + _UIManager._craftingTable.chlorophyteBoots.GetComponent<ArmorBehavior>()._chlorophyteNeeded);
+        }
+        else
+        {
+            ToggleRequirementText(5, false);
         }
 
         //Mithril
         if(_onMithrilTab)
         {
-            _mithrilSwordReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilSword.GetComponent<WeaponBehavior>()._mithrilNeeded +
+            ToggleRequirementText(6, true);
+
+            _pickaxesRequirement[6].text = ("Mithril:" + _UIManager._craftingTable.mithrilSword.GetComponent<WeaponBehavior>()._mithrilNeeded +
             "|Ash Wood:" + _UIManager._craftingTable.mithrilSword.GetComponent<WeaponBehavior>()._ashWoodNeeded);
 
-            _mithrilPickaxeReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilPickaxe.GetComponent<PickaxeBehavior>()._mithrilNeeded +
+            _swordReqirement[6].text = ("Mithril:" + _UIManager._craftingTable.mithrilPickaxe.GetComponent<PickaxeBehavior>()._mithrilNeeded +
             "|Ash Wood:" + _UIManager._craftingTable.mithrilPickaxe.GetComponent<PickaxeBehavior>()._ashWoodNeeded);
 
-            _mithrilHelmetReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilHelmet.GetComponent<ArmorBehavior>()._mithrilNeeded);
+            _helmetRequirement[6].text = ("Mithril:" + _UIManager._craftingTable.mithrilHelmet.GetComponent<ArmorBehavior>()._mithrilNeeded);
 
-            _mithrilChestplateReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilChestplate.GetComponent<ArmorBehavior>()._mithrilNeeded);
+            _chestplateRequirement[6].text = ("Mithril:" + _UIManager._craftingTable.mithrilChestplate.GetComponent<ArmorBehavior>()._mithrilNeeded);
 
-            _mithrilLeggingsReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilLeggings.GetComponent<ArmorBehavior>()._mithrilNeeded);
+            _leggingsRequirement[6].text = ("Mithril:" + _UIManager._craftingTable.mithrilLeggings.GetComponent<ArmorBehavior>()._mithrilNeeded);
 
-            _mithrilBootsReqirements.text = ("Mithril:" + _UIManager._craftingTable.mithrilBoots.GetComponent<ArmorBehavior>()._mithrilNeeded);
+            _bootsRequirement[6].text = ("Mithril:" + _UIManager._craftingTable.mithrilBoots.GetComponent<ArmorBehavior>()._mithrilNeeded);
+        }
+        else
+        {
+            ToggleRequirementText(6, false);
         }
     }
 }
