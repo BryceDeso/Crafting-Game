@@ -11,11 +11,7 @@ public class InteractableFieldBehavior : MonoBehaviour
     [SerializeField]
     private Camera playerCamera;
 
-    [HideInInspector]
-    public float _ironMined;
-
     public bool canCraft;
-    public bool canFight;
 
     [HideInInspector]
     public bool inInventory;
@@ -57,7 +53,6 @@ public class InteractableFieldBehavior : MonoBehaviour
             weapon = null;
             pickaxe = null;
             armor = null;
-            canFight = false;
             canCraft = false;
             _currentInteraction = null;
         }
@@ -70,18 +65,11 @@ public class InteractableFieldBehavior : MonoBehaviour
 
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
             {
-                if (hit.transform.CompareTag("IronOre"))
+                if (hit.transform.CompareTag("Ore"))
                 {
                     ore = hit.transform.GetComponent<OreBehavior>();
                     canInteract = true;
                     Debug.Log("Looking at iron ore");
-                    _currentInteraction = hit.transform.gameObject;
-                }
-                if (hit.transform.CompareTag("GoldOre"))
-                {
-                    ore = hit.transform.GetComponent<OreBehavior>();
-                    canInteract = true;
-                    Debug.Log("Looking at gold ore");
                     _currentInteraction = hit.transform.gameObject;
                 }
                 else if (hit.transform.CompareTag("GroundEnemy"))

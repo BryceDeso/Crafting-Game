@@ -88,6 +88,8 @@ public class PlayerBehavior : MonoBehaviour
         UpdateStats();
     }
 
+    //private void CollectOre(float oreHeld, )
+
     private void TakeDamage()
     {
         if (_hitbox.isHit == true && canBeHit == true)
@@ -163,43 +165,21 @@ public class PlayerBehavior : MonoBehaviour
         //Mining
         if (_interactionField.ore)
         {
-            if (Input.GetButtonDown("Fire1") && (_interactionField.ore.canCollect == true && _interactionField.ore.CompareTag("IronOre")))
+            if (Input.GetButtonDown("Fire1") && _interactionField.ore.canCollect)
             {
-                if (_pickaxe.miningDamage >= _interactionField.ore.currentHealth)
-                {
-                    _ironHeld += _interactionField.ore.currentHealth;
-                }
-                else
-                {
-                    _ironHeld += _pickaxe.miningDamage;
-                }
-
-                _interactionField.ore.currentHealth -= _pickaxe.miningDamage;
-                Debug.Log("Hit ore");
-            }
-            if (Input.GetButtonDown("Fire1") && (_interactionField.ore.canCollect == true && _interactionField.ore.CompareTag("GoldOre")))
-            {
-                if (_pickaxe.miningDamage >= _interactionField.ore.currentHealth)
-                {
-                    _goldHeld += _interactionField.ore.currentHealth;
-                }
-                else
-                {
-                    _goldHeld += _pickaxe.miningDamage;
-                }
-
-                _interactionField.ore.currentHealth -= _pickaxe.miningDamage;
-                Debug.Log("Hit ore");
+                OreInteraction(_ironHeld, 0);
+                OreInteraction(_silverHeld, 1);
+                OreInteraction(_goldHeld, 2);
+                OreInteraction(_diamondsHeld, 3);
+                OreInteraction(_bloodstoneHeld, 4);
             }
         }
-
         //Fighting
         if (Input.GetButtonDown("Fire1") && _interactionField.groundEnemy)
         {
             _interactionField.groundEnemy.health -= _weapon.weaponDamage;
             Debug.Log("Hit ground enemy");
         }
-
         //Tool eqipping
         if (_canEquipWeapon)
         {
@@ -227,7 +207,6 @@ public class PlayerBehavior : MonoBehaviour
                 _canEquipPickaxe = false;
             }
         }
-
         //Armor equipping
         if(_interactionField.armor)
         {
@@ -340,6 +319,109 @@ public class PlayerBehavior : MonoBehaviour
         _canEquipBoots = true;
         _boots = null;
     }
+
+    private void OreInteraction(float oreHeld, int index)
+    {
+        if (_interactionField.ore.CheckOreType() == index)
+        {
+            if (_pickaxe.miningDamage >= _interactionField.ore.currentHealth)
+            {
+                oreHeld += _interactionField.ore.currentHealth;
+            }
+            else
+            {
+                oreHeld += _pickaxe.miningDamage;
+            }
+
+            _interactionField.ore.currentHealth -= (_pickaxe.miningDamage - _interactionField.ore._defense);
+            Debug.Log("Hit ore");
+        }
+    }
+    //    else if (_interactionField.ore.CheckOreType() == 1)
+    //    {
+    //        if (_pickaxe.miningDamage >= _interactionField.ore.currentHealth)
+    //        {
+    //            _silverHeld += _interactionField.ore.currentHealth;
+    //        }
+    //        else
+    //        {
+    //            _silverHeld += _pickaxe.miningDamage;
+    //        }
+
+    //        _interactionField.ore.currentHealth -= (_pickaxe.miningDamage - _interactionField.ore._defense);
+    //        Debug.Log("Hit ore");
+    //    }
+    //    else if (_interactionField.ore.CheckOreType() == 2)
+    //    {
+    //        if (_pickaxe.miningDamage >= _interactionField.ore.currentHealth)
+    //        {
+    //            _goldHeld += _interactionField.ore.currentHealth;
+    //        }
+    //        else
+    //        {
+    //            _goldHeld += _pickaxe.miningDamage;
+    //        }
+
+    //        _interactionField.ore.currentHealth -= (_pickaxe.miningDamage - _interactionField.ore._defense);
+    //        Debug.Log("Hit ore");
+    //    }
+    //    else if (_interactionField.ore.CheckOreType() == 3)
+    //    {
+    //        if (_pickaxe.miningDamage >= _interactionField.ore.currentHealth)
+    //        {
+    //            _diamondsHeld += _interactionField.ore.currentHealth;
+    //        }
+    //        else
+    //        {
+    //            _diamondsHeld += _pickaxe.miningDamage;
+    //        }
+
+    //        _interactionField.ore.currentHealth -= (_pickaxe.miningDamage - _interactionField.ore._defense);
+    //        Debug.Log("Hit ore");
+    //    }
+    //    else if (_interactionField.ore.CheckOreType() == 4)
+    //    {
+    //        if (_pickaxe.miningDamage >= _interactionField.ore.currentHealth)
+    //        {
+    //            _bloodstoneHeld += _interactionField.ore.currentHealth;
+    //        }
+    //        else
+    //        {
+    //            _bloodstoneHeld += _pickaxe.miningDamage;
+    //        }
+
+    //        _interactionField.ore.currentHealth -= (_pickaxe.miningDamage - _interactionField.ore._defense);
+    //        Debug.Log("Hit ore");
+    //    }
+    //    else if (_interactionField.ore.CheckOreType() == 5)
+    //    {
+    //        if (_pickaxe.miningDamage >= _interactionField.ore.currentHealth)
+    //        {
+    //            _chlorophyteHeld += _interactionField.ore.currentHealth;
+    //        }
+    //        else
+    //        {
+    //            _chlorophyteHeld += _pickaxe.miningDamage;
+    //        }
+
+    //        _interactionField.ore.currentHealth -= (_pickaxe.miningDamage - _interactionField.ore._defense);
+    //        Debug.Log("Hit ore");
+    //    }
+    //    else if (_interactionField.ore.CheckOreType() == 6)
+    //    {
+    //        if (_pickaxe.miningDamage >= _interactionField.ore.currentHealth)
+    //        {
+    //            _mithrilHeld += _interactionField.ore.currentHealth;
+    //        }
+    //        else
+    //        {
+    //            _mithrilHeld += _pickaxe.miningDamage;
+    //        }
+
+    //        _interactionField.ore.currentHealth -= (_pickaxe.miningDamage - _interactionField.ore._defense);
+    //        Debug.Log("Hit ore");
+    //    }
+    //}
 
     private void Timer()
     {
