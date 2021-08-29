@@ -320,22 +320,26 @@ public class PlayerBehavior : MonoBehaviour
         _boots = null;
     }
 
-    private void OreInteraction(float oreHeld, int index)
+    private float OreInteraction(float oreHeld, int index)
     {
         if (_interactionField.ore.CheckOreType() == index)
         {
             if (_pickaxe.miningDamage >= _interactionField.ore.currentHealth)
             {
                 oreHeld += _interactionField.ore.currentHealth;
+                _interactionField.ore.currentHealth -= (_pickaxe.miningDamage - _interactionField.ore._defense);
+                Debug.Log("Hit ore");
+                return oreHeld;
             }
             else
             {
                 oreHeld += _pickaxe.miningDamage;
+                _interactionField.ore.currentHealth -= (_pickaxe.miningDamage - _interactionField.ore._defense);
+                Debug.Log("Hit ore");
+                return oreHeld;
             }
-
-            _interactionField.ore.currentHealth -= (_pickaxe.miningDamage - _interactionField.ore._defense);
-            Debug.Log("Hit ore");
         }
+        return -1;
     }
     //    else if (_interactionField.ore.CheckOreType() == 1)
     //    {
