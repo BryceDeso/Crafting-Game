@@ -128,5 +128,6 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 10
   canCollect: 1
-  _defense: 14
+  _maxTime: 60
+  _timeLeft: 0
   oreType: 00000000010000

@@ -10,13 +10,15 @@ public class OreBehavior : MonoBehaviour
     private MeshRenderer mesh;
 
     public bool canCollect = true;
+
+    public float _defense;
+
+    public bool[] oreType;
+
     [SerializeField]
     private float _maxTime;
     [SerializeField]
     private float _timeLeft;
-    public float _defense;
-
-    public bool[] oreType;
 
     private void Start()
     {
@@ -38,6 +40,7 @@ public class OreBehavior : MonoBehaviour
         {
             canCollect = false;
             mesh.enabled = false;
+            currentHealth = 0;
             Timer();
         }
     }
@@ -48,14 +51,13 @@ public class OreBehavior : MonoBehaviour
 
         for (int i = 0; i < oreType.Length; i++)
         {
-            if(oreType[i] == true)
+            if (oreType[i] == true)
             {
                 type = i;
                 return type;
             }
         }
-
-        return -1;
+        return 0;
     }
 
     private void Timer()
