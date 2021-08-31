@@ -69,7 +69,7 @@ public class InteractableFieldBehavior : MonoBehaviour
                 {
                     ore = hit.transform.GetComponent<OreBehavior>();
                     canInteract = true;
-                    Debug.Log("Looking at iron ore");
+                    Debug.Log("Looking at " + ore.name + " ore");
                     _currentInteraction = hit.transform.gameObject;
                 }
                 else if (hit.transform.CompareTag("GroundEnemy"))

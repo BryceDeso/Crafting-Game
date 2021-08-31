@@ -320,7 +320,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (_interactionField.ore.CheckOreType() == 0)
         {
-            if(_pickaxe.miningDamage > _interactionField.ore._defense)
+            if(_pickaxe.miningDamage >= _interactionField.ore._defense)
             {
                 if (_pickaxe.miningDamage <= _interactionField.ore.currentHealth)
                 {
@@ -338,7 +338,7 @@ public class PlayerBehavior : MonoBehaviour
         }
         else if (_interactionField.ore.CheckOreType() == 1)
         {
-            if(_pickaxe.miningDamage > _interactionField.ore._defense)
+            if(_pickaxe.miningDamage >= _interactionField.ore._defense)
             {
                 if (_pickaxe.miningDamage <= _interactionField.ore.currentHealth)
                 {
@@ -356,7 +356,7 @@ public class PlayerBehavior : MonoBehaviour
         }
         else if (_interactionField.ore.CheckOreType() == 2)
         {
-            if (_pickaxe.miningDamage > _interactionField.ore._defense)
+            if (_pickaxe.miningDamage >= _interactionField.ore._defense)
             {
                 if (_pickaxe.miningDamage <= _interactionField.ore.currentHealth)
                 {
@@ -374,7 +374,7 @@ public class PlayerBehavior : MonoBehaviour
         }
         else if (_interactionField.ore.CheckOreType() == 3)
         {
-            if (_pickaxe.miningDamage > _interactionField.ore._defense)
+            if (_pickaxe.miningDamage >= _interactionField.ore._defense)
             {
                 if (_pickaxe.miningDamage <= _interactionField.ore.currentHealth)
                 {
@@ -392,7 +392,7 @@ public class PlayerBehavior : MonoBehaviour
         }
         else if (_interactionField.ore.CheckOreType() == 4)
         {
-            if (_pickaxe.miningDamage > _interactionField.ore._defense)
+            if (_pickaxe.miningDamage >= _interactionField.ore._defense)
             {
                 if (_pickaxe.miningDamage <= _interactionField.ore.currentHealth)
                 {
@@ -410,7 +410,7 @@ public class PlayerBehavior : MonoBehaviour
         }
         else if (_interactionField.ore.CheckOreType() == 5)
         {
-            if (_pickaxe.miningDamage > _interactionField.ore._defense)
+            if (_pickaxe.miningDamage >= _interactionField.ore._defense)
             {
                 if (_pickaxe.miningDamage <= _interactionField.ore.currentHealth)
                 {
@@ -428,7 +428,7 @@ public class PlayerBehavior : MonoBehaviour
         }
         else if (_interactionField.ore.CheckOreType() == 6)
         {
-            if (_pickaxe.miningDamage > _interactionField.ore._defense)
+            if (_pickaxe.miningDamage >= _interactionField.ore._defense)
             {
                 if (_pickaxe.miningDamage <= _interactionField.ore.currentHealth)
                 {
