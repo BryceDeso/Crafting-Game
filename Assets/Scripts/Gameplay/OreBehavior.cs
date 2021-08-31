@@ -10,7 +10,9 @@ public class OreBehavior : MonoBehaviour
     private MeshRenderer mesh;
 
     public bool canCollect = true;
+    [SerializeField]
     private float _maxTime;
+    [SerializeField]
     private float _timeLeft;
     public float _defense;
 
