@@ -304,6 +304,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4542705401346047478, guid: b1729405eee9ee6428a0d4bffe5ae133,
+        type: 3}
+      propertyPath: _mouseSensitivity
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4542705402534024738, guid: b1729405eee9ee6428a0d4bffe5ae133,
         type: 3}
       propertyPath: m_Name
@@ -397,6 +402,11 @@ PrefabInstance:
     - target: {fileID: 4542705402534024750, guid: b1729405eee9ee6428a0d4bffe5ae133,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982621676660960868, guid: b1729405eee9ee6428a0d4bffe5ae133,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -959,18 +969,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 126cc8fd61b92e94d9c9acd6ada28e6f, type: 3}
---- !u!114 &695845692 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2728219242927900799, guid: 00dc7ba09b0c7c245a442149e895765d,
-    type: 3}
-  m_PrefabInstance: {fileID: 4006431419952757824}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &701726306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4542705402534024738, guid: b1729405eee9ee6428a0d4bffe5ae133,
@@ -5063,7 +5061,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _copper
       value: 
-      objectReference: {fileID: 695845692}
+      objectReference: {fileID: 0}
     - target: {fileID: 1787272649927749798, guid: 55b9fbc846d1b6845ada4c14fd7d4133,
         type: 3}
       propertyPath: _silver
