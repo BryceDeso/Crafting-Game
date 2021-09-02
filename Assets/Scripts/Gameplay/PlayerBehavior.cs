@@ -444,6 +444,60 @@ public class PlayerBehavior : MonoBehaviour
                 }
             }
         }
+        else if (_interactionField.ore.CheckOreType() == 7)
+        {
+            if (_pickaxe.miningDamage >= _interactionField.ore._defense)
+            {
+                if (_pickaxe.miningDamage <= _interactionField.ore.currentHealth)
+                {
+                    _oakWoodHeld += _pickaxe.miningDamage;
+                    _interactionField.ore.currentHealth -= _pickaxe.miningDamage;
+                    Debug.Log("Hit oak wood");
+                }
+                else
+                {
+                    _oakWoodHeld += _interactionField.ore.currentHealth;
+                    _interactionField.ore.currentHealth -= _pickaxe.miningDamage;
+                    Debug.Log("Hit oak wood");
+                }
+            }
+        }
+        else if (_interactionField.ore.CheckOreType() == 8)
+        {
+            if (_pickaxe.miningDamage >= _interactionField.ore._defense)
+            {
+                if (_pickaxe.miningDamage <= _interactionField.ore.currentHealth)
+                {
+                    _jungleWoodHeld += _pickaxe.miningDamage;
+                    _interactionField.ore.currentHealth -= _pickaxe.miningDamage;
+                    Debug.Log("Hit jungle wood");
+                }
+                else
+                {
+                    _jungleWoodHeld += _interactionField.ore.currentHealth;
+                    _interactionField.ore.currentHealth -= _pickaxe.miningDamage;
+                    Debug.Log("Hit jungle wood");
+                }
+            }
+        }
+        else if (_interactionField.ore.CheckOreType() == 9)
+        {
+            if (_pickaxe.miningDamage >= _interactionField.ore._defense)
+            {
+                if (_pickaxe.miningDamage <= _interactionField.ore.currentHealth)
+                {
+                    _ashWoodHeld += _pickaxe.miningDamage;
+                    _interactionField.ore.currentHealth -= _pickaxe.miningDamage;
+                    Debug.Log("Hit oak wood");
+                }
+                else
+                {
+                    _ashWoodHeld += _interactionField.ore.currentHealth;
+                    _interactionField.ore.currentHealth -= _pickaxe.miningDamage;
+                    Debug.Log("Hit oak wood");
+                }
+            }
+        }
     }
 
     private void Timer()

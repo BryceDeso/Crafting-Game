@@ -65,7 +65,7 @@ public class InteractableFieldBehavior : MonoBehaviour
 
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
             {
-                if (hit.transform.CompareTag("Ore"))
+                if (hit.transform.CompareTag("Ore") || hit.transform.CompareTag("Wood"))
                 {
                     ore = hit.transform.GetComponent<OreBehavior>();
                     canInteract = true;
