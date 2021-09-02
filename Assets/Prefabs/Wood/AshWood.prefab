@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7229381294237226201
+--- !u!1 &8353849193840415921
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7229381294237226204}
-  - component: {fileID: 7229381294237226205}
-  - component: {fileID: 7229381294237226206}
-  - component: {fileID: 7229381294237226207}
-  - component: {fileID: 7229381294237226200}
-  - component: {fileID: 7229381294237226179}
+  - component: {fileID: 8353849193840415924}
+  - component: {fileID: 8353849193840415925}
+  - component: {fileID: 8353849193840415926}
+  - component: {fileID: 8353849193840415927}
+  - component: {fileID: 8353849193840415920}
+  - component: {fileID: 8353849193840415915}
   m_Layer: 0
-  m_Name: BloodstoneOre
-  m_TagString: Ore
+  m_Name: AshWood
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7229381294237226204
+--- !u!4 &8353849193840415924
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7229381294237226201}
+  m_GameObject: {fileID: 8353849193840415921}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.02, y: 2.98, z: 10.560182}
+  m_LocalPosition: {x: -10.721, y: 2.94, z: 10.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7229381294237226205
+--- !u!33 &8353849193840415925
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7229381294237226201}
+  m_GameObject: {fileID: 8353849193840415921}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7229381294237226206
+--- !u!23 &8353849193840415926
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7229381294237226201}
+  m_GameObject: {fileID: 8353849193840415921}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 508c382feec40184cae8c63b8b8af7fb, type: 2}
+  - {fileID: 2100000, guid: c2b25e3738a30aa4ab3cb73ec881bc8d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,26 +84,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7229381294237226207
+--- !u!65 &8353849193840415927
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7229381294237226201}
+  m_GameObject: {fileID: 8353849193840415921}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &7229381294237226200
+--- !u!54 &8353849193840415920
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7229381294237226201}
+  m_GameObject: {fileID: 8353849193840415921}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -113,22 +113,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7229381294237226179
+--- !u!114 &8353849193840415915
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7229381294237226201}
+  m_GameObject: {fileID: 8353849193840415921}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffe8a4b11d1b4d74199755c874b1097c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 10
-  canCollect: 1
-  _defense: 15
-  oreType: 00000000010000
+  maxHealth: 5
+  currentHealth: 0
+  canCollect: 0
+  _defense: 30
+  oreType: 00000000000000000001
   _maxTime: 60
   _timeLeft: 0

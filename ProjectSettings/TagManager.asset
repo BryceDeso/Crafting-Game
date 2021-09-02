@@ -4,16 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - IronOre
   - InteractionField
   - GroundEnemy
   - WanderPoint
   - CraftingTable
   - Weapon
   - Pickaxe
-  - GoldOre
   - Armor
   - Ore
+  - Wood
   layers:
   - Default
   - TransparentFX
