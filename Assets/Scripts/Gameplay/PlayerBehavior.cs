@@ -48,6 +48,8 @@ public class PlayerBehavior : MonoBehaviour
 
     public InteractableFieldBehavior _interactionField;
 
+    public float _healthPotionsHeld;
+
     public float _ironHeld;
     public float _goldHeld;
     public float _silverHeld;

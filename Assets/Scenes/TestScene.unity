@@ -1901,7 +1901,7 @@ PrefabInstance:
     - target: {fileID: 2396355766393742589, guid: cff27faaba6659343b8119011d696acf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CraftGoldLeggings
+      value: CraftGoldBoots
       objectReference: {fileID: 0}
     - target: {fileID: 2396355766393742589, guid: cff27faaba6659343b8119011d696acf,
         type: 3}

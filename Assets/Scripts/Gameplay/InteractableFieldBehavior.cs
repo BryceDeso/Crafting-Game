@@ -28,6 +28,8 @@ public class InteractableFieldBehavior : MonoBehaviour
     public PickaxeBehavior pickaxe;
     [HideInInspector]
     public ArmorBehavior armor;
+    [HideInInspector]
+    public GameObject healthPotion;
 
     [SerializeField]
     private GameObject _currentInteraction;
