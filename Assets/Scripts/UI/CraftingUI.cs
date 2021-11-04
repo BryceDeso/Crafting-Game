@@ -31,32 +31,7 @@ public class CraftingUI : MonoBehaviour
     [SerializeField]
     private Text[] _bootsRequirement;
 
-    [SerializeField]
-    private bool[] _onTab;
-
-    [SerializeField]
-    private bool _onIronTab = false;
-
-    [SerializeField]
-    private bool _onSilverTab = false;
-
-    [SerializeField]
-    private bool _onGoldTab = false;
-
-    [SerializeField]
-    private bool _onDiamondTab = false;
-
-    [SerializeField]
-    private bool _onBloodstoneTab = false;
-
-    [SerializeField]
-    private bool _onChlorophyteTab = false;
-
-    [SerializeField]
-    private bool _onMithrilTab = false;
-
     //Swords
-
     [SerializeField]
     private Button _ironSwordButton;
 
@@ -78,6 +53,7 @@ public class CraftingUI : MonoBehaviour
     [SerializeField]
     private Button _mithrilSwordButton;
 
+    //Pickaxes
     [SerializeField]
     private Button _ironPickaxeButton;
 
