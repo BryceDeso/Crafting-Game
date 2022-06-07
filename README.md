@@ -1,4 +1,4 @@
-[# Crafting System Demo
+# Crafting System
 
 ### Getting and Opening the demo:
 
