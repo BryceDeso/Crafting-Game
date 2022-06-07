@@ -20,5 +20,6 @@ Use the following controls to interact with the scene:
     S: Press to move backwards
     D: Press to move right
     I: Press to open the inventory screen, press again to close the screen
+    Escape: Exits Demo
     Right Mouse Button: Interact with crafting UI, tools, materials, and the crafting bench.
     (Tool hitboxes are a bit small right now and must click directly on them, so keep that in mind when attempting to pick them up.)
