@@ -1,3 +1,3 @@
-[#Unamed Crafting Game
+[# Unamed Crafting Game
 
 T
