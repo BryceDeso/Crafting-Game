@@ -1,8 +1,6 @@
-# Crafting System
-
 ### Summary:
 
-This is a unamed work-in-progress crafting game. There is a demo level to show the current state of the crafting system.
+This is a unamed work-in-progress crafting game. There is a demo level to show the prototype crafting system.
 
 ### Getting and Opening the demo:
 
