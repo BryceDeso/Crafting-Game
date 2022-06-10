@@ -79,6 +79,12 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Exit Game");
+            Application.Quit();
+        }
+
         PlayerActions();
     }
 
