@@ -31,29 +31,7 @@ public class CraftingUI : MonoBehaviour
     [SerializeField]
     private Text[] _bootsRequirement;
 
-    [SerializeField]
-    private bool _onIronTab = false;
-
-    [SerializeField]
-    private bool _onSilverTab = false;
-
-    [SerializeField]
-    private bool _onGoldTab = false;
-
-    [SerializeField]
-    private bool _onDiamondTab = false;
-
-    [SerializeField]
-    private bool _onBloodstoneTab = false;
-
-    [SerializeField]
-    private bool _onChlorophyteTab = false;
-
-    [SerializeField]
-    private bool _onMithrilTab = false;
-
     //Swords
-
     [SerializeField]
     private Button _ironSwordButton;
 
@@ -75,6 +53,7 @@ public class CraftingUI : MonoBehaviour
     [SerializeField]
     private Button _mithrilSwordButton;
 
+    //Pickaxes
     [SerializeField]
     private Button _ironPickaxeButton;
 
@@ -224,86 +203,24 @@ public class CraftingUI : MonoBehaviour
         _bootsRequirement[index].gameObject.SetActive(enable);
     }
 
-    public void OnIronTab()
+    public void OnTab(int index)
     {
-        _onIronTab = true;
-        _onSilverTab = false;
-        _onGoldTab = false;
-        _onDiamondTab = false;
-        _onBloodstoneTab = false;
-        _onChlorophyteTab = false;
-        _onMithrilTab = false;
-    }
-
-    public void OnSilverTab()
-    {
-        _onIronTab = false;
-        _onSilverTab = true;
-        _onGoldTab = false;
-        _onDiamondTab = false;
-        _onBloodstoneTab = false;
-        _onChlorophyteTab = false;
-        _onMithrilTab = false;
-    }
-
-    public void OnGoldTab()
-    {
-        _onIronTab = false;
-        _onSilverTab = false;
-        _onGoldTab = true;
-        _onDiamondTab = false;
-        _onBloodstoneTab = false;
-        _onChlorophyteTab = false;
-        _onMithrilTab = false;
-    }
-
-    public void OnDiamondTab()
-    {
-        _onIronTab = false;
-        _onSilverTab = false;
-        _onGoldTab = false;
-        _onDiamondTab = true;
-        _onBloodstoneTab = false;
-        _onChlorophyteTab = false;
-        _onMithrilTab = false;
-    }
-
-    public void OnBloodStoneTab()
-    {
-        _onIronTab = false;
-        _onSilverTab = false;
-        _onGoldTab = false;
-        _onDiamondTab = false;
-        _onBloodstoneTab = true;
-        _onChlorophyteTab = false;
-        _onMithrilTab = false;
-    }
-
-    public void OnChlorophyteTab()
-    {
-        _onIronTab = false;
-        _onSilverTab = false;
-        _onGoldTab = false;
-        _onDiamondTab = false;
-        _onBloodstoneTab = false;
-        _onChlorophyteTab = true;
-        _onMithrilTab = false;
-    }
-
-    public void OnMithrilTab()
-    {
-        _onIronTab = false;
-        _onSilverTab = false;
-        _onGoldTab = false;
-        _onDiamondTab = false;
-        _onBloodstoneTab = false;
-        _onChlorophyteTab = false;
-        _onMithrilTab = true;
+        for(int i = 0; i < _tabs.Length; i ++)
+        {
+            if(i == index)
+            {
+                _tabs[i] = true;
+            }
+            else if(i != index)
+            {
+                _tabs[i] = false;
+            }
+        }
     }
 
     public void updateCraftButtons()
     {
-        if(_onIronTab)
+        if(_tabs[0])
         {
             //Sword
             if (_UIManager._player._ironHeld >= _UIManager._craftingTable.ironSword.GetComponent<WeaponBehavior>()._ironNeeded &&
@@ -362,7 +279,7 @@ public class CraftingUI : MonoBehaviour
                 _ironBootsButton.gameObject.SetActive(false);
             }
         }
-        else if (_onSilverTab)
+        else if (_tabs[1])
         {
             //Sword
             if (_UIManager._player._silverHeld >= _UIManager._craftingTable.silverSword.GetComponent<WeaponBehavior>()._silverNeeded &&
@@ -421,7 +338,7 @@ public class CraftingUI : MonoBehaviour
                 _silverBootsButton.gameObject.SetActive(false);
             }
         }
-        else if(_onGoldTab)
+        else if(_tabs[2])
         {
             //Sword
             if (_UIManager._player._goldHeld >= _UIManager._craftingTable.goldSword.GetComponent<WeaponBehavior>()._goldNeeded &&
@@ -480,7 +397,7 @@ public class CraftingUI : MonoBehaviour
                 _goldBootsButton.gameObject.SetActive(false);
             }
         }
-        else if (_onDiamondTab)
+        else if (_tabs[3])
         {
             //Sword
             if (_UIManager._player._diamondsHeld >= _UIManager._craftingTable.diamondSword.GetComponent<WeaponBehavior>()._diamondsNeeded &&
@@ -539,7 +456,7 @@ public class CraftingUI : MonoBehaviour
                 _diamondBootsButton.gameObject.SetActive(false);
             }
         }
-        else if (_onBloodstoneTab)
+        else if (_tabs[4])
         {
             //Sword
             if (_UIManager._player._bloodstoneHeld >= _UIManager._craftingTable.bloodstoneSword.GetComponent<WeaponBehavior>()._bloodstoneNeeded &&
@@ -598,7 +515,7 @@ public class CraftingUI : MonoBehaviour
                 _bloodstoneBootsButton.gameObject.SetActive(false);
             }
         }
-        else if (_onChlorophyteTab)
+        else if (_tabs[5])
         {
             //Sword
             if (_UIManager._player._chlorophyteHeld >= _UIManager._craftingTable.chlorophyteSword.GetComponent<WeaponBehavior>()._chlorophyteNeeded &&
@@ -657,7 +574,7 @@ public class CraftingUI : MonoBehaviour
                 _chlorophyteBootsButton.gameObject.SetActive(false);
             }
         }
-        else if (_onMithrilTab)
+        else if (_tabs[6])
         {
             //Sword
             if (_UIManager._player._mithrilHeld >= _UIManager._craftingTable.mithrilSword.GetComponent<WeaponBehavior>()._mithrilNeeded &&
@@ -721,7 +638,7 @@ public class CraftingUI : MonoBehaviour
     private void UpdateRequirements()
     {
         //Iron
-        if (_onIronTab)
+        if (_tabs[0])
         {
             ToggleRequirementText(0, true);
 
@@ -745,7 +662,7 @@ public class CraftingUI : MonoBehaviour
         }
 
         //Silver
-        if(_onSilverTab)
+        if(_tabs[1])
         {
             ToggleRequirementText(1, true);
 
@@ -769,7 +686,7 @@ public class CraftingUI : MonoBehaviour
         }
 
         //Gold
-        if (_onGoldTab)
+        if (_tabs[2])
         {
             ToggleRequirementText(2, true);
 
@@ -793,7 +710,7 @@ public class CraftingUI : MonoBehaviour
         }
 
         //Diamond
-        if(_onDiamondTab)
+        if(_tabs[3])
         {
             ToggleRequirementText(3, true);
 
@@ -817,7 +734,7 @@ public class CraftingUI : MonoBehaviour
         }
 
         //BloodStone
-        if(_onBloodstoneTab)
+        if(_tabs[4])
         {
             ToggleRequirementText(4, true);
 
@@ -841,7 +758,7 @@ public class CraftingUI : MonoBehaviour
         }
 
         //Chlorophyte
-        if(_onChlorophyteTab)
+        if(_tabs[5])
         {
             ToggleRequirementText(5, true);
 
@@ -865,7 +782,7 @@ public class CraftingUI : MonoBehaviour
         }
 
         //Mithril
-        if(_onMithrilTab)
+        if(_tabs[6])
         {
             ToggleRequirementText(6, true);
 
