@@ -4,7 +4,7 @@ This is an unamed work-in-progress crafting game.
 
 <img src="DemoLevel.png"  width=70% height=70%>
 
-In the current demo, you can pickup tools that can be use to chop wood and mine minerals to craft armor and weapons at the crafting bench.
+In the current demo, you can pickup pickaxes with different stats that can be use to chop wood and mine minerals. To craft armor and tools go to the crafting bench and selet a mineral you want to craft with. You can also check your inventory to see your current stats and the amount of materials your holding.
 
 ### Getting and Opening the demo:
 
