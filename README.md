@@ -4,6 +4,8 @@ This is an unamed work-in-progress crafting game.
 
 <img src="DemoLevel.png"  width=70% height=70%>
 
+In the current demo, you can pickup tools that can be use to chop wood and mine minerals to craft armor and weapons at the crafting bench.
+
 ### Getting and Opening the demo:
 
 To get the project and use it, go to the releases tab, click on __CraftingDemo.zip__ to start downloading the project.
