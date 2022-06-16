@@ -2,7 +2,7 @@
 
 This is an unamed work-in-progress crafting game.
 
-<img src=""  width=50% height=50%>
+<img src="DemoLevel.png"  width=70% height=70%>
 
 ### Getting and Opening the demo:
 
