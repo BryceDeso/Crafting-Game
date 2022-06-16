@@ -2,6 +2,8 @@
 
 This is an unamed work-in-progress crafting game.
 
+<img src=""  width=50% height=50%>
+
 ### Getting and Opening the demo:
 
 To get the project and use it, go to the releases tab, click on __CraftingDemo.zip__ to start downloading the project.
